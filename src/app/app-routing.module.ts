@@ -24,7 +24,11 @@ const routes: Routes = [
     {
         path: 'assignment',
         loadChildren: () => import('./assignment/assignment.module').then(m => m.AssignmentModule)
-    }
+    },
+    {
+        path: 'receive-complaint',
+        loadChildren: () => import('./receive-complaint/receive-complaint.module').then(m => m.ReceiveComplaintModule)
+    },
 ];
 
 @NgModule({
