@@ -1,45 +1,44 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>ลำดับ</th>
-                    <th>เรื่องร้องเรียนเลขดำที่</th>
-                    <th>เลขที่อ้างอิง</th>
-                    <th>ชื่อเรื่องร้องเรียน</th>
-                    <th>ชื่อผู้ร้องเรียน</th>
-                    <th>วันที่รับแจ้ง</th>
-                    <th>มอบหมายงาน</th>
-                    <th>ดูรายละเอียด</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of [1,1,1,1,1];let index = index;">
-                    <td></td>
-                    <td>{{index + 1}}</td>
-                    <td></td>
-                    <td>เรื่องแจ้งที่ {{index + 1}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button class="btn btn-block btn-info btn-sm">
-                            มอบหมายงาน
-                        </button>
-                    </td>
-                    <td>
-                        <button class="btn btn-block btn-info btn-sm">
-                            ดูรายละเอียด
-                        </button>
-                    </td>
-                </tr>
-                </tbody>
+            <div class="card">
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>ลำดับ</th>
+                            <th>เรื่องร้องเรียนเลขดำที่</th>
+                            <th>เลขที่อ้างอิง</th>
+                            <th>ชื่อเรื่องร้องเรียน</th>
+                            <th>ชื่อผู้ร้องเรียน</th>
+                            <th>วันที่รับแจ้ง</th>
+                            <th>มอบหมายงาน</th>
+                            <th>ดูรายละเอียด</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of [1,1,1,1,1];let index = index;">
+                            <td></td>
+                            <td>{{index + 1}}</td>
+                            <td></td>
+                            <td>เรื่องแจ้งที่ {{index + 1}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['detail']">
+                                    มอบหมายงาน
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
 
-            </table>
-            <div class="row justify-content-center">
-                <ngb-pagination [collectionSize]="50" [page]="0"></ngb-pagination>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <ngb-pagination [collectionSize]="70" [page]="0"></ngb-pagination>
             </div>
         </div>
     </div>
