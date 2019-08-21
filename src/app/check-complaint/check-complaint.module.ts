@@ -12,6 +12,7 @@ import {PrintComponent} from './detail/print/print.component';
 import {ComplaintInfoComponent} from './detail/complaint-info/complaint-info.component';
 import { ComplaintComponent } from './detail/complaint/complaint.component';
 import { AttachmentComponent } from './detail/attachment/attachment.component';
+import { ReceiveDocComponent } from './detail/receive-doc/receive-doc.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AttachmentComponent } from './detail/attachment/attachment.component';
         FactComponent,
         ComplaintInfoComponent,
         ComplaintComponent,
-        AttachmentComponent
+        AttachmentComponent,
+        ReceiveDocComponent
     ],
     imports: [
         CommonModule,
