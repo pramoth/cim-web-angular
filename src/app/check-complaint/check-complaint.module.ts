@@ -10,6 +10,7 @@ import {AboutComponent} from './detail/about/about.component';
 import {ForwardComponent} from './detail/forward/forward.component';
 import {PrintComponent} from './detail/print/print.component';
 import {ComplaintInfoComponent} from './detail/complaint-info/complaint-info.component';
+import { ComplaintComponent } from './detail/complaint/complaint.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {ComplaintInfoComponent} from './detail/complaint-info/complaint-info.com
         ForwardComponent,
         PrintComponent,
         FactComponent,
-        ComplaintInfoComponent
+        ComplaintInfoComponent,
+        ComplaintComponent
     ],
     imports: [
         CommonModule,
