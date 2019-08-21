@@ -16,7 +16,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a [routerLink]="['/dashboard']" routerLinkActive="active" class="nav-link">
             <i class="nav-icon fas fa-th fa-spin"></i>
             <p>
               สถิติ Dashboard
@@ -29,32 +29,42 @@
             <p>
               รับเรื่องร้องเรียน
               <i class="fas fa-angle-left right"></i>
-              <!--<span class="badge badge-info right">6</span>-->
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a [routerLink]="['/receive-complaint/all']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
-                <p>- Walk in</p>
+                <p>ค้นหาเรื่องร้องเรียน</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a [routerLink]="['/receive-complaint/walk-in']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
-                <p>- Call Center</p>
+                <p>Walk in</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a [routerLink]="['/receive-complaint/call-center']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
-                <p>- ไปรษณีย์</p>
+                <p>Call Center</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a [routerLink]="['/receive-complaint/post']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
-                <p>- ผผ.หยิบยก</p>
+                <p>ไปรษณีย์</p>
+              </a>
+            </li><li class="nav-item">
+            <a [routerLink]="['/receive-complaint/internet']" routerLinkActive="active" class="nav-link">
+              <i class="far nav-icon"></i>
+              <p>Internet</p>
+            </a>
+          </li>
+            <li class="nav-item">
+              <a [routerLink]="['/receive-complaint/own-motion']" routerLinkActive="active" class="nav-link">
+                <i class="far nav-icon"></i>
+                <p>ผผ.หยิบยก</p>
               </a>
             </li>
           </ul>

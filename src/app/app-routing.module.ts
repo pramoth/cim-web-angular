@@ -16,7 +16,11 @@ const routes: Routes = [
     {
         path: 'form',
         loadChildren: () => import('./form-demo/form-demo.module').then(m => m.FormDemoModule)
-    }
+    },
+    {
+        path: 'receive-complaint',
+        loadChildren: () => import('./receive-complaint/receive-complaint.module').then(m => m.ReceiveComplaintModule)
+    },
 ];
 
 @NgModule({
