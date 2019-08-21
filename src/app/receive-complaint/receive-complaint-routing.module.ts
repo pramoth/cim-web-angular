@@ -17,7 +17,7 @@ const routes: Routes = [
         path: 'all',
         pathMatch: 'full',
         component: AllComponent,
-        data: {name: 'รับเรื่องร้องเรียน ค้นหา', header: 'ค้นหาเรื่องร้องเรียน'}
+        data: {name: 'รับเรื่องร้องเรียน ค้นหา', header: 'รับเรื่องร้องเรียน'}
     },
     {
         path: 'walk-in',

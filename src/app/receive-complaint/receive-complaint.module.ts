@@ -7,6 +7,7 @@ import {CallCenterComplaintComponent} from './call-center-complaint/call-center-
 import {PostComplaintComponent} from './post-complaint/post-complaint.component';
 import {InternetComplaintComponent} from './internet-complaint/internet-complaint.component';
 import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-complaint.component';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-com
         InternetComplaintComponent, OwnMotionComplaintComponent],
     imports: [
         CommonModule,
-        ReceiveComplaintRoutingModule
+        ReceiveComplaintRoutingModule,
+        NgbPaginationModule
     ]
 })
 export class ReceiveComplaintModule {
