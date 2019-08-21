@@ -39,7 +39,7 @@
     </div>
 
     <div class="card mt-5">
-        <ngb-tabset [justify]="'fill'">
+        <ngb-tabset [justify]="'fill'" activeId="conclude">
             <ngb-tab title="รายละเอียดเรื่อง">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
@@ -47,7 +47,7 @@
                     </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab id="complaint-info" title="ข้อมูลผู้ร้อง" >
+            <ngb-tab id="complaint-info" title="ข้อมูลผู้ร้อง">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
                         <app-complaint-info></app-complaint-info>
@@ -78,9 +78,11 @@
                     </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="เสนอยุติ">
+            <ngb-tab id="conclude" title="เสนอยุติ">
                 <ng-template ngbTabContent>
-                    <p>เสนอยุติ</p>
+                    <div class="ml-4 mr-4">
+                        <app-conclude></app-conclude>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="ส่งต่อ สส 1-4 สกค. สตท.">
