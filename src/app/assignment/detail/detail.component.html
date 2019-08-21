@@ -4,7 +4,7 @@
         <div class="col-sm">
             <input class="form-control" value="00001/2562" disabled>
         </div>
-        <label class="ccol-sm-2 col-form-label font-weight-normal">ผู้รับผิดชอบ</label>
+        <label class="col-sm-2 col-form-label font-weight-normal">ผู้รับผิดชอบ</label>
         <div class="col-sm">
             <input class="form-control" disabled>
         </div>
@@ -23,7 +23,7 @@
         <ngb-tabset [justify]="'fill'">
             <ngb-tab title="มอบหมายงาน">
                 <ng-template ngbTabContent>
-                    <div class="card card-primary m-4">
+                    <div class="card card-info m-4">
                         <div class="card-header">
                             <h3 class="card-title">มอบหมายสำนักที่รับผิดชอบ</h3>
 
@@ -37,20 +37,20 @@
                             <div class="form-group row text-right">
                                 <label class="col-sm-2 col-form-label font-weight-normal">เลือกหน่วยงาน</label>
                                 <div class="col-sm">
-                                    <select class="form-control" >
-                                        <option >กรุณาเลือก</option>
-                                        <option >Alaska</option>
-                                        <option >California</option>
-                                        <option >Delaware</option>
-                                        <option >Tennessee</option>
-                                        <option >Texas</option>
-                                        <option >Washington</option>
+                                    <select class="form-control">
+                                        <option>กรุณาเลือก</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-primary m-4">
+                    <div class="card card-info m-4">
                         <div class="card-header">
                             <h3 class="card-title">มอบหมายสำนักที่รับผิดชอบ</h3>
 
@@ -64,14 +64,14 @@
                             <div class="form-group row text-right">
                                 <label class="col-sm-2 col-form-label font-weight-normal">เลือกเจ้าหน้าที่</label>
                                 <div class="col-sm">
-                                    <select class="form-control" >
-                                        <option >กรุณาเลือก</option>
-                                        <option >Alaska</option>
-                                        <option >California</option>
-                                        <option >Delaware</option>
-                                        <option >Tennessee</option>
-                                        <option >Texas</option>
-                                        <option >Washington</option>
+                                    <select class="form-control">
+                                        <option>กรุณาเลือก</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
                                     </select>
                                 </div>
                             </div>
@@ -81,33 +81,151 @@
             </ngb-tab>
             <ngb-tab title="รายละเอียดเรื่อง">
                 <ng-template ngbTabContent>
-                    <div class="card card-primary m-4">
+                    <div class="card card-info m-4">
                         <div class="card-header">
                             <h3 class="card-title">เรื่องร้องเรียน</h3>
 
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
-                                        class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse">
+                                    <i class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="form-group row text-right">
-                                <label class="col-sm-2 col-form-label font-weight-normal">เลือกเจ้าหน้าที่</label>
-                                <div class="col-sm">
-                                    <select class="form-control" >
-                                        <option >กรุณาเลือก</option>
-                                        <option >Alaska</option>
-                                        <option >California</option>
-                                        <option >Delaware</option>
-                                        <option >Tennessee</option>
-                                        <option >Texas</option>
-                                        <option >Washington</option>
+                                <label for="input1" class="col-3 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="input1" value="00001/2562" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input2" class="col col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน</label>
+                                <div class="col">
+                                    <input type="text" class="form-control" value="07/08/2562" id="input2" disabled>
+                                </div>
+                                <label for="input3" class="col col-form-label font-weight-normal">เวลา</label>
+                                <div class="col">
+                                    <input type="text" class="form-control" value="18:54" id="input3" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input4" class="col col-form-label font-weight-normal">เลขที่หนังสือ</label>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="input4">
+                                </div>
+                                <label for="input5" class="col col-form-label font-weight-normal">เวลา</label>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="input5" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input6" class="col-3 col-form-label font-weight-normal">เลขที่หนังสือ</label>
+                                <div class="col">
+                                    <textarea id="input6" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input7" class="col-3 col-form-label font-weight-normal">สรุปประเด็นข้อร้องเรียน</label>
+                                <div class="col">
+                                    <textarea id="input7" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input8" class="col-3 col-form-label font-weight-normal">เรื่องที่อยู่ในความสนใจของสาธารณะชน</label>
+                                <div class="col-3">
+                                    <select id="input8" class="form-control">
+                                        <option>ปกติ</option>
+                                        <option>ไม่ปกติ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input9" class="col-3 col-form-label font-weight-normal">ส่วนงานที่รับผิดชอบ</label>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="input9" value="สำนักตรวจสอบเรื่องร้องเรียน" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input10" class="col-3 col-form-label font-weight-normal">เกลี่ยงานมาจาก</label>
+                                <div class="col-3">
+                                    <select id="input10" class="form-control">
+                                        <option>-</option>
+                                        <option>---</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="card card-info m-4">
+                        <div class="card-header">
+                            <h3 class="card-title">ช่องทางการร้องเรียน</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-widget="collapse">
+                                    <i class="fas fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row text-right">
+                                <label for="input11" class="col-3 col-form-label font-weight-normal">การเสนอคำร้องเรียน</label>
+                                <div class="col-3">
+                                    <select id="input11" class="form-control">
+                                        <option>ไปรษณีย์</option>
+                                        <option>Internet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input12" class="col-3 col-form-label font-weight-normal">ประเภทการร้องเรียน</label>
+                                <div class="col-3">
+                                    <select id="input12" class="form-control">
+                                        <option>ร้องเรียนด้วยหนังสือ</option>
+                                        <option>ร้องเรียนด้วยวาจา</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input13" class="col-3 col-form-label font-weight-normal">ลักษณะเรื่องร้องเรียน  **</label>
+                                <div class="col">
+                                    <select id="input13" class="form-control">
+                                        <option>ร้องเรียนเกี่ยวกับปัญหาความชอบธรรมด้วยรัฐธรรมนูญ</option>
+                                        <option>ร้องเรียนเกี่ยวกับปัญหาความชอบธรรมด้วยรัฐธรรมนูญ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-info m-4">
+                        <div class="card-header">
+                            <h3 class="card-title">ความเห็นผู้อำนวยการ ( ผอ. )</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-widget="collapse">
+                                    <i class="fas fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row text-right">
+                                <label for="input14" class="col-3 col-form-label font-weight-normal">การดำเนินการ</label>
+                                <div class="col">
+                                    <textarea id="input14" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row text-right">
+                                <label for="input15" class="col-3 col-form-label font-weight-normal">ความเห็น</label>
+                                <div class="col-3">
+                                    <select id="input15" class="form-control">
+                                        <option>ปกติ</option>
+                                        <option>อยู่ในความสนใจ</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="input16" value="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </ng-template>
             </ngb-tab>
         </ngb-tabset>
