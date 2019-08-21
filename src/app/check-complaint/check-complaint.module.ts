@@ -5,6 +5,7 @@ import {CheckComplaintRoutingModule} from './check-complaint-routing.module';
 import {CheckComplaintComponent} from './check-complaint.component';
 import {NgbPaginationModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
 import {DetailComponent} from './detail/detail.component';
+import {FactComponent} from './detail/fact/fact.component';
 import {AboutComponent} from './detail/about/about.component';
 import {ForwardComponent} from './detail/forward/forward.component';
 import {PrintComponent} from './detail/print/print.component';
@@ -12,7 +13,15 @@ import {ComplaintInfoComponent} from './detail/complaint-info/complaint-info.com
 
 
 @NgModule({
-    declarations: [CheckComplaintComponent, DetailComponent, AboutComponent, ForwardComponent, PrintComponent, ComplaintInfoComponent],
+    declarations: [
+        CheckComplaintComponent,
+        DetailComponent,
+        AboutComponent,
+        ForwardComponent,
+        PrintComponent,
+        FactComponent,
+        ComplaintInfoComponent
+    ],
     imports: [
         CommonModule,
         CheckComplaintRoutingModule,
