@@ -39,7 +39,7 @@
     </div>
 
     <div class="card mt-5">
-        <ngb-tabset [justify]="'fill'">
+        <ngb-tabset [justify]="'fill'" >
             <ngb-tab title="รายละเอียดเรื่อง">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
@@ -47,44 +47,60 @@
                     </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="ข้อมูลผู้ร้อง">
+            <ngb-tab id="complaint-info" title="ข้อมูลผู้ร้อง">
                 <ng-template ngbTabContent>
-                    <p>ข้อมูลผู้ร้อง</p>
+                    <div class="ml-4 mr-4">
+                        <app-complaint-info></app-complaint-info>
+                    </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="หน่วยงาน/ผู้ถูกร้องเรียน">
+            <ngb-tab id="complaint" title="หน่วยงาน/ผู้ถูกร้องเรียน">
                 <ng-template ngbTabContent>
-                    <p>หน่วยงาน/ผู้ถูกร้องเรียน</p>
+                    <div class="ml-4 mr-4">
+                        <app-complaint></app-complaint>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="เอกสารแนบ">
                 <ng-template ngbTabContent>
-                    <p>เอกสารแนบ</p>
+                    <div class="ml-4 mr-4">
+                        <app-attachment></app-attachment>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="รับหนังสือ">
                 <ng-template ngbTabContent>
-                    <p>รับหนังสือ</p>
+                    <div class="ml-4 mr-4">
+                        <app-receive-doc></app-receive-doc>
+                    </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="ข้อเท็จจริง">
+            <ngb-tab title="แสวงหาข้อเท็จจริง">
                 <ng-template ngbTabContent>
-                    <p>ข้อเท็จจริง</p>
+                    <div class="ml-4 mr-4">
+                        <app-fact></app-fact>
+                    </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="เสนอยุติ">
+            <ngb-tab id="conclude" title="เสนอยุติ">
                 <ng-template ngbTabContent>
-                    <p>เสนอยุติ</p>
+                    <div class="ml-4 mr-4">
+                        <app-conclude></app-conclude>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="ส่งต่อ สส 1-4 สกค. สตท.">
                 <ng-template ngbTabContent>
-                    <p>ส่งต่อ สส 1-4 สกค. สตท.</p>
+                    <div class="ml-4 mr-4">
+                        <app-forward></app-forward>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="พิมพ์">
                 <ng-template ngbTabContent>
-                    <p>พิมพ์</p>
+                    <div class="ml-4 mr-4">
+                        <app-print></app-print>
+                    </div>
                 </ng-template>
             </ngb-tab>
         </ngb-tabset>
