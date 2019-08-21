@@ -17,37 +17,37 @@ const routes: Routes = [
         path: 'all',
         pathMatch: 'full',
         component: AllComponent,
-        data: {name: 'รับเรื่องร้องเรียน ค้นหา', header: 'รับเรื่องร้องเรียน'}
+        data: {name: 'รับเรื่องร้องเรียน : ค้นหา', header: 'รับเรื่องร้องเรียน'}
     },
     {
         path: 'walk-in',
         pathMatch: 'full',
         component: WalkInComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน Walk in', header: 'รับเรื่องร้องเรียน Walk In'}
+        data: {name: 'รับเรื่องร้องเรียน : Walk in', header: 'รับเรื่องร้องเรียน : Walk In'}
     },
     {
         path: 'call-center',
         pathMatch: 'full',
         component: CallCenterComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน call-center', header: 'รับเรื่องร้องเรียน call-center'}
+        data: {name: 'รับเรื่องร้องเรียน : Call Center', header: 'รับเรื่องร้องเรียน : Call Center'}
     },
     {
         path: 'post',
         pathMatch: 'full',
         component: PostComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน ไปรษณีย์', header: 'รับเรื่องร้องเรียน ไปรษณีย์'}
+        data: {name: 'รับเรื่องร้องเรียน : ไปรษณีย์', header: 'รับเรื่องร้องเรียน : ไปรษณีย์'}
     },
     {
         path: 'internet',
         pathMatch: 'full',
         component: InternetComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน Internet', header: 'รับเรื่องร้องเรียน Internet'}
+        data: {name: 'รับเรื่องร้องเรียน : Internet', header: 'รับเรื่องร้องเรียน : Internet'}
     },
     {
         path: 'own-motion',
         pathMatch: 'full',
         component: OwnMotionComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน ผผ.หยิบยก', header: 'ผผ.หยิบยก'}
+        data: {name: 'รับเรื่องร้องเรียน : ผผ.หยิบยก', header: 'รับเรื่องร้องเรียน : ผผ.หยิบยก'}
     },
 ];
 

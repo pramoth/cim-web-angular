@@ -1,1 +1,34 @@
-<p>walk-in-complaint works!</p>
+<div class="container-fluid">
+    <div class="card mt-1">
+        <ngb-tabset [justify]="'fill'">
+            <ngb-tab title="1. รายละเอียดเรื่องร้องเรียน">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-detail></app-detail>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="2. รายละเอียดผู้ร้องเรียน">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-complainant-detail></app-complainant-detail>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="3. รายละเอียดหน่วยงาน/ผู้ถูกร้องเรียน">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-accused-detail></app-accused-detail>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab title="4. ผลการร้องเรียน">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-results></app-results>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>
