@@ -1,9 +1,19 @@
-<section >
-  <ol class="breadcrumb ">
-    <li *ngFor="let breadcrumb of breadcrumbs;let last = last">
-      <i *ngIf="breadcrumb.label.iconClass" [class]="breadcrumb.label.iconClass"></i>
-      <a *ngIf="!last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</a>
-      <span *ngIf="last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</span>
-    </li>
-  </ol>
+<section>
+    <ol class="breadcrumb float-sm-right">
+        <!--
+        <li *ngFor="let breadcrumb of breadcrumbs;let last = last">
+            <i *ngIf="breadcrumb.data.iconClass" [class]="breadcrumb.data.iconClass"></i>
+            <a *ngIf="!last" [routerLink]="breadcrumb.url">{{breadcrumb.data.title}}</a>
+            <span *ngIf="last" [routerLink]="breadcrumb.url">{{breadcrumb.data.title}}</span>
+        </li>
+        -->
+        <ol class="breadcrumb float-sm-right">
+            <ng-container *ngFor="let breadcrumb of breadcrumbs;let last = last">
+                <li *ngIf="!last" class="breadcrumb-item">
+                    <a [routerLink]="breadcrumb.url">{{breadcrumb.data.title}}</a>
+                </li>
+                <li *ngIf="last" class="breadcrumb-item active">{{breadcrumb.data.title}}</li>
+            </ng-container>
+        </ol>
+    </ol>
 </section>
