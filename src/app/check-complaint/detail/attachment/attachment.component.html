@@ -1,0 +1,64 @@
+<div class="card card-primary mt-5 mb-5">
+    <div class="card-header">
+        <h3 class="card-title">เอกสารแนบ</h3>
+
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2 text-md-right">
+                จำนวนหน้าเอกสาร
+            </div>
+            <div class="col-md-4 form-group">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="ml-5 mr-5">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td class="text-center">File</td>
+                    <td>
+                        <button type="button" class="btn btn-secondary" style="width: 150px">อัปโหลด</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">รายละเอียด</td>
+                    <td><textarea rows="4" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <h5 class="mt-5 ml-5 mb-2" style="font-weight: bold">เอกสารที่ส่งมา</h5>
+        <div class="ml-5 mr-5">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center" style="width: 50px;">ลำดับ</th>
+                    <th>ชื่อไฟล์</th>
+                    <th>รายละเอียด</th>
+                    <th style="width: 50px;"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of [1,1,1,1,1,1,1]; let i = index">
+                    <td class="text-center">{{i + 1}}</td>
+                    <td>test{{i + 1}}.pdf</td>
+                    <td>-</td>
+                    <td class="text-center">
+                        <button class="btn btn-outline-danger mr-2"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
