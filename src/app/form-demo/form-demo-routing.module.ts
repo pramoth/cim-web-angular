@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'general',
     pathMatch: 'full',
-    component: GeneralComponent
+    component: GeneralComponent,
+    data: {name: 'General', header: 'General'}
   },
 ];
 
