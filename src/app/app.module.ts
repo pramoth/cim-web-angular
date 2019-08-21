@@ -8,7 +8,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { MainContentComponent } from './main-content/main-content.component';
-import {BreadcumbComponent} from './breadcumb/breadcumb.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import {BreadcumbComponent} from './breadcumb/breadcumb.component';
     SidebarComponent,
     DashboardComponent,
     PageHeaderComponent,
-    MainContentComponent,
-    BreadcumbComponent
+    MainContentComponent
   ],
   imports: [
     BrowserModule,

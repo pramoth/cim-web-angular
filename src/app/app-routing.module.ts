@@ -11,7 +11,7 @@ const routes: Routes = [
     {
         path: 'dashboard',
         component: MainContentComponent,
-        data: {title: 'Dashboard'}
+        data: {name: 'Dashboard', header: 'Dashboard', iconClass: undefined}
     },
     {
         path: 'form',
