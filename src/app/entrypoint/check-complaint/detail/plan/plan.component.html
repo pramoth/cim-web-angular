@@ -1,0 +1,36 @@
+<div class="row pt-4">
+    <div class="col-auto">
+        <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i>
+            เพิ่มแผนการดำเนินการ</button>
+    </div>
+    <div class="col-auto ml-auto">
+        <button class="btn btn-success">Export Excel</button>
+    </div>
+</div>
+
+<table class="table table-bordered mt-3 mb-5">
+    <thead>
+    <tr>
+        <th style="width: 10px" class="text-center">ลำดับ</th>
+        <th>หัวข้อการดำเนินการ</th>
+        <th>ตั้งแต่วันที่</th>
+        <th>ถึงวันที่</th>
+        <th>หมายเหตุ</th>
+        <th style="width: 220px"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1]; let i = index">
+        <td class="text-center">{{i+1}}</td>
+        <td>ทดสอบ</td>
+        <td>1/1/11</td>
+        <td>1/1/11</td>
+        <td>-</td>
+        <td class="text-center">
+            <button class="btn btn-primary">บันทึก</button>
+            <button class="btn btn-warning ml-2">แก้ไข</button>
+            <button class="btn btn-danger ml-2">ลบ</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

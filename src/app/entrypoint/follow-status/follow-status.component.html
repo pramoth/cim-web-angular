@@ -1,0 +1,152 @@
+﻿<div class="container-fluid">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">ค้นหาเลขดำ</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label class="col-lg-5 col-form-label font-weight-normal">เลขดำ</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-primary btn-block">ค้นหา</button>
+
+                </div>
+                <div class="col-xl-1">
+                    <button type="button" class="btn btn-secondary btn-block">ยกเลิก</button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="numberOfComplaint" class="col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="numberOfComplaint" placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="dateOfComplaint" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน
+                        </label>
+                        <div class="col-lg-7">
+                            <input type="date" class="form-control" id="dateOfComplaint">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="timeOfComplaint"
+                               class="col-lg-5 col-form-label font-weight-normal">เวลา</label>
+                        <div class="col-lg-7">
+                            <input type="time" class="form-control" id="timeOfComplaint">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="numberOfBook"
+                               class="col-lg-5 col-form-label font-weight-normal">เลขที่หนังสือ</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="numberOfBook" placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="date" class="col-lg-5 col-form-label font-weight-normal">
+                            ลงวันที่</label>
+                        <div class="col-lg-7">
+                            <input type="date" class="form-control" id="date">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="nameOfComplaint"
+                               class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="nameOfComplaint" placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="nameOfComplained" class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ถูกร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="nameOfComplained" placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="row">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div>
+                        <h4 class="card-title"> ประวัติสถานะ
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="table text-secondary">
+                            <th>ลำดับ</th>
+                            <th>วันที่เปลี่ยนสถานะ</th>
+                            <th>การกำเนินการ</th>
+                            <th>เลขที่หนังสื่อ</th>
+                            <th>วันออกหนังสือแจ้ง</th>
+                            <th>ประเภทหนังสื่อ</th>
+                            <th>ไฟล์เอกสาร</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1/8/2562</td>
+                                <td>รับเรื่องร้องเรียน</td>
+                                <td></td>
+                                <td>1/8/2562</td>
+                                <td>หนังสือแจ้งการรับเรื่องร้องเรียน</td>
+                                <td style="color: rgb(69, 0, 209)"><a href="#"><u>แสดงไฟล์</u></a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>10/8/2562</td>
+                                <td>ออกเลขดำ</td>
+                                <td></td>
+                                <td>10/8/2562</td>
+                                <td>หนังสือแจ้งการออกเลขดำ</td>
+                                <td style="color: rgb(69, 0, 209)" > <a href="#"><u>แสดงไฟล์</u></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <ngb-pagination [collectionSize]="40" [page]="0"></ngb-pagination>
+        </div>
+
+    </div>
+</div>
