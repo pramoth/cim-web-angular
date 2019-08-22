@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {MainContentComponent} from "./main-content/main-content.component";
 import {EntrypointComponent} from "./entrypoint.component";
+import {RecordComponent} from './record/record.component';
 
 const routes: Routes = [
     {
@@ -16,7 +17,7 @@ const routes: Routes = [
             {
                 path: 'dashboard',
                 component: MainContentComponent,
-                data: {name: 'Dashboard', header: 'Dashboard', iconClass: undefined}
+                data: {name: 'Dashboard', header: 'Dashboard'}
             },
             {
                 path: 'form',
@@ -41,6 +42,11 @@ const routes: Routes = [
             {
                 path: 'sign-complaint',
                 loadChildren: () => import ('./sign-complaint/sign-complaint.module').then(m => m.SignComplaintModule)
+            },
+            {
+                path: 'record',
+                component: RecordComponent,
+                data: {name: 'บันทึกรับแฟ้ม', header: 'บันทึกรับแฟ้ม'}
             }
         ]
     }

@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {EntrypointRoutingModule} from "./entrypoint-routing.module";
 import {CommonModule} from "@angular/common";
+import {RecordComponent} from './record/record.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import {CommonModule} from "@angular/common";
         DashboardComponent,
         PageHeaderComponent,
         MainContentComponent,
-        EntrypointComponent
+        EntrypointComponent,
+        RecordComponent
     ],
     imports: [
         CommonModule,
