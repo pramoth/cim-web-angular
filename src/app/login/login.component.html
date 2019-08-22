@@ -1,20 +1,48 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="login-container">
-      <form (submit)="login()">
-        <div class="form-group">
-          <h5>Please Login</h5>
+<div class="bg">
+    <div class="row system-banner pt-5 pb-3">
+        <div class="offset-5 col-md-5 text-center name">
+            <div>
+                <span>ระบบบริหารจัดการเรื่องร้องเรียน</span><br>
+                <span>สำนักงานผู้ตรวจการแผ่นดิน</span><br>
+                <span>( Complain and investigate Management )</span>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="email" class="form-control" id="username" name="username" aria-describedby="username" placeholder="username">
+        <div class="col-md-2">
+            <img src="../../assets/images/Ombudsman_thailand%20(1).png" alt="logo"  height="180">
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="password">
-        </div>
-        <button type="submit" class="btn btn-primary" >Login</button>
-      </form>
     </div>
-  </div>
+    <div class="row login-wrapper">
+        <div class="offset-6 col-md-6">
+            <div class="login-container">
+                <form (submit)="login()">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label" for="username">บัญชีผู้ใช้งาน</label>
+                        <div class="col-md-8 input-group mb-2 pl-0">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   placeholder="username"
+                                   aria-describedby="username">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label " for="password">รหัสผ่าน</label>
+                        <div class="col-md-8 input-group mb-2 pl-0">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                            </div>
+                            <input type="password" class="form-control" id="password" placeholder="password" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-md-8 pl-0">
+                            <button type="submit" class="btn btn-info btn-block">เข้าสู่ระบบ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
