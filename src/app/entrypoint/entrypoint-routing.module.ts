@@ -37,6 +37,10 @@ const routes: Routes = [
             {
                 path: 'follow-status',
                 loadChildren: () => import ('./follow-status/follow-status.module').then(m => m.FollowStatusModule)
+            },
+            {
+                path: 'sign-complaint',
+                loadChildren: () => import ('./sign-complaint/sign-complaint.module').then(m => m.SignComplaintModule)
             }
         ]
     }
