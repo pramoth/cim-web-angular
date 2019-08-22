@@ -14,7 +14,7 @@ import {ComplaintComponent} from './detail/complaint/complaint.component';
 import {ConcludeComponent} from './detail/conclude/conclude.component';
 import {AttachmentComponent} from './detail/attachment/attachment.component';
 import {ReceiveDocComponent} from './detail/receive-doc/receive-doc.component';
-import {PlanComponent} from "../../check-complaint/detail/plan/plan.component";
+import {PlanComponent} from "./detail/plan/plan.component";
 
 
 @NgModule({
