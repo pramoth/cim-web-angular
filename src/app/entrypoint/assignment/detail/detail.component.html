@@ -64,18 +64,25 @@
                             <div class="form-group row text-right">
                                 <label class="col-sm-2 col-form-label font-weight-normal">เลือกเจ้าหน้าที่</label>
                                 <div class="col-sm">
-                                    <select class="form-control">
-                                        <option>กรุณาเลือก</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
+                                    <select class="custom-select" size="5" multiple>
+
+                                        <option value="A">นาย A</option>
+                                        <option value="B">นาย B</option>
+                                        <option value="C">นาย C</option>
+                                        <option value="D">นาย D</option>
+                                        <option value="E">นาย E</option>
+                                        <option value="F">นาย F</option>
+                                        <option value="G">นาย G</option>
+                                        <option value="H">นาย H</option>
+                                        <option value="I">นาย I</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-center mt-5 mb-5">
+                        <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
+                        <button type="button" class="btn btn-secondary ml-2" style="width: 150px">ยกเลิก</button>
                     </div>
                 </ng-template>
             </ngb-tab>
@@ -225,7 +232,10 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="text-center mt-5 mb-5">
+                        <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
+                        <button type="button" class="btn btn-secondary ml-2" style="width: 150px">ยกเลิก</button>
+                    </div>
                 </ng-template>
             </ngb-tab>
             <ngb-tab title="ข้อมูลผู้ร้อง">

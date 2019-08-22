@@ -1,0 +1,138 @@
+<div class="container-fluid">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">ค้นหาเรื่องร้องเรียน</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="form-group row ">
+                <label class="col col-form-label font-weight-normal text-right">เรื่องร้องเรียนเลขดำที่</label>
+                <div class="col">
+                    <input class="form-control" value="00001/2562">
+                </div>
+                <label class="col col-form-label font-weight-normal text-left">QR Code</label>
+            </div>
+            <div class="form-group row ">
+                <label class="col-4 col-form-label font-weight-normal text-right">เรื่องร้องเรียนแดงเลขที่</label>
+                <div class="col-4">
+                    <input class="form-control" value="00001/2562">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-primary btn-block">ค้นหา</button>
+                </div>
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-secondary btn-block">เคลียร์ข้อความ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group row text-right">
+                        <label for="input1" class="col-2 col-form-label font-weight-normal">ผู้รับผิดชอบ</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input1" value="" disabled>
+                        </div>
+                        <label for="input2" class="col-2 col-form-label font-weight-normal">สำนัก</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input2" value="" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title">ข้อมูลการรับแฟ้ม</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row text-right">
+                        <label for="input3" class="col-3 col-form-label font-weight-normal">วันที่เสนอยุติ</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input3" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row text-right">
+                        <label for="input4" class="col-3 col-form-label font-weight-normal">วันที่รับแฟ้ม
+                            (รองเลขาธิการ)</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input4" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row text-right">
+                        <label for="input5" class="col-3 col-form-label font-weight-normal">วันที่รับแฟ้ม
+                            (เลขาธิการ)</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input5" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row text-right">
+                        <label for="input6" class="col-3 col-form-label font-weight-normal">วันที่รับแฟ้ม
+                            (ผู้ตรวจการแผ่นดิน)</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input6" value="" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title">ผลการวินิจฉัย</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row ">
+                        <div class="col-2">
+                            <input type="radio" name="result-type" value="ปรึกษา"> ส่งกลับแก้ไข
+                        </div>
+                        <label for="input3" class="col-2 col-form-label font-weight-normal text-right">เนื่องจาก</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="input7" value="" >
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <div class="col-2">
+                            <input type="radio" name="result-type" value="ยุติ"> ยุติ
+                        </div>
+                        <label for="input3" class="col-2 col-form-label font-weight-normal text-right">วันที่ลงนาม</label>
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="input8" value="" >
+                        </div>
+                        <label for="input3" class="col-2 col-form-label font-weight-normal text-right">เรื่องร้องเรียนแดงเลขที่</label>
+                        <div class="col-3">
+                            <input type="text" class="form-control" id="input9" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5 mb-5">
+                        <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
+                        <button type="button" class="btn btn-secondary ml-2" style="width: 150px">เคลียร์ข้อความ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

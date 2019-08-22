@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {MainContentComponent} from "./main-content/main-content.component";
 import {EntrypointComponent} from "./entrypoint.component";
+import {RecordComponent} from "./record/record.component";
 
 const routes: Routes = [
     {
@@ -37,7 +38,20 @@ const routes: Routes = [
             {
                 path: 'follow-status',
                 loadChildren: () => import ('./follow-status/follow-status.module').then(m => m.FollowStatusModule)
-            }
+            },
+            {
+                path: 'sign-complaint',
+                loadChildren: () => import ('./sign-complaint/sign-complaint.module').then(m => m.SignComplaintModule)
+            },
+            {
+                path: 'system-job',
+                loadChildren: () => import ('./system-job/system-job.module').then(m => m.SystemJobModule)
+            },
+            {
+                path: 'record',
+                component: RecordComponent,
+                data: {name: 'บันทึกรับแฟ้ม', header: 'บันทึกรับแฟ้ม'}
+            },
         ]
     }
 ];
