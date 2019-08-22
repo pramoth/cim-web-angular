@@ -16,7 +16,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item">
-          <a [routerLink]="['/dashboard']" routerLinkActive="active" class="nav-link">
+          <a [routerLink]="['dashboard']" routerLinkActive="active" class="nav-link">
             <i class="nav-icon fas fa-th fa-spin"></i>
             <p>
               สถิติ Dashboard
@@ -33,36 +33,36 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a [routerLink]="['/receive-complaint/all']" routerLinkActive="active" class="nav-link">
+              <a [routerLink]="['receive-complaint/all']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
                 <p>ค้นหาเรื่องร้องเรียน</p>
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/receive-complaint/walk-in']" routerLinkActive="active" class="nav-link">
+              <a [routerLink]="['receive-complaint/walk-in']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
                 <p>Walk in</p>
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/receive-complaint/call-center']" routerLinkActive="active" class="nav-link">
+              <a [routerLink]="['receive-complaint/call-center']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
                 <p>Call Center</p>
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/receive-complaint/post']" routerLinkActive="active" class="nav-link">
+              <a [routerLink]="['receive-complaint/post']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
                 <p>ไปรษณีย์</p>
               </a>
             </li><li class="nav-item">
-            <a [routerLink]="['/receive-complaint/internet']" routerLinkActive="active" class="nav-link">
+            <a [routerLink]="['receive-complaint/internet']" routerLinkActive="active" class="nav-link">
               <i class="far nav-icon"></i>
               <p>Internet</p>
             </a>
           </li>
             <li class="nav-item">
-              <a [routerLink]="['/receive-complaint/own-motion']" routerLinkActive="active" class="nav-link">
+              <a [routerLink]="['receive-complaint/own-motion']" routerLinkActive="active" class="nav-link">
                 <i class="far nav-icon"></i>
                 <p>ผผ.หยิบยก</p>
               </a>
@@ -78,7 +78,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/check-complaint" routerLinkActive="nav-link active" class="nav-link">
+          <a [routerLink]="['check-complaint']" routerLinkActive="nav-link active" class="nav-link">
             <i class="nav-icon fas fa-check"></i>
             <p>
               ตรวจสอบเรื่องร้องเรียน
@@ -86,7 +86,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/cim/record']" routerLinkActive="active" class="nav-link">
+          <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">
             <i class="nav-icon fas fa-clipboard"></i>
             <p>
               บันทึกรับแฟ้ม
