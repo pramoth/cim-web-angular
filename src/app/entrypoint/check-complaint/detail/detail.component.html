@@ -3,17 +3,17 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="form-group row text-right">
-                    <label for="inputPassword" class="col-lg-5 col-form-label font-weight-normal">เรื่องร้องเรียนเลขดำที่</label>
+                    <label for="input1" class="col-lg-5 col-form-label font-weight-normal">เรื่องร้องเรียนเลขดำที่</label>
                     <div class="col-lg-7">
-                        <input type="text" class="form-control" id="inputPassword" value="ทดสอบ" disabled>
+                        <input type="text" class="form-control" id="input1" value="ทดสอบ" disabled>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group row text-right">
-                    <label for="inputPassword" class="col-lg-4 col-form-label font-weight-normal">ผู้รับผิดชอบ</label>
+                    <label for="input2" class="col-lg-4 col-form-label font-weight-normal">ผู้รับผิดชอบ</label>
                     <div class="col-lg-7">
-                        <input type="text" class="form-control" id="inputPassword" value="ทดสอบ" disabled>
+                        <input type="text" class="form-control" id="input2" value="ทดสอบ" disabled>
                     </div>
                 </div>
             </div>
@@ -21,17 +21,17 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="form-group row text-right">
-                    <label for="inputPassword" class="col-lg-5 col-form-label font-weight-normal">เรื่องร้องเรียนเลขแดงที่</label>
+                    <label for="input3" class="col-lg-5 col-form-label font-weight-normal">เรื่องร้องเรียนเลขแดงที่</label>
                     <div class="col-lg-7">
-                        <input type="text" class="form-control" id="inputPassword" value="ทดสอบ" disabled>
+                        <input type="text" class="form-control" id="input3" value="ทดสอบ" disabled>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group row text-right">
-                    <label for="inputPassword" class="col-lg-4 col-form-label font-weight-normal">สำนัก</label>
+                    <label for="input4" class="col-lg-4 col-form-label font-weight-normal">สำนัก</label>
                     <div class="col-lg-7">
-                        <input type="text" class="form-control" id="inputPassword" value="ทดสอบ" disabled>
+                        <input type="text" class="form-control" id="input4" value="ทดสอบ" disabled>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,14 @@
     </div>
 
     <div class="card mt-5">
-        <ngb-tabset [justify]="'fill'" >
+        <ngb-tabset [justify]="'fill'">
+            <ngb-tab title="แผนการดำเนินการ">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-plan></app-plan>
+                    </div>
+                </ng-template>
+            </ngb-tab>
             <ngb-tab title="รายละเอียดเรื่อง">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
