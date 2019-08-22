@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">ค้นหาเรื่องร้องเรียน</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="form-group row ">
+                <label class="col col-form-label font-weight-normal text-right">เรื่องร้องเรียนเลขดำที่</label>
+                <div class="col">
+                    <input class="form-control" value="00001/2562">
+                </div>
+                <label class="col col-form-label font-weight-normal text-left">QR Code</label>
+            </div>
+            <div class="form-group row ">
+                <label class="col-4 col-form-label font-weight-normal text-right">เรื่องร้องเรียนแดงเลขที่</label>
+                <div class="col-4">
+                    <input class="form-control" value="00001/2562">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-primary btn-block">ค้นหา</button>
+                </div>
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-secondary btn-block">เคลียร์ข้อความ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียน</h3>
+                    <button class="btn btn-primary float-right" >
+                        เพิ่มงานเชิงระบบ
+                    </button>
+                </div>
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ลำดับ</th>
+                            <th>เรื่องร้องเรียนเลขดำที่</th>
+                            <th>เรื่องร้องเรียนแดงเลขที่</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of [1,1,1,1,1];let index = index;">
+                            <td>{{index + 1}}</td>
+                            <td></td>
+                            <td>เรื่องแจ้งที่ {{index + 1}}</td>
+                            <td>
+                                <span class="ml-2">
+                                      <i class="fa fa-edit"></i>
+                                </span>
+                                <span class="ml-2">
+                                <i class="fa fa-trash"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <ngb-pagination [collectionSize]="70" [page]="0"></ngb-pagination>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
