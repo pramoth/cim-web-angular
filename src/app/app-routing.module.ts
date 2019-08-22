@@ -29,6 +29,10 @@ const routes: Routes = [
         path: 'receive-complaint',
         loadChildren: () => import('./receive-complaint/receive-complaint.module').then(m => m.ReceiveComplaintModule)
     },
+    {
+        path: 'follow-status',
+        loadChildren: () => import ('./follow-status/follow-status.module').then(m => m.FollowStatusModule)
+    }
 ];
 
 @NgModule({

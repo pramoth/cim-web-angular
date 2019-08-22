@@ -17,7 +17,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     SidebarComponent,
     DashboardComponent,
     PageHeaderComponent,
-    MainContentComponent
+    MainContentComponent,
   ],
   imports: [
     BrowserModule,
