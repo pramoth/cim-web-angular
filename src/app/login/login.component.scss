@@ -1,13 +1,84 @@
-.container-fluid {
-  padding-top: 15vh !important;
+html, body {
+}
+
+div.bg {
+  background-image: url("../../assets/images/office-3295556_1920.jpg");
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  transition: 0.1s ease-in;
+}
+.system-banner {
+
+}
+
+.system-banner .name {
+  font-size: 2rem; //32px
+  line-height: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.system-banner .name div {
+  margin: auto;
+  vertical-align: middle;
+  display: block;
+}
+
+.login-wrapper img {
+  float: right;
+}
+
+.login-wrapper {
+  padding: 50px 0 50px 0;
+  background-color: rgba(36, 142, 166, .9);
 }
 
 .login-container {
-  float:none;
-  height: 350px;
+  float: none;
   width: 450px;
-  border: 1px solid gray;
-  margin: auto;
   display: block;
   padding: 15px;
+  z-index: 100;
 }
+
+.login-container label {
+  font-weight: 100;
+  color: whitesmoke;
+}
+
+div.input-group-text {
+  //border: unset;
+  color: whitesmoke;
+}
+
+.system-banner {
+  background-color: rgba(151, 151, 151, .9);
+}
+
+div.input-group-text {
+  background: none;
+  border-right: 0;
+}
+
+
+//div.login-container input[type=text], input[type=password] {
+//  /*background-color: rgba(28, 33, 63, .8) !important;*/
+//  /*color: whitesmoke;*/
+//  border: none;
+//  background-color: transparent;
+//  padding-left: 0;
+//}
+//
+//div.login-container input[type=text]:focus, input[type=password]:focus {
+//  border-style: none !important;
+//  outline: 0 none;
+//  box-shadow: none;
+//}
