@@ -9,11 +9,6 @@ import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-com
 
 const routes: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: ''
-    },
-    {
         path: 'all',
         pathMatch: 'full',
         component: AllComponent,
@@ -52,7 +47,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class ReceiveComplaintRoutingModule {
 }
