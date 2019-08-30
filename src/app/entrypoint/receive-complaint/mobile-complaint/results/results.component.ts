@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-results-walk-in',
+  selector: 'app-results-mobile',
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss']
 })
-export class WalkInResultsComponent implements OnInit {
+export class MobileResultsComponent implements OnInit {
 
   constructor() { }
 

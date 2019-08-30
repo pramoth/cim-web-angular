@@ -6,6 +6,7 @@ import {CallCenterComplaintComponent} from './call-center-complaint/call-center-
 import {PostComplaintComponent} from './post-complaint/post-complaint.component';
 import {InternetComplaintComponent} from './internet-complaint/internet-complaint.component';
 import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-complaint.component';
+import {MobileComplaintComponent} from "./mobile-complaint/mobile-complaint.component";
 
 const routes: Routes = [
     {
@@ -37,6 +38,12 @@ const routes: Routes = [
         pathMatch: 'full',
         component: InternetComplaintComponent,
         data: {name: 'รับเรื่องร้องเรียน : Internet', header: 'รับเรื่องร้องเรียน : Internet'}
+    },
+    {
+        path: 'mobile',
+        pathMatch: 'full',
+        component: MobileComplaintComponent,
+        data: {name: 'รับเรื่องร้องเรียน : Mobile', header: 'รับเรื่องร้องเรียน : Mobile'}
     },
     {
         path: 'own-motion',
