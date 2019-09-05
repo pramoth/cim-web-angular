@@ -13,6 +13,7 @@ export class AllComponent implements OnInit {
         {name: 'ไปรษณีย์', route: 'post'},
         {name: 'Call Center', route: 'call-center'},
         {name: 'Internet', route: 'internet'},
+        {name: 'Mobile', route: 'mobile'},
         {name: 'ผผ.หยิบยก', route: 'own-motion'}];
 
     constructor() {
