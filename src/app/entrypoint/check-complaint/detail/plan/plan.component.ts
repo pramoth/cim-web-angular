@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {AddPlanModalComponent} from "./add-plan-modal/add-plan-modal.component";
 
 @Component({
   selector: 'app-plan',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private modalService: NgbModal) {}
   ngOnInit() {
+  }
+
+  open() {
+    const modalRef = this.modalService.open(AddPlanModalComponent,{size: 'lg'});
   }
 
 }
