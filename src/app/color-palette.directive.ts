@@ -1,4 +1,4 @@
-import {AfterViewInit, Directive, ElementRef} from "@angular/core";
+import {AfterViewInit, Directive} from "@angular/core";
 import * as $ from "jquery";
 
 @Directive({
