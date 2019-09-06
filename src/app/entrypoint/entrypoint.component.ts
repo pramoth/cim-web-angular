@@ -10,7 +10,7 @@ export class EntrypointComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    jQuery('.nav-link').tree();
+
   }
 
 }
