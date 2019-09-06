@@ -18,13 +18,13 @@
                         <div class="col-md-2 text-md-right">
                             ช่องทางการรับเรื่อง
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control" [(ngModel)]="complaintType" disabled>
                         </div>
                         <div class="col-md-2 text-md-right">
                             เลขที่รับเรื่อง
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control" disabled>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                         <div class="col-md-2 text-md-right">
                             วันที่แจ้งเรื่อง
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
                             เวลารับเรื่อง
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         <div class="col-md-2 text-md-right">
                             รายละเอียดคำร้องเรียน
                         </div>
-                        <div class="col-md form-group">
+                        <div class="col-md-6 form-group">
                             <textarea rows="4" class="form-control"></textarea>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                         <div class="col-md-2 text-md-right">
                             ประเด็น
                         </div>
-                        <div class="col-md form-group">
+                        <div class="col-md-6 form-group">
                             <textarea rows="4" class="form-control"></textarea>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="col-md-2 text-md-right">
                             เรื่องที่อยู่ในความสนใจของสาธารณะชน
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>ปกติ</option>
                                 <option>อยู่ในความสนใจ</option>
@@ -91,7 +91,7 @@
                         <div class="col-md-2 text-md-right">
                             เกลี่ยงานมาจาก
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>กรุณาเลือก</option>
                                 <option>-</option>
@@ -102,7 +102,7 @@
                         <div class="col-md-2 text-md-right">
                             ส่วนงานที่รับผิดชอบ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>กรุณาเลือก</option>
                                 <option>-</option>
@@ -113,7 +113,7 @@
                         <div class="col-md-2 text-md-right">
                             การเสนอคำร้องเรียน
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>กรุณาเลือก</option>
                                 <option>ไปรษณีย์</option>
@@ -124,7 +124,7 @@
                         <div class="col-md-2 text-md-right">
                             ประเภทการร้องเรียน
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>กรุณาเลือก</option>
                                 <option>ร้องเรียนด้วยหนังสือ</option>
@@ -148,7 +148,7 @@
                     <div class="row">
                         <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="check-system">
                                 <label class="custom-control-label" for="check-system">เรื่องเชิงระบบ</label>
@@ -209,7 +209,7 @@
                     <div class="row">
                         <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="check-hide">
                                 <label class="custom-control-label" for="check-hide">ปกปิดชื่อ</label>
@@ -219,7 +219,7 @@
                     <div class="row" *ngIf="complainantType == 'group'">
                         <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <h5>ชื่อผู้ร้องหลัก</h5>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                         <div class="col-md-2 text-md-right">
                             คำนำหน้าชื่อ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
@@ -241,13 +241,13 @@
                         <div class="col-md-2 text-md-right">
                             ชื่อ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
                             นามสกุล
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                         <div class="row">
                             <div class="col-md-2 text-md-right">
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-2 form-group">
                                 <h5>ชื่อผู้ร้องร่วม</h5>
                             </div>
                         </div>
@@ -263,7 +263,7 @@
                             <div class="col-md-2 text-md-right">
                                 คำนำหน้าชื่อ
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-2 form-group">
                                 <input type="text" class="form-control">
                             </div>
                             <div class="col-md-2 text-md-right">
@@ -277,20 +277,20 @@
                             <div class="col-md-2 text-md-right">
                                 ชื่อ
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-2 form-group">
                                 <input type="text" class="form-control">
                             </div>
                             <div class="col-md-2 text-md-right">
                                 นามสกุล
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-2 form-group">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-2 text-md-right">
                             </div>
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-2 form-group">
                                 <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>
@@ -299,7 +299,7 @@
                         <div class="col-md-2 text-md-right">
                             ประเภทหนังสือ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <select class="form-control">
                                 <option>เลขประจำตัวประชาชน</option>
                                 <option>เลขที่หนังสือเดินทาง</option>
@@ -320,7 +320,7 @@
                         <div class="col-md-2 text-md-right">
                             ลักษณะผู้ร้องเรียน
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -393,7 +393,7 @@
                         <div class="col-md-2 text-md-right">
                             E-mail
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -401,7 +401,7 @@
                         <div class="col-md-2 text-md-right">
                             เบอร์โทรศัพท์
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -412,14 +412,14 @@
                                 <div class="col-md-2">
                                     <h5>ข้อมูลตัวแทน</h5>
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 text-md-right">
                                     คำนำหน้าชื่อ
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                                 <div class="col-md-2 text-md-right">
@@ -433,13 +433,13 @@
                                 <div class="col-md-2 text-md-right">
                                     ชื่อ
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                                 <div class="col-md-2 text-md-right">
                                     นามสกุล
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -447,7 +447,7 @@
                                 <div class="col-md-2 text-md-right">
                                     ประเภทหนังสือ
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <select class="form-control">
                                         <option>เลขประจำตัวประชาชน</option>
                                         <option>เลขที่หนังสือเดินทาง</option>
@@ -468,7 +468,7 @@
                                 <div class="col-md-2 text-md-right">
                                     ลักษณะผู้ร้องเรียน
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -541,7 +541,7 @@
                                 <div class="col-md-2 text-md-right">
                                     E-mail
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -549,7 +549,7 @@
                                 <div class="col-md-2 text-md-right">
                                     เบอร์โทรศัพท์
                                 </div>
-                                <div class="col-md-4 form-group">
+                                <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -604,7 +604,7 @@
                         <div class="col-md-2 text-md-right">
                             คำนำหน้าชื่อ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -612,13 +612,13 @@
                         <div class="col-md-2 text-md-right">
                             ชื่อ
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
                             นามสกุล
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -743,7 +743,7 @@
                     <div class="row">
                         <div class="col-md-3 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="check-end">
                                 <label class="custom-control-label" for="check-end">ยุติโดยไม่ทำหนังสือ</label>
@@ -753,7 +753,7 @@
                     <div class="row">
                         <div class="col-md-3 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
+                        <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="check-report">
                                 <label class="custom-control-label" for="check-report">เรื่องที่เห็นควรลงในรายงานประจำปี</label>
