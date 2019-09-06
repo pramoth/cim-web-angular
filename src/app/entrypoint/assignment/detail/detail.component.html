@@ -95,10 +95,9 @@
                                         <table class="table table-bordered">
                                             <thead>
                                             <tr>
-                                                <th class="text-center">#</th>
+                                                <th class="text-center" style="width: 100px">#</th>
                                                 <th>ชื่อ</th>
-                                                <th class="text-center">ผู้รับผิดชอบหลัก</th>
-                                                <th class="text-center">เจ้าหน้าที่ร่วมงาน</th>
+                                                <th class="text-center" style="width: 100px">ผู้รับผิดชอบหลัก</th>
                                                 <th class="text-center" style="width: 10px">ลบ</th>
                                             </tr>
                                             </thead>
@@ -111,14 +110,6 @@
                                                         <input type="radio" id="radioPrimary{{i}}" name="r1" #radio
                                                                (click)="log(radio.checked)">
                                                         <label for="radioPrimary{{i}}">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" id="checkboxPrimary{{i}}"
-                                                               [disabled]="radio.checked">
-                                                        <label for="checkboxPrimary{{i}}">
                                                         </label>
                                                     </div>
                                                 </td>
