@@ -1,4 +1,3 @@
-
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthenService} from '../../authen.service';
 import {Subscription} from 'rxjs';
@@ -11,7 +10,6 @@ import {Router} from '@angular/router';
 })
 export class SidebarComponent implements OnInit, OnDestroy {
     subscription: Subscription;
-
 
     constructor(private router: Router, private  authenService: AuthenService) {
     }
