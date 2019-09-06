@@ -1,11 +1,10 @@
 <!-- Small boxes (Stat box) -->
 <div class="row">
-    <div class="col-lg-3 col-6">
+    <div class="col-xl-2 col-6">
         <!-- small box -->
         <div class="small-box bg-info">
             <div class="inner">
                 <h3>750</h3>
-
                 <p>เรื่องร้องเรียนทั้งหมด</p>
             </div>
             <div class="icon">
@@ -15,7 +14,22 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-6">
+    <div class="col-xl-2 col-6">
+        <!-- small box -->
+        <div class="small-box bg-primary">
+            <div class="inner">
+                <h3>185</h3>
+
+                <p>เรื่องที่รับร้องเรียน</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-close"></i>
+            </div>
+            <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-xl-2 col-6">
         <!-- small box -->
         <div class="small-box bg-warning">
             <div class="inner">
@@ -30,7 +44,7 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-6">
+    <div class="col-xl-2 col-6">
         <!-- small box -->
         <div class="small-box bg-success">
             <div class="inner">
@@ -45,11 +59,11 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-6">
+    <div class="col-xl-2 col-6">
         <!-- small box -->
-        <div class="small-box bg-danger">
+        <div class="small-box bg-secondary">
             <div class="inner">
-                <h3>185</h3>
+                <h3>112</h3>
 
                 <p>เรื่องที่ไม่รับร้องเรียน</p>
             </div>
@@ -60,8 +74,24 @@
         </div>
     </div>
     <!-- ./col -->
+    <div class="col-xl-2 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>185</h3>
+
+                <p>เรื่องที่เกินระยะเวลา</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-close"></i>
+            </div>
+            <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
 </div>
-<ng-container *ngIf="authenService.hasAnyRole(['INTAKE']) && authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
+<ng-container
+        *ngIf="authenService.hasAnyRole(['INTAKE']) ">
     <!-- ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ สำนักตรวจสอบเรื่องร้องเรียน -->
     <!-- /.row -->
     <div class="row">
@@ -220,7 +250,7 @@
             <!-- small box -->
             <div class="info-box bg-white">
                 <div class="info-box-content">
-                    <span class="info-box-text">เสนอ ผผ. ยุติ (ไม่รับ)</span>
+                    <span class="info-box-text">เสนอ ผผ. (ไม่รับ)</span>
                     <span class="info-box-text">จำนวน</span>
                     <span class="info-box-number">30 รายการ</span>
                     <div class="progress">
@@ -235,7 +265,7 @@
             <!-- small box -->
             <div class="info-box bg-white">
                 <div class="info-box-content">
-                    <span class="info-box-text">เสนอ ผผ. ยุติเรื่องไม่ซับซ้อน</span>
+                    <span class="info-box-text">เสนอ ผผ. ยุติเรื่อง</span>
                     <span class="info-box-text">จำนวน</span>
                     <span class="info-box-number">10 รายการ</span>
                     <div class="progress">
@@ -297,467 +327,425 @@
     </div>
 </ng-container>
 <!-- /.row (main row) -->
-<!-- ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ สำนักสอบสอน -->
-<!-- /.row -->
-<div class="row">
-    <div class="col-sm-6">
-        <br>
-        <h5 class="m-0 text-dark">ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ สำนักสอบสอน</h5>
-        <br>
-    </div>
-</div>
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">รอมอบหมาย</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">60 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 10%;"></div>
-                </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+<ng-container *ngIf="authenService.hasAnyRole(['INVESTIGATION'])">
+    <!-- ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ สำนักสอบสอน -->
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-sm-6">
+            <br>
+            <h5 class="m-0 text-dark">ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ สำนักสอบสอน</h5>
+            <br>
         </div>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">พิจารณารับ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">90 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 15%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">รอมอบหมาย</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">60 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 10%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ขอข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">30 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 5%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">พิจารณารับ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">90 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 15%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ได้รับข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">15 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 2.5%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ขอข้อมูลเพิ่มเติมจากผู้ร้อง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">30 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 5%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ได้รับข้อมูลเพิ่มเติมจากผู้ร้อง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">15 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 2.5%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
 
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ให้หน่วยงานชี้แจง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">120 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 20%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ให้หน่วยงานชี้แจง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">120 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 20%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">หน่วยงานชี้แจงเข้ามา</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">60 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 10%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">หน่วยงานชี้แจงเข้ามา</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">60 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 10%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">แจ้งเตือนครั้งที่ 1</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">50 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 12%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">แจ้งเตือนครั้งที่ 1</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">50 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 12%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">แจ้งเตือนครั้งที่ 2</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">100 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 17%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">แจ้งเตือนครั้งที่ 2</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">100 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 17%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
 
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">เสนอ ผผ. ยุติ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">180 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 30%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">เสนอ ผผ. ยุติ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">180 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ส่งยุติด้วยมาตรา 22(1)</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">20 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 4%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ส่งยุติด้วยมาตรา 22(1)</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">20 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 4%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ส่งยุติด้วยมาตรา 22(2)</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">25 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 4.5%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ส่งยุติด้วยมาตรา 22(2)</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">25 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 4.5%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ส่งยุติด้วยมาตรา 22(3)</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">30 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 5%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ส่งยุติด้วยมาตรา 22(3)</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">30 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 5%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
 
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">เรื่องโต้แย้ง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">75 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 13%;"></div>
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">เรื่องโต้แย้ง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">75 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 13%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">เชิงระบบ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">5 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 1%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">เชิงระบบ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">5 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 1%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">อื่นๆ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">?? รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 50%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">อื่นๆ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">?? รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 50%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">อื่นๆ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">?? รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 50%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">อื่นๆ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">?? รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 50%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
-<!-- /.row (main row) -->
-<!-- /.row -->
-<div class="row">
-    <div class="col-sm-6">
-        <br>
-        <h5 class="m-0 text-dark">ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ ผู้ตรวจการแผ่นดิน</h5>
-        <br>
-    </div>
-</div>
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">รอมอบหมาย</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+    <!-- /.row (main row) -->
+    <!-- /.row -->
+</ng-container>
+<ng-container *ngIf="authenService.hasAnyRole(['OMBUDSMAN'])">
+    <div class="row">
+        <div class="col-sm-6">
+            <br>
+            <h5 class="m-0 text-dark">ขั้นตอนการจัดการเรื่องร้องเรียน (CIM) ในส่วนของ ผู้ตรวจการแผ่นดิน</h5>
+            <br>
         </div>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">พิจารณารับ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">รอมอบหมาย</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ขอข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">พิจารณารับ</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ได้รับข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ขอข้อมูลเพิ่มเติมจากผู้ร้อง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ได้รับข้อมูลเพิ่มเติมจากผู้ร้อง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
 
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ให้หน่วยงานชี้แจง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ให้หน่วยงานชี้แจง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">หน่วยงานชี้แจงเข้ามา</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">หน่วยงานชี้แจงเข้ามา</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">เสนอแนะต่อหน่วยงาน</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">เสนอแนะต่อหน่วยงาน</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ส่งต่อหน่วยงานอื่น</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ส่งต่อหน่วยงานอื่น</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+        <!-- ./col -->
     </div>
-    <!-- ./col -->
-</div>
 
-<!-- Main row -->
-<div class="row">
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">ออกเลขแดง</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
+    <!-- Main row -->
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="info-box bg-white">
+                <div class="info-box-content">
+                    <span class="info-box-text">ออกเลขแดง</span>
+                    <span class="info-box-text">จำนวน</span>
+                    <span class="info-box-number">99 รายการ</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">อื่นๆ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">อื่นๆ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="info-box bg-white">
-            <div class="info-box-content">
-                <span class="info-box-text">อื่นๆ</span>
-                <span class="info-box-text">จำนวน</span>
-                <span class="info-box-number">99 รายการ</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-                <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- ./col -->
-</div>
-<!-- /.row (main row) -->
+    <!-- /.row (main row) -->
+</ng-container>

@@ -58,18 +58,52 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
-                                <button class="btn btn-primary matra mr-3">37 (1)</button>
-                                <button class="btn btn-light matra mr-3">37 (2)</button>
-                                <button class="btn btn-light matra mr-3">37 (3)</button>
-                                <button class="btn btn-light matra mr-3">37 (4)</button>
-                                <button class="btn btn-light matra mr-3">37 (5)</button>
-                                <button class="btn btn-light matra mr-3">37 (6)</button>
-                                <button class="btn btn-light matra mr-3">37 (7)</button>
-                                <button class="btn btn-light matra mr-3">37 (8)</button>
-                                (จะนำเสนอผู้ตรวจการแผ่นดินพิจารณามีมติต่อไป)
+                                <div class="btn-group-toggle" >
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra1}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่เป็นนโยบายที่คณะรัฐมนตรีกำหนด">
+                                        <input type="checkbox" name="options" id="option_1" autocomplete="off" [(ngModel)]="data1.isMatra1">
+                                        37 (1)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3 " placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra2}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่มีการฟ้องร้องเป็นคดีอยู่ในศาล">
+                                        <input type="checkbox" name="options" id="option_2" autocomplete="off" [(ngModel)]="data1.isMatra2">
+                                        37 (2)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra3}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่ไม่อยู่ในหน้าที่และอำนาจของผู้ตรวจการแผ่นดิน">
+                                        <input type="checkbox" name="options" id="option_3" autocomplete="off" [(ngModel)]="data1.isMatra3">
+                                        37 (3)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra4}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่อยู่ในหน้าที่และอำนาจองค์กรอิสระอื่น">
+                                        <input type="checkbox" name="options" id="option_4" autocomplete="off" [(ngModel)]="data1.isMatra4">
+                                        37 (4)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra5}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เป็นการร้องเรียนโดยใช้สิทธิไม่สุจริต">
+                                        <input type="checkbox" name="options" id="option_5" autocomplete="off" [(ngModel)]="data1.isMatra5">
+                                        37 (5)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra6}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่ได้รับการแก้ไขความเดือดร้อนแล้ว">
+                                        <input type="checkbox" name="options" id="option_6" autocomplete="off" [(ngModel)]="data1.isMatra6">
+                                        37 (6)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra7}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องที่ผู้ตรวจการแผ่นดินเคยสรุปผลการพิจารณาแล้ว">
+                                        <input type="checkbox" name="options" id="option_7" autocomplete="off" [(ngModel)]="data1.isMatra7">
+                                        37 (7)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data1.isMatra8}"
+                                            ngbTooltip="เรื่องร้องเรียนที่วินิจฉัยแล้วไม่รับไว้พิจารณาเพราะเข้าหลักเกณฑ์เรื่องอื่นตามมติที่ผู้ตรวจการแผ่นดินกำหนด">
+                                        <input type="checkbox" name="options" id="option_8" autocomplete="off" [(ngModel)]="data1.isMatra8" >
+                                        37 (8)
+                                    </label>
+                                    (จะนำเสนอผู้ตรวจการแผ่นดินพิจารณามีมติต่อไป)
+                                </div>
                             </div>
                         </div>
-                        <div class="row mt-5">
+                        <div class="row mt-5" *ngIf="data1.isMatra8">
                             <div class="col-12">
                                 <fieldset class="form-group">
                                     <div class="row">
@@ -127,61 +161,119 @@
             <div class="col-12">
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">เรื่องร้องเรียนที่ปรากฏในภายหลังว่าเป็นเรื่องร้องเรียนที่มีมีลักษณะตามมาตรา 37 วรรคหนึ่งให้ผู้ตรวจการแผ่นดินสั่งยุติเรื่องตามมาตรา 37 วรรคสอง จึงยุติเรื่อง</h3>
+                        <h3 class="card-title">
+                            เรื่องร้องเรียนที่ปรากฏในภายหลังว่าเป็นเรื่องร้องเรียนที่มีมีลักษณะตามมาตรา 37
+                            วรรคหนึ่งให้ผู้ตรวจการแผ่นดินสั่งยุติเรื่องตามมาตรา 37 วรรคสอง จึงยุติเรื่อง</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
-                                <button class="btn btn-primary matra mr-3">37 (1)</button>
-                                <button class="btn btn-light matra mr-3">37 (2)</button>
-                                <button class="btn btn-light matra mr-3">37 (3)</button>
-                                <button class="btn btn-light matra mr-3">37 (4)</button>
-                                <button class="btn btn-light matra mr-3">37 (5)</button>
-                                <button class="btn btn-light matra mr-3">37 (6)</button>
-                                <button class="btn btn-light matra mr-3">37 (7)</button>
-                                <button class="btn btn-light matra mr-3">37 (8)</button>
-                                (จะนำเสนอผู้ตรวจการแผ่นดินพิจารณามีมติต่อไป)
+                                <div class="btn-group btn-group-toggle">
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra1}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่เป็นนโยบายที่คณะรัฐมนตรีกำหนด" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option1" autocomplete="off" [(ngModel)]="data2.isMatra8">
+                                        37 (1)
+                                    </label>
+
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra2}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่มีการฟ้องร้องเป็นคดีอยู่ในศาล" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option2" autocomplete="off" [(ngModel)]="data2.isMatra2">
+                                        37 (2)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra3}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่ไม่อยู่ในหน้าที่และอำนาจของผู้ตรวจการแผ่นดิน" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option3" autocomplete="off" [(ngModel)]="data2.isMatra3">
+                                        37 (3)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra4}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่อยู่ในหน้าที่และอำนาจองค์กรอิสระอื่น" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option4" autocomplete="off" [(ngModel)]="data2.isMatra4">
+                                        37 (4)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra5}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเป็นการร้องเรียนโดยใช้สิทธิไม่สุจริต" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option5" autocomplete="off" [(ngModel)]="data2.isMatra5">
+                                        37 (5)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra6}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่ได้รับการแก้ไขความเดือดร้อนแล้ว" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option6" autocomplete="off" [(ngModel)]="data2.isMatra6">
+                                        37 (6)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra7}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องที่ผู้ตรวจการแผ่นดินเคยสรุปผลการพิจารณาแล้ว" ngbButtonLabel>
+                                        <input type="checkbox" name="options" ngbButton id="option7" autocomplete="off" [(ngModel)]="data2.isMatra7">
+                                        37 (7)
+                                    </label>
+                                    <label class="btn btn-light matra mr-3" placement="top" style="min-width: 100px;" [ngClass]="{'active':data2.isMatra8}"
+                                           ngbTooltip="เรื่องร้องเรียนที่ปรากฏข้อเท็จจริงว่ามีลักษณะเรื่องอื่นตามมติที่ผู้ตรวจการแผ่นดินกำหนด" ngbButtonLabel>
+                                        <input type="checkbox" name="options1" ngbButton id="option8" autocomplete="off" [(ngModel)]="data2.isMatra8">
+                                        37 (8)
+                                    </label>
+
+                                    (จะนำเสนอผู้ตรวจการแผ่นดินพิจารณามีมติต่อไป)
+                                </div>
                             </div>
                         </div>
-                        <div class="row mt-5">
+                        <div class="row mt-5" *ngIf="data2.isMatra8">
                             <div class="col-12">
                                 <fieldset class="form-group">
                                     <div class="row">
                                         <div class="offset-1 col-sm-10">
                                             <div class="form-check pt-2">
-                                                <input class="form-check-input" type="radio" name="no02" >
+                                                <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    ถอนเรื่อง
+                                                    ถอนเรื่อง/เรื่องที่มีข้อมูลไม่ชัดเจนเพียงพอที่จะรับไว้พิจารณาได้
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    ข้อมูลไม่ชัดเจน
+                                                    ข้อมูลไม่ชัดเจน/เรื่องที่ผู้แจ้งหรือผู้ร้องเรียนไม่มาให้ถ้อยคำ
+                                                    ไม่แสดงพยานหลักฐาน หรือไม่ให้ความร่วมมือ
+                                                    ในการชี้แจงข้อเท็จจริงต่อผู้ตรวจการแผ่นดินภายในระยะเวลาที่กำหนด
+                                                    โดยไม่มีเหตุอันสมควร
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    ไม่แสดงพยานหลักฐานในเวลาที่กำหนด
+                                                    ไม่แสดงพยานหลักฐานในเวลาที่กำหนด/
+                                                    เรื่องที่ผู้แจ้งหรือผู้ร้องเรียนขอถอนเรื่องหรือขอยุติเรื่อง
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    ผู้ร้องเรียนเสียชีวิต และไม่มีทายาท
+                                                    ผู้ร้องเรียนเสียชีวิต
+                                                    และไม่มีทายาท/เรื่องที่ผู้ร้องเรียนตายโดยไม่มีทายาทเข้าแทนที่
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    ผู้ร้องเรียนมิใช่ผู้ได้รับความเดือนร้อนหรือความไม่เป็นธรรม
+                                                    ผู้ร้องเรียนมิใช่ผู้ได้รับความเดือนร้อนหรือความไม่เป็นธรรม/เรื่องที่ผู้ร้องเรียนมิได้เป็นผู้ที่ได้รับความเดือดร้อนหรือความไม่เป็นธรรมโดยตรง
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" type="radio" name="no02">
                                                 <label class="form-check-label">
-                                                    เรื่องร้องเรียนที่วินิจฉัยแล้วปรากฏข้อเท็จจริงว่าไม่มีลักษณะตามมาตรา 22
+                                                    เรื่องร้องเรียนที่วินิจฉัยแล้วปรากฏข้อเท็จจริงว่าไม่มีลักษณะตามมาตรา
+                                                    22/เรื่องที่เกี่ยวข้องกับการพิจารณาพิพากษาอรรถคดีของศาล
+                                                </label>
+                                            </div>
+                                            <div class="form-check pt-2">
+                                                <input class="form-check-input" type="radio" name="no02">
+                                                <label class="form-check-label">
+                                                    เรื่องที่มิได้เป็นไปตามหลักเกณฑ์และเงื่อนไขตามกฎหมายอื่น
+                                                </label>
+                                            </div>
+                                            <div class="form-check pt-2">
+                                                <input class="form-check-input" type="radio" name="no02">
+                                                <label class="form-check-label">
+                                                    เรื่องที่มิได้เป็นไปตามมาตรา 22 (1) (2) (3) หรือ (4)
+                                                    แห่งพระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยผู้ตรวจการแผ่นดิน พ.ศ. 2560
+                                                    แล้วแต่กรณี
                                                 </label>
                                             </div>
                                         </div>
@@ -207,7 +299,8 @@
             <div class="col-12">
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">เรื่องร้องเรียนที่ผู้ตรวจการแผ่นดินมีข้อเสนอแนะต่อหน่วยงานของรัฐตามมาตรา 22</h3>
+                        <h3 class="card-title">เรื่องร้องเรียนที่ผู้ตรวจการแผ่นดินมีข้อเสนอแนะต่อหน่วยงานของรัฐตามมาตรา
+                            22</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -246,7 +339,9 @@
             <div class="col-12">
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">4.1 เรื่องร้องเรียนที่เกี่ยวกับการละเมิดสิทธิมนุษยชนและส่งเรื่องให้คณะกรรมการสิทธิมนุษยชนแห่งชาติตามมาตรา 22 วรรคสาม</h3>
+                        <h3 class="card-title">4.1
+                            เรื่องร้องเรียนที่เกี่ยวกับการละเมิดสิทธิมนุษยชนและส่งเรื่องให้คณะกรรมการสิทธิมนุษยชนแห่งชาติตามมาตรา
+                            22 วรรคสาม</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -260,7 +355,8 @@
             <div class="col-12">
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">4.2 เรื่องร้องเรียนที่ผู้ตรวจการแผ่นดินส่งเรื่องให้หน่วยงานของรัฐตามมาตรา 36</h3>
+                        <h3 class="card-title">4.2 เรื่องร้องเรียนที่ผู้ตรวจการแผ่นดินส่งเรื่องให้หน่วยงานของรัฐตามมาตรา
+                            36</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -314,7 +410,8 @@
             <div class="col-12">
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">เรื่องร้องเรียนที่วินิจฉัยแล้วมีปัญหาเกี่ยวกับความชอบด้วยรัฐธรรมนูญตามมาตราตามมาตรา 23</h3>
+                        <h3 class="card-title">
+                            เรื่องร้องเรียนที่วินิจฉัยแล้วมีปัญหาเกี่ยวกับความชอบด้วยรัฐธรรมนูญตามมาตราตามมาตรา 23</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -353,7 +450,7 @@
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" name="no06" type="radio">
                                                 <label class="form-check-label">
-                                                    พรป.ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ (ตามรัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 มาตรา 213)
+                                                    พรป.ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ (ตามรัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 มาตรา 213) / พรป.ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ มาตรา 45
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
@@ -365,7 +462,7 @@
                                             <div class="form-check pt-2">
                                                 <input class="form-check-input" name="no06" type="radio">
                                                 <label class="form-check-label">
-                                                    รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 มาตรา 51
+                                                    รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 มาตรา 51 / พรป.ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ มาตรา 46 และ 48
                                                 </label>
                                             </div>
                                             <div class="form-check pt-2">
@@ -401,13 +498,24 @@
                                         เลือกชื่อผู้ตรวจการแผ่นดิน
                                     </div>
                                     <div class="col-md-3 form-group">
-                                        <select class="form-control">
-                                            <option selected="" value="กรุณาเลือก">กรุณาเลือก</option>
-                                            <option value="นายบูรณ์ ฐาปนดูรย์">นายบูรณ์ ฐาปนดูรย์</option>
-                                            <option value="พลเอกวิทวัส รชนะนันทน์">พลเอกวิทวัส รชนะนันทน์</option>
-                                            <option value="นายสมศักด์ สุวรรณสุจริต">นายสมศักด์ สุวรรณสุจริต</option>
-                                            <option value="ผู้ตรวจการแผ่นดินทุกท่าน">ผู้ตรวจการแผ่นดินทุกท่าน</option>
-                                        </select>
+                                       <div class="table-responsive">
+                                           <table class="table">
+                                               <tbody>
+                                               <tr>
+                                                   <td scope="row"><input type="checkbox" ></td>
+                                                   <td>นายบูรณ์ ฐาปนดูรย์</td>
+                                               </tr>
+                                               <tr>
+                                                   <td scope="row"><input type="checkbox" ></td>
+                                                   <td>พลเอกวิทวัส รชนะนันทน์</td>
+                                               </tr>
+                                               <tr>
+                                                   <td scope="row"><input type="checkbox" ></td>
+                                                   <td>นายสมศักด์ สุวรรณสุจริต</td>
+                                               </tr>
+                                               </tbody>
+                                           </table>
+                                       </div>
                                     </div>
                                     <div class="col-md-2 text-md-right">
                                         วันที่เสนอผู้ตรวจการแผ่นดิน
