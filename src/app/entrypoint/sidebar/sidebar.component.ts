@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class SidebarComponent implements OnInit, OnDestroy {
     subscription: Subscription;
 
-    constructor(private router: Router, private  authenService: AuthenService) {
+    constructor(private router: Router, public authenService: AuthenService) {
     }
 
     ngOnInit() {

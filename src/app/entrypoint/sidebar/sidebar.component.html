@@ -23,7 +23,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview menu-open" *ngIf="authenService.hasAnyRole(['INTAKE'])">
                     <a class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['INTAKE','INVESTIGATION']) && authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
                     <a class="nav-link" [routerLink]="['assignment']" routerLinkActive="active">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
@@ -86,7 +86,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['INTAKE','INVESTIGATION']) ">
                     <a [routerLink]="['check-complaint']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-check"></i>
                         <p>
@@ -94,7 +94,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
                     <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-clipboard"></i>
                         <p>
@@ -102,7 +102,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"  *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
                     <a class="nav-link" [routerLink]="['sign-complaint']" routerLinkActive="active">
                         <i class="nav-icon fas fa-pen"></i>
                         <p>
@@ -126,7 +126,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['ADMIN'])" >
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-user-cog"></i>
                         <p>

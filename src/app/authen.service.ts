@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {DepartmentEnum, PositionEnum, User} from './model/user';
+import {Authority, DepartmentEnum, PositionEnum, User} from './model/user';
 
 const CURRENT_USER_KEY = 'currentUser';
 
@@ -26,7 +26,8 @@ export class AuthenService {
         let user = new User();
         user.name = 'สมชาย ใจดี';
         user.username = username;
-        user.authorities = [('' + username).toUpperCase() as (DepartmentEnum | PositionEnum)];
+        let roles = ('' + username).toUpperCase().split(',') as Authority[];
+        user.authorities = [...roles];
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
         return this.currentUserSubject;
@@ -36,5 +37,13 @@ export class AuthenService {
         localStorage.removeItem(CURRENT_USER_KEY);
         this.currentUserSubject.next(null);
         return this.currentUserSubject;
+    }
+
+    public hasAnyRole(rolesAllow: Authority[]): boolean {
+        if (this.currentUserSubject.value && this.currentUserSubject.value.authorities) {
+            return this.currentUserSubject.value.authorities.some(e => rolesAllow.some(ex => e === ex));
+        } else {
+            return false;
+        }
     }
 }
