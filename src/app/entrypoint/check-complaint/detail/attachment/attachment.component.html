@@ -45,7 +45,8 @@
                     <th class="text-center" style="width: 50px;">ลำดับ</th>
                     <th>ชื่อไฟล์</th>
                     <th>รายละเอียด</th>
-                    <th style="width: 50px;"></th>
+                    <th class="text-center" style="width: 230px"></th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -53,8 +54,18 @@
                     <td class="text-center">{{i + 1}}</td>
                     <td>test{{i + 1}}.pdf</td>
                     <td>-</td>
-                    <td class="text-center">
-                        <button class="btn btn-outline-danger mr-2"><i class="fa fa-trash"></i></button>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <button type="button" class="btn btn-info" >
+                                    <i class="nav-icon fas fa-edit"></i>ดูรายละเอียด
+                                </button>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-outline-danger"><i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 </tbody>
