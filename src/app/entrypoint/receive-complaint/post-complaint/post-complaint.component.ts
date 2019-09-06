@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComplaintComponent implements OnInit {
 
+  complaintType: string = 'ไปรษณีย์';
+
   constructor() { }
 
   ngOnInit() {

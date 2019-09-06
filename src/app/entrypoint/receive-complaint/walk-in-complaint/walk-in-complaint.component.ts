@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WalkInComplaintComponent implements OnInit {
 
+  complaintType: string = 'Walk In';
+
   constructor() { }
 
   ngOnInit() {
