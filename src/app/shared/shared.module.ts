@@ -9,6 +9,10 @@ import {HideByRolesDirective} from './hide-by-roles.directive';
         ShowByRolesDirective,
         HideByRolesDirective
     ],
+    exports: [
+      ShowByRolesDirective,
+      HideByRolesDirective
+    ],
     imports: [
         CommonModule
     ]

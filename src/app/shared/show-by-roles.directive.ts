@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Input, OnDestroy} from '@angular/core';
+import {Directive, ElementRef, Input, OnDestroy, Renderer2} from '@angular/core';
 import {Authority, User} from '../model/user';
 import {Subscription} from 'rxjs';
 import {AuthenService} from '../authen.service';
@@ -14,7 +14,7 @@ export class ShowByRolesDirective implements OnDestroy {
     @Input('andCondition')
     andCondition: boolean = true;
 
-    constructor(private el: ElementRef, private authenService: AuthenService) {
+    constructor(private el: ElementRef,private render:Renderer2, private authenService: AuthenService) {
         this.subscription = this.authenService.currentUser.subscribe(e => {
             this.userAuthorities = e.authorities;
         });
@@ -23,7 +23,7 @@ export class ShowByRolesDirective implements OnDestroy {
     @Input('showByRoles')
     set hasAnyRole(roles: Authority[]) {
         if (!this.checkHasAnyRole(roles) && this.andCondition) {
-            this.el.nativeElement.style.display = 'none';
+            this.render.setStyle(this.el.nativeElement,'display','none')
         }
     }
 
