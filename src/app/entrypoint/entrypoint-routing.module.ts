@@ -52,6 +52,10 @@ const routes: Routes = [
                 component: RecordComponent,
                 data: {name: 'บันทึกรับแฟ้ม', header: 'บันทึกรับแฟ้ม'}
             },
+            {
+                path: 'report',
+                loadChildren: () => import('./report/report.module').then(m => m.ReportModule)
+            },
         ]
     }
 ];

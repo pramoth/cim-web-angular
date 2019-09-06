@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">รายงานสถิติรายจังหวัด</h3>
+        </div>
+        <div class="card-body p-0">
+            <div #geoChartElement class="w-100 h-100"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">กราฟเปรียบเทียบเรื่องร้องเรียน</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label class="col-3 text-center">ปี</label>
+                                <select class="form-control col">
+                                    <option *ngFor="let item of [1,1,1,1,1,1]; let i = index">{{2550 + i}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label class="col-3 text-center">ถึงปี</label>
+                                <select class="form-control col">
+                                    <option *ngFor="let item of [1,1,1,1,1,1]; let i = index">{{2550 + i}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas baseChart
+                            [datasets]="barChartData1"
+                            [labels]="barChartLabels1"
+                            [options]="barChartOptions"
+                            [legend]="true"
+                            [chartType]="'bar'">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        สถิติเรื่องร้องเรียนที่อยู่ระหว่างการดำเนินการของสำนักงานผู้ตรวจการแผ่นดิน</h3>
+                </div>
+                <div class="card-body">
+                    <canvas baseChart
+                            style="margin: 26px 0 26px 0"
+                            [datasets]="barChartData2"
+                            [labels]="barChartLabels2"
+                            [options]="barChartOptions"
+                            [legend]="true"
+                            [chartType]="'bar'">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">รายงาน</h3>
+        </div>
+        <div class="card-body p-0">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item active" *ngFor="let item of reportList; let i = index">
+                    <a [routerLink]="'.'" class="nav-link">
+                        {{i+1}}. {{item}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
