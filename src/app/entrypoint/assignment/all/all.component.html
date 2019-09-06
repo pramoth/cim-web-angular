@@ -8,19 +8,19 @@
                         <tr>
                             <th>ลำดับ</th>
                             <th>เรื่องร้องเรียนเลขดำที่</th>
-                            <th>ชื่อเรื่องร้องเรียน</th>
+                            <th>ประเด็นเรื่องร้องเรียน</th>
                             <th>ชื่อผู้ร้องเรียน</th>
-                            <th>วันที่รับแจ้ง</th>
+                            <th>วันที่รับเรื่องร้องเรียน</th>
                             <th>มอบหมายงาน</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let item of [1,1,1,1,1];let index = index;">
+                        <tr *ngFor="let item of [100,101,102,103,104];let index = index;">
                             <td>{{index + 1}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>2019 / {{item}}</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>09-09-2019</td>
                             <td>
                                 <button class="btn btn-block btn-info btn-sm" [routerLink]="['detail']">
                                     มอบหมายงาน

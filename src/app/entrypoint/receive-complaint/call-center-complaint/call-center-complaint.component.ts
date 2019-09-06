@@ -9,6 +9,8 @@ export class CallCenterComplaintComponent implements OnInit {
 
   complaintType: string = 'Call Center';
 
+  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+
   constructor() { }
 
   ngOnInit() {

@@ -9,6 +9,8 @@ export class InternetComplaintComponent implements OnInit {
 
   complaintType: string = 'Internet';
 
+  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+
   constructor() { }
 
   ngOnInit() {

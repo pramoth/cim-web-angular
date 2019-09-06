@@ -9,6 +9,8 @@ export class WalkInComplaintComponent implements OnInit {
 
   complaintType: string = 'Walk In';
 
+  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+
   constructor() { }
 
   ngOnInit() {
