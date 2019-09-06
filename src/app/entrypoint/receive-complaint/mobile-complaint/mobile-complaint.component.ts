@@ -9,6 +9,8 @@ export class MobileComplaintComponent implements OnInit {
 
   complaintType: string = 'Mobile Application';
 
+  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+
   constructor() { }
 
   ngOnInit() {

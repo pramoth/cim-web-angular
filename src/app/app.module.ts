@@ -13,7 +13,9 @@ import {NgbDateParser} from "./shared/custom-ngb-date-parser";
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent
+        LoginComponent,
+    ],
+    exports: [
     ],
     imports: [
         BrowserModule,

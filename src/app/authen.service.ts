@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {Authority, DepartmentEnum, PositionEnum, User} from './model/user';
+import {Authority, User} from './model/user';
 
 const CURRENT_USER_KEY = 'currentUser';
 

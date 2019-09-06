@@ -9,6 +9,8 @@ export class PostComplaintComponent implements OnInit {
 
   complaintType: string = 'ไปรษณีย์';
 
+  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+
   constructor() { }
 
   ngOnInit() {
