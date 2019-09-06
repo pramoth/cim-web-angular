@@ -5,6 +5,7 @@ import {AssignmentRoutingModule} from './assignment-routing.module';
 import {AllComponent} from './all/all.component';
 import {NgbPaginationModule, NgbTabsetModule} from "@ng-bootstrap/ng-bootstrap";
 import {DetailComponent} from './detail/detail.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {DetailComponent} from './detail/detail.component';
         CommonModule,
         AssignmentRoutingModule,
         NgbPaginationModule,
-        NgbTabsetModule
+        NgbTabsetModule,
+        FormsModule
     ]
 })
 export class AssignmentModule {

@@ -10,6 +10,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {EntrypointRoutingModule} from "./entrypoint-routing.module";
 import {CommonModule} from "@angular/common";
 import {RecordComponent} from './record/record.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {RecordComponent} from './record/record.component';
         CommonModule,
         FormsModule,
         NgbModule,
-        EntrypointRoutingModule
+        EntrypointRoutingModule,
+        SharedModule
     ],
     providers: []
 })
