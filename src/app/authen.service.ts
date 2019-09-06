@@ -18,6 +18,10 @@ export class AuthenService {
         return this.currentUserSubject.value;
     }
 
+    public get currentUser(): BehaviorSubject<User> {
+        return this.currentUserSubject;
+    }
+
     login(username: string, password: string): BehaviorSubject<User> {
         let user = new User();
         user.name = 'สมชาย ใจดี';

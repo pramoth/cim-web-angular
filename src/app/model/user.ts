@@ -4,7 +4,8 @@ export type PositionEnum =
     | 'DEPUTY_SECRETARY'  /** รองเลขาธิการ **/
     | 'DEPARTMENT_HEAD' /** ผอ **/
     | 'DIVISION_HEAD' /** หัวหน้า **/
-    | 'STAFF' /** พนักงาน **/
+    | 'STAFF'
+/** พนักงาน **/
 export type DepartmentEnum =
     | 'INTAKE'   /** สตร **/
     | 'INVESTIGATION'  /** สส  **/
@@ -13,11 +14,14 @@ export type DepartmentEnum =
     | 'INVESTIGATION_3'  /** สส 3 **/
     | 'INVESTIGATION_4'  /** สส 4 **/
     | 'INVESTIGATION_GOV'  /** สตท **/
-    | 'LEGAL'   /** กฏหมาย **/
+    | 'LEGAL'
+/** กฏหมาย **/
+
+export type Authority = PositionEnum | DepartmentEnum
 
 
 export class User {
     username: string;
     name: string;
-    authorities: (DepartmentEnum | PositionEnum)[]=[];
+    authorities: Authority[] = [];
 }
