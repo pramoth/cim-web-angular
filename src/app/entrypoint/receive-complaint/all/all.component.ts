@@ -8,13 +8,15 @@ import {Component, OnInit} from '@angular/core';
 export class AllComponent implements OnInit {
 
     page = 1;
-    items: { name: string, route: string }[] = [
-        {name: 'Walk In', route: 'walk-in'},
-        {name: 'ไปรษณีย์', route: 'post'},
-        {name: 'Call Center', route: 'call-center'},
-        {name: 'Internet', route: 'internet'},
-        {name: 'Mobile', route: 'mobile'},
-        {name: 'ผผ.หยิบยก', route: 'own-motion'}];
+    items: { name: string, route: string ,complainant:string}[] = [
+        {name: 'Walk In', route: 'walk-in',complainant:'นายสมชาย ใจดี'},
+        {name: 'ไปรษณีย์', route: 'post',complainant:'นายจอห์น วิก'},
+        {name: 'Call Center', route: 'call-center',complainant:'นางสมหญิง ใจเด็ด'},
+        {name: 'Internet', route: 'internet',complainant:'นางสาวมะนาว โซดา'},
+        {name: 'Mobile', route: 'mobile',complainant:'นายรุ่งเรือง จิตใจดี'},
+        {name: 'ผผ.หยิบยก', route: 'own-motion',complainant:'นายเจ้าขุน ทอง'}];
+
+    advanceSearch:boolean=false;
 
     constructor() {
     }
