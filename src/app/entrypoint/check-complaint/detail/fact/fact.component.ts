@@ -1,11 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+
+declare var $: any;
 
 @Component({
     selector: 'app-fact',
     templateUrl: './fact.component.html',
     styleUrls: ['./fact.component.scss']
 })
-export class FactComponent implements OnInit {
+export class FactComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
     texts: string[] = [
         '1. (ประธานผู้ตรวจการแผ่นดิน/ผู้ตรวจการแผ่นดิน)ได้เห็นชอบให้รับเรื่องร้องเรียนของ.................................................................. ไว้พิจารณาเมื่อวันที่.....................................................\n' +
@@ -22,10 +24,39 @@ export class FactComponent implements OnInit {
         'อาศัยอำนาจตามความในมาตรา..........................................................................................แห่งพระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยผู้ตรวจการแผ่นดิน พ.ศ.2560 ผู้ตรวการแผ่นดินจึงมีคำวินิจฉัยให้.......................................................................................และเพื่อมิให้เกิดปัญหาการร้องเรียนในลักษณะดังกล่าวอีก ผู้ตรวจการแผ่นดินจึงมีข้อเสนอแนะให้..................................................................................',
     ];
 
+    settings: any = {
+        height: 300,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', []],
+            ['view', ['fullscreen', 'help']],
+        ],
+
+    };
+
     constructor() {
+
     }
 
     ngOnInit() {
+    }
+
+    ngAfterViewInit(): void {
+    }
+
+    ngAfterViewChecked(): void {
+        $('#processText1').summernote(this.settings);
+        $('#subject2').summernote(this.settings);
+        $('#fact3').summernote(this.settings);
+        $('#law4').summernote(this.settings);
+        $('#opinion5').summernote(this.settings);
+        $('#suggest6').summernote(this.settings);
+        $('#suggestion-result7').summernote(this.settings);
     }
 
 }
