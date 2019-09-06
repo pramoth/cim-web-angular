@@ -26,80 +26,100 @@
             </div>
         </div>
         <div class="card-body">
-
             <div class="row ">
-                <div class="col-md-7 col-lg-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="form-group row text-right">
-                        <label for="numberOfComplaint" class="col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
-                        <div class="col-lg-7">
+                        <label for="numberOfComplaint" class=" col-md-4 col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
+                        <div class="col-lg-6">
                             <input type="text" class="form-control" id="numberOfComplaint" placeholder="Input Filed">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-4">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                </div>
+
+
             </div>
             <div class="row">
-                <div class="col-md-7  col-lg-4">
+                <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
                         <label for="dateOfComplaint" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน
                         </label>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <input type="date" class="form-control" id="dateOfComplaint">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5  col-lg-4">
+                <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
                         <label for="timeOfComplaint"
                                class="col-lg-5 col-form-label font-weight-normal">เวลา</label>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <input type="time" class="form-control" id="timeOfComplaint">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-4">
+                </div>
 
             </div>
             <div class="row">
-                <div class="col-md-7  col-lg-4">
+                <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
                         <label for="numberOfBook"
                                class="col-lg-5 col-form-label font-weight-normal">เลขที่หนังสือ</label>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <input type="text" class="form-control" id="numberOfBook" placeholder="Input Filed">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5  col-lg-4">
+                <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
                         <label for="date" class="col-lg-5 col-form-label font-weight-normal">
                             ลงวันที่</label>
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <input type="date" class="form-control" id="date">
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-4"></div>
 
             </div>
             <div class="row">
-                <div class="col-md-7  col-lg-4">
+                <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
                         <label for="nameOfComplaint"
                                class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ร้องเรียน</label>
-                        <div class="col-lg-7">
-                            <input type="text" class="form-control" id="nameOfComplaint" placeholder="Input Filed">
-                        </div>
-                    </div>
-                        <div class=" col-md-6 col-lg-6">
-                            <button type="button" class="btn btn-primary btn-block">รับแฟ้ม</button>
-                    </div>
-                </div>
-                <div class="col-md-5  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="nameOfComplained" class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ถูกร้องเรียน</label>
-                        <div class="col-lg-7">
-                            <input type="text" class="form-control" id="nameOfComplained" placeholder="Input Filed">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="nameOfComplaint"
+                                   placeholder="Input Filed">
                         </div>
                     </div>
 
+                </div>
+                <div class="col-md-6  col-lg-4">
+                    <div class="form-group row text-right">
+                        <label for="nameOfComplained" class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ถูกร้องเรียน</label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="nameOfComplained"
+                                   placeholder="Input Filed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="offset-lg-5 col-md-2 col-lg-3 btn-lg">
+                            <button type="button" class="btn btn-primary  ">รับแฟ้ม</button>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,7 +133,7 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <table class="table table-hover ">
+                        <table class="table">
                             <thead class="table text-secondary">
                             <th>ลำดับ</th>
                             <th>วันที่เปลี่ยนสถานะ</th>
@@ -121,7 +141,7 @@
                             <th>เลขที่หนังสื่อ</th>
                             <th>วันออกหนังสือแจ้ง</th>
                             <th>ประเภทหนังสื่อ</th>
-                            <th  >ไฟล์เอกสาร</th>
+                            <th>ไฟล์เอกสาร</th>
                             </thead>
                             <tbody>
                             <tr>
@@ -150,8 +170,9 @@
         </div>
 
         <div class="card-footer">
-            <ngb-pagination [collectionSize]="40" [page]="0"></ngb-pagination>
-        </div>
 
+            <ngb-pagination [collectionSize]="70" [page]="0"></ngb-pagination>
+        </div>
     </div>
+
 </div>
