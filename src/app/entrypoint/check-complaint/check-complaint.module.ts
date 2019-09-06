@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {CheckComplaintRoutingModule} from './check-complaint-routing.module';
 import {CheckComplaintComponent} from './check-complaint.component';
-import {NgbPaginationModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDatepickerModule, NgbModalModule, NgbPaginationModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
 import {DetailComponent} from './detail/detail.component';
 import {FactComponent} from './detail/fact/fact.component';
 import {AboutComponent} from './detail/about/about.component';
@@ -15,6 +15,8 @@ import {ConcludeComponent} from './detail/conclude/conclude.component';
 import {AttachmentComponent} from './detail/attachment/attachment.component';
 import {ReceiveDocComponent} from './detail/receive-doc/receive-doc.component';
 import {PlanComponent} from "./detail/plan/plan.component";
+import {AddPlanModalComponent} from './detail/plan/add-plan-modal/add-plan-modal.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -30,13 +32,20 @@ import {PlanComponent} from "./detail/plan/plan.component";
         AttachmentComponent,
         ReceiveDocComponent,
         PlanComponent,
-        ConcludeComponent
+        ConcludeComponent,
+        AddPlanModalComponent
     ],
     imports: [
         CommonModule,
         CheckComplaintRoutingModule,
         NgbPaginationModule,
-        NgbTabsetModule
+        NgbTabsetModule,
+        NgbModalModule,
+        NgbDatepickerModule,
+        FormsModule
+    ],
+    entryComponents: [
+        AddPlanModalComponent
     ]
 })
 export class CheckComplaintModule {
