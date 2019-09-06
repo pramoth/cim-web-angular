@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 
 @Component({
     selector: 'app-record',
@@ -15,11 +18,22 @@ export class RecordComponent implements OnInit {
     isTrade: boolean = false
     checkAllTrades: boolean = false
 
-    trade = [
-        {label: '1', selected: false},
-        {label: '2', selected: false},
-        {label: '3', selected: false},
-        {label: '4', selected: false}
+    trade = [{
+        label: '1',
+        selected: false
+    },
+        {
+            label: '2',
+            selected: false
+        },
+        {
+            label: '3',
+            selected: false
+        },
+        {
+            label: '4',
+            selected: false
+        }
     ];
 
     constructor() {
@@ -50,4 +64,3 @@ export class RecordComponent implements OnInit {
         this.trade.forEach(item => item.selected = checked);
     }
 }
-
