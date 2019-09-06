@@ -19,9 +19,16 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div *ngIf="!advanceSearch">
                 <a style="float:right;color: #007bff;cursor: pointer;" (click)="advanceSearch = !advanceSearch">
+                    <i class="fas fa-search-plus"></i>
                     Advance Search
+                </a>
+            </div>
+            <div *ngIf="advanceSearch">
+                <a style="float:right;color: #007bff;cursor: pointer;" (click)="advanceSearch = !advanceSearch">
+                    <i class="fa fa-search"></i>
+                    Fulltext Search
                 </a>
             </div>
         </div>
@@ -194,18 +201,18 @@
             </div>
 
         </div>
-        <div class="card-footer text-center" *ngIf="advanceSearch">
+        <div class="card-footer text-center">
             <div class="row justify-content-center">
                 <div class="col-5 col-xl-2">
-                    <button type="button" class="btn btn-primary btn-block">ค้นหา</button>
+                    <button type="button" class="btn btn-primary btn-block" (click)="result = {}">ค้นหา</button>
                 </div>
                 <div class="col-5 col-xl-2">
-                    <button type="button" class="btn btn-secondary btn-block">เคลียร์ข้อความ</button>
+                    <button type="button" class="btn btn-secondary btn-block" (click)="result = undefined">เคลียร์ข้อความ</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="result">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
