@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var jQuery: any;
 @Component({
   selector: 'app-entrypoint',
   templateUrl: './entrypoint.component.html',
@@ -10,6 +10,7 @@ export class EntrypointComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    jQuery('.nav-link').tree();
   }
 
 }

@@ -191,17 +191,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let item of ['Walk In','ไปรษณีย์','Call Center','Internet','ผผ.หยิบยก','ผผ.หยิบยก','Walk In','ไปรษณีย์','Call Center','Internet']; let i = index">
+                        <tr *ngFor="let item of items; let i = index">
                             <td>{{i + 1}}</td>
                             <td>001/2558</td>
                             <td>-</td>
                             <td>เรื่องแจ้งที่ {{i + 1}}</td>
                             <td>-</td>
-                            <td>{{item}}</td>
+                            <td>{{item.name}}</td>
                             <td>-</td>
                             <td>รอรับเรื่อง</td>
                             <td>
-                                <button type="button" class="btn btn-block btn-info btn-sm">ดูรายละเอียด</button>
+                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['..',item.route]">
+                                    รายละเอียด
+                                </button>
                             </td>
                             <td>
                                 <button type="button" class="btn btn-block btn-info btn-sm">พิมพ์ปก</button>
