@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternetComplaintComponent implements OnInit {
 
+  complaintType: string = 'Internet';
+
   constructor() { }
 
   ngOnInit() {

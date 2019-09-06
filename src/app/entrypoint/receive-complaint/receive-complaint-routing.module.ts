@@ -43,13 +43,13 @@ const routes: Routes = [
         path: 'mobile',
         pathMatch: 'full',
         component: MobileComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน : Mobile', header: 'รับเรื่องร้องเรียน : Mobile'}
+        data: {name: 'รับเรื่องร้องเรียน : Mobile Application', header: 'รับเรื่องร้องเรียน : Mobile Application'}
     },
     {
         path: 'own-motion',
         pathMatch: 'full',
         component: OwnMotionComplaintComponent,
-        data: {name: 'รับเรื่องร้องเรียน : ผผ.หยิบยก', header: 'รับเรื่องร้องเรียน : ผผ.หยิบยก'}
+        data: {name: 'รับเรื่องร้องเรียน : Own Motion', header: 'รับเรื่องร้องเรียน : Own Motion'}
     },
 ];
 

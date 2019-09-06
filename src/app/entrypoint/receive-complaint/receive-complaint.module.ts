@@ -9,6 +9,7 @@ import {InternetComplaintComponent} from './internet-complaint/internet-complain
 import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-complaint.component';
 import {NgbPaginationModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
 import {MobileComplaintComponent} from './mobile-complaint/mobile-complaint.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {MobileComplaintComponent} from './mobile-complaint/mobile-complaint.comp
         MobileComplaintComponent],
     imports: [
         CommonModule,
+        FormsModule,
         ReceiveComplaintRoutingModule,
         NgbPaginationModule,
         NgbTabsetModule

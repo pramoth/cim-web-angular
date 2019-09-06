@@ -1,3 +1,9 @@
 button.matra {
   min-width: 100px;
 }
+
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}

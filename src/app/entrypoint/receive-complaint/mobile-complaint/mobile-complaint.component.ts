@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileComplaintComponent implements OnInit {
 
+  complaintType: string = 'Mobile Application';
+
   constructor() { }
 
   ngOnInit() {

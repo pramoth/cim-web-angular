@@ -19,6 +19,12 @@
                             ช่องทางการรับเรื่อง
                         </div>
                         <div class="col-md-4 form-group">
+                            <input type="text" class="form-control" [(ngModel)]="complaintType" disabled>
+                        </div>
+                        <div class="col-md-2 text-md-right">
+                            เลขที่อ้างอิง
+                        </div>
+                        <div class="col-md-4 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -30,7 +36,7 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
-                            เวลา
+                            เวลารับเรื่อง
                         </div>
                         <div class="col-md-4 form-group">
                             <input type="text" class="form-control">
@@ -54,6 +60,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
+                            ประเด็น
+                        </div>
+                        <div class="col-md form-group">
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
                             เรื่องที่อยู่ในความสนใจ
                         </div>
                         <div class="col-md-4 form-group">
@@ -61,6 +75,16 @@
                                 <option>ปกติ</option>
                                 <option>อยู่ในความสนใจ</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <div class="form-group custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check-system">
+                                <label class="custom-control-label" for="check-system">เรื่องเชิงระบบ</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,6 +100,46 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            ประเภทผู้ร้องเรียน
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <div class="form-group custom-radio">
+                                <input type="radio" name="Complainant-type" class="custom-control-input" id="radio1">
+                                <label class="custom-control-label" for="radio1">ชาวไทย</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group custom-radio">
+                                <input type="radio" name="Complainant-type" class="custom-control-input" id="radio2">
+                                <label class="custom-control-label" for="radio2">ชาวต่างชาติ</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group custom-radio">
+                                <input type="radio" name="Complainant-type" class="custom-control-input" id="radio3">
+                                <label class="custom-control-label" for="radio3">ตัวแทน</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group custom-radio">
+                                <input type="radio" name="Complainant-type" class="custom-control-input" id="radio4">
+                                <label class="custom-control-label" for="radio4">หมู่คณะ
+                                    (สามารถเพิ่มผู้ร้องได้หลายคน)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <div class="form-group custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check">
+                                <label class="custom-control-label" for="check">ปกปิดชื่อ</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
                             คำนำหน้าชื่อ
@@ -120,6 +184,14 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            ลักษณะผู้ร้องเรียน
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-2 text-md-right mt-2 mb-4">
                             ที่อยู่/ที่ติดต่อ
                         </div>
@@ -138,7 +210,7 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
-                            หมู่
+                            หมู่ที่
                         </div>
                         <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
@@ -181,6 +253,22 @@
                             รหัสไปรษณีย์
                         </div>
                         <div class="col-md-2 form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            E-mail
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            เบอร์โทรศัพท์
+                        </div>
+                        <div class="col-md-4 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -270,7 +358,7 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 text-md-right">
-                            หมู่
+                            หมู่ที่
                         </div>
                         <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
@@ -317,6 +405,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
+                            เพิ่มหน่วยงาน / ผู้ถูกร้องเรียน
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="card card-primary mt-5">
@@ -331,54 +427,69 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            กรณียื่นโดย Walk In
+                            กรณียื่นโดย Mobile Application
                         </div>
                         <div class="col-md-4 form-group">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-md-right">
+                        <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
-                            <input type="radio" name="result-type" value="ปรึกษา"> ปรึกษา
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 text-md-right">
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="radio" name="result-type" value="จะยื่นเรื่องเข้ามา"> จะยื่นเรื่องเข้ามา
+                        <div class="col-md form-group custom-radio">
+                            <input type="radio" name="result-type" class="custom-control-input" id="result-type1">
+                            <label class="custom-control-label" for="result-type1">ส่งคำร้องซ้ำ</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-md-right">
+                        <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
-                            <input type="radio" name="result-type" value="รับเป็นเรื่องร้องเรียน">
-                            รับเป็นเรื่องร้องเรียน
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 text-md-right">
+                        <div class="col-md-3 form-group custom-radio">
+                            <input type="radio" name="result-type" class="custom-control-input" id="result-type2">
+                            <label class="custom-control-label" for="result-type2">รับเป็นข้อมูลเพิ่มเติมของเรื่องร้องเรียน เลขที่</label>
                         </div>
                         <div class="col-md-2 form-group">
-                            <input type="radio" name="result-type" value="ไม่อยู่ในอำนาจเนื่องจาก">
-                            ไม่อยู่ในอำนาจเนื่องจาก
+                            <input type="text" class="form-control">
                         </div>
-                        <div class="col-md-4 form-group">
-                            <textarea rows="4" class="form-control"></textarea>
+                        <div class="col-md form-group">
+                            (กรณีผู้ร้องส่งข้อมูลเพิ่มเติมมาในลักษณะเรื่องร้องเรียนใหม่)
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-md-right">
-                            รหัสมาตราตาม พรป.
+                        <div class="col-md-2 text-md-right">
                         </div>
-                        <div class="col-md-4 form-group">
-                            <select class="form-control">
-                                <option>กรุณาเลือก</option>
-                                <option>ไม่รับตามมาตรา 28(1)</option>
-                                <option>ไม่รับตามมาตรา 28(2)</option>
-                            </select>
+                        <div class="col-md-4 form-group custom-radio">
+                            <input type="radio" name="result-type" class="custom-control-input" id="result-type3">
+                            <label class="custom-control-label" for="result-type3">รับเป็นคำร้องเพิ่มเติมรวมพิจารณาของเรื่องร้องเรียน เลขที่</label>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md form-group">
+                            (กรณีผู้ร้องส่งคำร้องที่มีประเด็นเพิ่มเติม มาในลักษณะเป็นเรื่องร้องเรียนใหม่)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                        </div>
+                        <div class="col-md form-group custom-radio">
+                            <input type="radio" name="result-type" class="custom-control-input" id="result-type4">
+                            <label class="custom-control-label" for="result-type4">รับเป็นการร้องเรียนเจ้าหน้าที่สำนักงานผู้ตรวจการแผ่นดิน</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                        </div>
+                        <div class="col-md form-group custom-radio">
+                            <input type="radio" name="result-type" class="custom-control-input" id="result-type5">
+                            <label class="custom-control-label" for="result-type5">รับเป็นเรื่องร้องเรียน</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            จำนวนเอกสาร
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <input type="text" class="form-control">
                         </div>
                     </div>
                 </div>

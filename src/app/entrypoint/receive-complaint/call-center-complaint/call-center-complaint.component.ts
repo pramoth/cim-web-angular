@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CallCenterComplaintComponent implements OnInit {
 
+  complaintType: string = 'Call Center';
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,68 @@
+<div class="modal-header">
+    <h4 class="modal-title">เพิ่มแผนการดำเนินการ</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-3">
+            หัวข้อการดำเนินการ
+        </div>
+        <div class="col-md form-group">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            จำนวนวัน
+        </div>
+        <div class="col-md form-group">
+            <input type="number" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            ตั้งแต่วันที่
+        </div>
+        <div class="col-md">
+            <div class="input-group">
+                <input class="form-control" id="start-date" placeholder="วว/ดด/ปปปป"
+                       name="dp" ngbDatepicker #startDate="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary " (click)="startDate.toggle()" type="button">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 text-md-center">
+            ถึงวันที่
+        </div>
+        <div class="col-md">
+            <div class="input-group">
+                <input class="form-control" id="end-date" placeholder="วว/ดด/ปปปป"
+                       name="dp" ngbDatepicker #endDate="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary " (click)="endDate.toggle()" type="button">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer text-center d-block">
+    <div class="m-3">
+        <button class="btn btn-primary" style="width: 150px" type="button" (click)="activeModal.close('Close click')">
+            บันทึก
+        </button>
+        <button class="btn btn-secondary ml-2" style="width: 150px" type="button"
+                (click)="activeModal.close('Close click')">ยกเลิก
+        </button>
+    </div>
+</div>
