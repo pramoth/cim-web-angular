@@ -61,38 +61,76 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <div class="form-group row text-right">
-                                <label class="col-sm-2 col-form-label font-weight-normal">ผู้รับผิดชอบหลัก</label>
-                                <div class="col-sm">
-                                    <select class="form-control">
-                                        <option>กรุณาเลือก</option>
-                                        <option value="A">นาย A</option>
-                                        <option value="B">นาย B</option>
-                                        <option value="C">นาย C</option>
-                                        <option value="D">นาย D</option>
-                                        <option value="E">นาย E</option>
-                                        <option value="F">นาย F</option>
-                                        <option value="G">นาย G</option>
-                                        <option value="H">นาย H</option>
-                                        <option value="I">นาย I</option>
-                                    </select>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="table-responsive" style="height: 366px;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>ชื่อ - สกุล</th>
+                                                <th>จำนวนงานที่กำลังดำเนินการ</th>
+                                                <th>จำนวนงานทั้งหมด</th>
+                                                <th class="text-center" style="width: 10px">เลือก</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+                                                <td class="text-center">{{i + 1}}</td>
+                                                <td>สมชาย ใจดี</td>
+                                                <td>{{10 | number}}</td>
+                                                <td>{{20 | number}}</td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-primary">
+                                                        <i class="fas fa-angle-double-right"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row text-right">
-                                <label class="col-sm-2 col-form-label font-weight-normal">เลือกเจ้าหน้าที่</label>
-                                <div class="col-sm">
-                                    <select class="custom-select" size="5" multiple>
-
-                                        <option value="A">นาย A</option>
-                                        <option value="B">นาย B</option>
-                                        <option value="C">นาย C</option>
-                                        <option value="D">นาย D</option>
-                                        <option value="E">นาย E</option>
-                                        <option value="F">นาย F</option>
-                                        <option value="G">นาย G</option>
-                                        <option value="H">นาย H</option>
-                                        <option value="I">นาย I</option>
-                                    </select>
+                                <div class="col">
+                                    <div class="table-responsive" style="height: 366px;">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>ชื่อ</th>
+                                                <th class="text-center">ผู้รับผิดชอบหลัก</th>
+                                                <th class="text-center">เจ้าหน้าที่ร่วมงาน</th>
+                                                <th class="text-center" style="width: 10px">ลบ</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+                                                <td class="text-center">{{i + 1}}</td>
+                                                <td>สมชาย ใจดี</td>
+                                                <td class="text-center">
+                                                    <div class="icheck-primary d-inline">
+                                                        <input type="radio" id="radioPrimary{{i}}" name="r1" #radio
+                                                               (click)="log(radio.checked)">
+                                                        <label for="radioPrimary{{i}}">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="icheck-primary d-inline">
+                                                        <input type="checkbox" id="checkboxPrimary{{i}}"
+                                                               [disabled]="radio.checked">
+                                                        <label for="checkboxPrimary{{i}}">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +181,8 @@
                                 </div>
                             </div>
                             <div class="form-group row text-right">
-                                <label for="input6" class="col-3 col-form-label font-weight-normal">เลขที่หนังสือ</label>
+                                <label for="input6"
+                                       class="col-3 col-form-label font-weight-normal">เลขที่หนังสือ</label>
                                 <div class="col">
                                     <textarea id="input6" class="form-control"></textarea>
                                 </div>
@@ -164,13 +203,16 @@
                                 </div>
                             </div>
                             <div class="form-group row text-right">
-                                <label for="input9" class="col-3 col-form-label font-weight-normal">ส่วนงานที่รับผิดชอบ</label>
+                                <label for="input9"
+                                       class="col-3 col-form-label font-weight-normal">ส่วนงานที่รับผิดชอบ</label>
                                 <div class="col-3">
-                                    <input type="text" class="form-control" id="input9" value="สำนักตรวจสอบเรื่องร้องเรียน" disabled>
+                                    <input type="text" class="form-control" id="input9"
+                                           value="สำนักตรวจสอบเรื่องร้องเรียน" disabled>
                                 </div>
                             </div>
                             <div class="form-group row text-right">
-                                <label for="input10" class="col-3 col-form-label font-weight-normal">เกลี่ยงานมาจาก</label>
+                                <label for="input10"
+                                       class="col-3 col-form-label font-weight-normal">เกลี่ยงานมาจาก</label>
                                 <div class="col-3">
                                     <select id="input10" class="form-control">
                                         <option>-</option>
@@ -191,7 +233,8 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group row text-right">
-                                <label for="input11" class="col-3 col-form-label font-weight-normal">การเสนอคำร้องเรียน</label>
+                                <label for="input11"
+                                       class="col-3 col-form-label font-weight-normal">การเสนอคำร้องเรียน</label>
                                 <div class="col-3">
                                     <select id="input11" class="form-control">
                                         <option>ไปรษณีย์</option>
@@ -200,7 +243,8 @@
                                 </div>
                             </div>
                             <div class="form-group row text-right">
-                                <label for="input12" class="col-3 col-form-label font-weight-normal">ประเภทการร้องเรียน</label>
+                                <label for="input12"
+                                       class="col-3 col-form-label font-weight-normal">ประเภทการร้องเรียน</label>
                                 <div class="col-3">
                                     <select id="input12" class="form-control">
                                         <option>ร้องเรียนด้วยหนังสือ</option>
@@ -209,7 +253,8 @@
                                 </div>
                             </div>
                             <div class="form-group row text-right">
-                                <label for="input13" class="col-3 col-form-label font-weight-normal">ลักษณะเรื่องร้องเรียน  **</label>
+                                <label for="input13" class="col-3 col-form-label font-weight-normal">ลักษณะเรื่องร้องเรียน
+                                    **</label>
                                 <div class="col">
                                     <select id="input13" class="form-control">
                                         <option>ร้องเรียนเกี่ยวกับปัญหาความชอบธรรมด้วยรัฐธรรมนูญ</option>
@@ -230,7 +275,8 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group row text-right">
-                                <label for="input14" class="col-3 col-form-label font-weight-normal">การดำเนินการ</label>
+                                <label for="input14"
+                                       class="col-3 col-form-label font-weight-normal">การดำเนินการ</label>
                                 <div class="col">
                                     <textarea id="input14" class="form-control"></textarea>
                                 </div>
@@ -244,7 +290,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <input type="text" class="form-control" id="input16" value="" >
+                                    <input type="text" class="form-control" id="input16" value="">
                                 </div>
                             </div>
                         </div>
@@ -261,7 +307,8 @@
                         <div class="card-header">
                             <h3 class="card-title">ข้อมูลผู้ร้อง</h3>
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -382,14 +429,15 @@
                         <div class="card-header">
                             <h3 class="card-title">ที่อยู่ในการส่งเอกสาร</h3>
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2 form-group">
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" >
+                                        <input type="checkbox" class="form-check-input">
                                         <label class="form-check-label">ที่อยู่เดียวกัน กับข้อมูลผู้ร้อง</label>
                                     </div>
                                 </div>
@@ -497,7 +545,8 @@
                         <div class="card-header">
                             <h3 class="card-title">หน่วยงาน/ผู้ถูกร้องเรียน</h3>
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -648,14 +697,15 @@
                         <div class="card-header">
                             <h3 class="card-title">ที่อยู่ในการส่งเอกสาร</h3>
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-2 form-group">
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" >
+                                        <input type="checkbox" class="form-check-input">
                                         <label class="form-check-label">ที่อยู่เดียวกัน กับข้อมูลผู้ร้อง</label>
                                     </div>
                                 </div>
@@ -758,7 +808,8 @@
                             <h3 class="card-title">เอกสารแนบ</h3>
 
                             <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -776,7 +827,9 @@
                                     <tr>
                                         <td class="text-center">File</td>
                                         <td>
-                                            <button type="button" class="btn btn-secondary" style="width: 150px">อัปโหลด</button>
+                                            <button type="button" class="btn btn-secondary" style="width: 150px">
+                                                อัปโหลด
+                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -786,7 +839,8 @@
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
+                                            <button type="button" class="btn btn-primary" style="width: 150px">บันทึก
+                                            </button>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -809,7 +863,8 @@
                                         <td>test{{i + 1}}.pdf</td>
                                         <td>-</td>
                                         <td class="text-center">
-                                            <button class="btn btn-outline-danger mr-2"><i class="fa fa-trash"></i></button>
+                                            <button class="btn btn-outline-danger mr-2"><i class="fa fa-trash"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                     </tbody>
