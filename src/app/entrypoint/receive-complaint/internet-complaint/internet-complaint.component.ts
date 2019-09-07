@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternetComplaintComponent implements OnInit {
 
-  complaintType: string = 'Internet';
-
-  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+  page = 1;
+  items: { route: string, complainant: string }[] = [
+    { route: 'internet', complainant: 'นายสมชาย ใจดี'},
+    { route: 'internet', complainant: 'นายจอห์น วิก'},
+    { route: 'internet', complainant: 'นางสมหญิง ใจเด็ด'},
+    { route: 'internet', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'internet', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'internet', complainant: 'นายเจ้าขุน ทอง'}];
 
   constructor() { }
 

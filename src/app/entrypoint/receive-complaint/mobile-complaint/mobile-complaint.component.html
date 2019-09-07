@@ -1,721 +1,96 @@
 <div class="container-fluid">
-    <div class="card mt-1">
-        <div class="card-header">
-            <h3 class="card-title">รายละเอียดเรื่องร้องเรียน</h3>
-        </div>
-        <div class="card-body">
-            <div class="card card-primary mt-5">
+    <!--<div class="row" *ngIf="result">-->
+    <!--<div class="col-12">-->
+    <!--<div class="card">-->
+    <!--<div class="card-header">-->
+    <!--<h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียน Call Center</h3>-->
+    <!--</div>-->
+    <!--<div class="card-body  p-0">-->
+    <!--<ng-container *ngFor="let item of items;let i = index;" >-->
+    <!--<div class="col-12 " style="padding: .75rem 1.25rem;" [ngClass]="{'mt-4': i != 0}">-->
+    <!--<div style="color: #1a0dab;font-size: 20px;    cursor: pointer;">-->
+    <!--เรื่องแจ้งที่ 1-->
+    <!--</div>-->
+    <!--<div class="block-ellipsis">-->
+    <!--<span style="color: #000;font-size: 16px;">มี.ค. 9, 2562</span>-->
+    <!--<span style="color: #000;font-size: 16px;"> - เลขดำที่ 00{{i+1}}/2562</span>-->
+    <!--<span style="color: #000;font-size: 16px;"> : {{item?.complainant}}</span>-->
+    <!--<span class="badge badge-pill badge-primary ml-1">รอรับเรื่อง</span>-->
+    <!--<span class="badge badge-pill badge-secondary ml-1">{{item?.name}}</span>-->
+    <!--<span style="color: #6b6b6b;">-->
+    <!-- - มีคนนำวัคซีนอหิวาห์ไก่มาขาย ทั้งที่ซื้อที่ปศุสัตว์ราคา 30 บาทแต่นำมาขาย 200 บาท ในเฟสบุ๊ค-->
+    <!--ชื่อเฟส facebook "ฟามาโกร วัคซีนป้องกันโรคสัตว์ปีก"-->
+
+    <!--เรื่องนี้เกิดมา 2 ปีแล้ว ผมตามมานานมาก-->
+
+    <!--อย่าให้ซ้ำรอย วัคซีน พิษสุนัชบ้านะครับ-->
+
+    <!--ผมไม่เห็นด้วย เพราะผมปรึกษานายสัตวแพทย์จังหวัดแล้ว พบว่า เวลาไปซื้อไม่มีวัคซีนให้เกษตรกร แต่ทำไม มีขายในเฟสบุ๊ค ช่วยตรวจสอบหน่วยงานนี้ด้วยครับ-->
+
+    <!--ประชาชนข้องใจครับ-->
+
+    <!--ผมไม่ได้มีส่วนได้ส่วนเสียแต่ไม่เข้าใจว่า วัคซีน 30 บาท ทำไมมาขาย 200 บาท ทั้งที่เขียนไว้ว่าห้ามจำหน่าย-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--<div>-->
+    <!--<button class="btn btn-info btn-sm" [routerLink]="['..','walk-in']">-->
+    <!--รายละเอียด-->
+    <!--</button>-->
+    <!--<button class="btn btn-info btn-sm ml-2" [routerLink]="['..',item.route]">-->
+    <!--พิมพ์ปก-->
+    <!--</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</ng-container>-->
+    <!--</div>-->
+    <!--<div class="card-footer">-->
+    <!--<button class="previous-btn">« Previous</button>-->
+    <!--<button class="next-btn">Next »</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">กรอกข้อมูลเรื่องร้องเรียน</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
-                        </button>
-                    </div>
+                    <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียน Mobile Application</h3>
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ช่องทางการรับเรื่อง
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control" [(ngModel)]="complaintType" disabled>
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            เลขที่อ้างอิง
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            วันที่รับเรื่องร้องเรียน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="date" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            เวลารับเรื่อง
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="time" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เลขที่หนังสือ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            รายละเอียดคำร้องเรียน
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <textarea rows="4" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ประเด็น
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <textarea rows="4" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เรื่องที่อยู่ในความสนใจ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <select class="form-control">
-                                <option>ปกติ</option>
-                                <option>อยู่ในความสนใจ</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <div class="form-group custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check-system">
-                                <label class="custom-control-label" for="check-system">เรื่องเชิงระบบ</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card card-primary mt-5">
-                <div class="card-header">
-                    <h3 class="card-title">กรอกข้อมูลผู้ร้องเรียน</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ประเภทผู้ร้องเรียน
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio1"
-                                       [value]="'thai'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio1">ชาวไทย</label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio2"
-                                       [value]="'foreign'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio2">ชาวต่างชาติ</label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio3"
-                                       [value]="'agent'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio3">ตัวแทน</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio4"
-                                       [value]="'group'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio4">หมู่คณะ
-                                    (สามารถเพิ่มผู้ร้องได้หลายคน)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <div class="form-group custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check-hide">
-                                <label class="custom-control-label" for="check-hide">ปกปิดชื่อ</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" *ngIf="complainantType == 'group'">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <h5>ชื่อผู้ร้องหลัก</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            คำนำหน้าชื่อ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            เพศ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ชื่อ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            นามสกุล
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div *ngIf="complainantType == 'group'">
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <h5>ชื่อผู้ร้องร่วม</h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                คำนำหน้าชื่อ
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-2 text-md-right">
-                                เพศ
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                ชื่อ
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-2 text-md-right">
-                                นามสกุล
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ประเภทหนังสือ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <select class="form-control">
-                                <option>เลขประจำตัวประชาชน</option>
-                                <option>เลขที่หนังสือเดินทาง</option>
-                                <option>เลขประจำตัวข้าราชการ</option>
-                            </select>
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            เลขบัตร
-                        </div>
-                        <div class="col-md-3 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-1 form-group">
-                            <button class="btn btn-info">ตรวจสอบ</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ลักษณะผู้ร้องเรียน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right mt-2 mb-4">
-                            ที่อยู่/ที่ติดต่อ
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เลขที่
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            หมู่บ้าน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            หมู่ที่
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ซอย
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            ถนน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            แขวง/ตำบล
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เขต/อำเภอ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            จังหวัด
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            รหัสไปรษณีย์
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            E-mail
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เบอร์โทรศัพท์
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div *ngIf="complainantType == 'agent'">
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <h5>ข้อมูลตัวแทน</h5>
-                                </div>
-                                <div class="col-md-2 form-group">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    คำนำหน้าชื่อ
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    เพศ
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    ชื่อ
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    นามสกุล
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    ประเภทหนังสือ
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <select class="form-control">
-                                        <option>เลขประจำตัวประชาชน</option>
-                                        <option>เลขที่หนังสือเดินทาง</option>
-                                        <option>เลขประจำตัวข้าราชการ</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    เลขบัตร
-                                </div>
-                                <div class="col-md-3 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-1 form-group">
-                                    <button class="btn btn-info">ตรวจสอบ</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    ลักษณะผู้ร้องเรียน
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right mt-2 mb-4">
-                                    ที่อยู่/ที่ติดต่อ
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    เลขที่
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    หมู่บ้าน
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    หมู่ที่
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    ซอย
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    ถนน
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    แขวง/ตำบล
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    เขต/อำเภอ
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    จังหวัด
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-2 text-md-right">
-                                    รหัสไปรษณีย์
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    E-mail
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 text-md-right">
-                                    เบอร์โทรศัพท์
-                                </div>
-                                <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card card-primary mt-5">
-                <div class="card-header">
-                    <h3 class="card-title">กรอกข้อมูลหน่วยงาน/ผู้ถูกร้องเรียน</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ชื่อหน่วยงาน **
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            กรม
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            กระทรวง **
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ตำแหน่งหัวหน้าหน่วยงาน
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            คำนำหน้าชื่อ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ชื่อ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            นามสกุล
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right mt-2 mb-4">
-                            ที่อยู่/ที่ติดต่อ
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เลขที่
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            หมู่บ้าน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            หมู่ที่
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            ซอย
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            ถนน
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            แขวง/ตำบล
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            เขต/อำเภอ
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            จังหวัด
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-2 text-md-right">
-                            รหัสไปรษณีย์
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-center">
+                        <thead>
+                        <tr>
+                            <th>ลำดับ</th>
+                            <th>เลขที่อ้างอิง</th>
+                            <th>ชื่อเรื่องร้องเรียน</th>
+                            <th>ชื่อผู้ร้องเรียน</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of items; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>-</td>
+                            <td>เรื่องแจ้งที่ {{i + 1}}</td>
+                            <td>{{item.complainant}}</td>
+                            <td>
+                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['detail']">
+                                    รับเรื่อง
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-block btn-info btn-sm">พิมพ์ปก</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="card-footer">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
-                            เพิ่มหน่วยงาน / ผู้ถูกร้องเรียน
-                        </div>
-                    </div>
+                    <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
                 </div>
-            </div>
-
-            <div class="card card-primary mt-5">
-                <div class="card-header">
-                    <h3 class="card-title">เลือกผลการร้องเรียน</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            กรณียื่นโดย Mobile Application
-                        </div>
-                        <div class="col-md-2 form-group">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md form-group custom-radio">
-                            <input type="radio" name="result-type" class="custom-control-input" id="result-type1">
-                            <label class="custom-control-label" for="result-type1">ส่งคำร้องซ้ำ</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md-2 form-group custom-radio">
-                            <input type="radio" name="result-type" class="custom-control-input" id="result-type2">
-                            <label class="custom-control-label" for="result-type2">รับเป็นข้อมูลเพิ่มเติมของเรื่องร้องเรียน เลขที่</label>
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md form-group">
-                            (กรณีผู้ร้องส่งข้อมูลเพิ่มเติมมาในลักษณะเรื่องร้องเรียนใหม่)
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md-2 form-group custom-radio">
-                            <input type="radio" name="result-type" class="custom-control-input" id="result-type3">
-                            <label class="custom-control-label" for="result-type3">รับเป็นคำร้องเพิ่มเติมรวมพิจารณาของเรื่องร้องเรียน เลขที่</label>
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md form-group">
-                            (กรณีผู้ร้องส่งคำร้องที่มีประเด็นเพิ่มเติม มาในลักษณะเป็นเรื่องร้องเรียนใหม่)
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md form-group custom-radio">
-                            <input type="radio" name="result-type" class="custom-control-input" id="result-type4">
-                            <label class="custom-control-label" for="result-type4">รับเป็นการร้องเรียนเจ้าหน้าที่สำนักงานผู้ตรวจการแผ่นดิน</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                        </div>
-                        <div class="col-md form-group custom-radio">
-                            <input type="radio" name="result-type" class="custom-control-input" id="result-type5">
-                            <label class="custom-control-label" for="result-type5">รับเป็นเรื่องร้องเรียน</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 text-md-right">
-                            จำนวนเอกสาร
-                        </div>
-                        <div class="col-md-2 form-group">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="card-footer">
-            <div class="row">
-                <button class="btn btn-primary">บันทึกรับเรื่องร้องเรียน</button>
-                <button class="btn btn-secondary ml-2">ยกเลิกการบันทึก</button>
             </div>
         </div>
     </div>
+
 </div>

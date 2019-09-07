@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComplaintComponent implements OnInit {
 
-  complaintType: string = 'ไปรษณีย์';
-
-  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+  page = 1;
+  items: { route: string, complainant: string }[] = [
+    { route: 'post', complainant: 'นายสมชาย ใจดี'},
+    { route: 'post', complainant: 'นายจอห์น วิก'},
+    { route: 'post', complainant: 'นางสมหญิง ใจเด็ด'},
+    { route: 'post', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'post', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'post', complainant: 'นายเจ้าขุน ทอง'}];
 
   constructor() { }
 

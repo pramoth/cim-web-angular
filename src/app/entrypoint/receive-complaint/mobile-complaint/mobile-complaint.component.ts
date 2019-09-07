@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileComplaintComponent implements OnInit {
 
-  complaintType: string = 'Mobile Application';
-
-  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+  page = 1;
+  items: { route: string, complainant: string }[] = [
+    { route: 'mobile', complainant: 'นายสมชาย ใจดี'},
+    { route: 'mobile', complainant: 'นายจอห์น วิก'},
+    { route: 'mobile', complainant: 'นางสมหญิง ใจเด็ด'},
+    { route: 'mobile', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'mobile', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'mobile', complainant: 'นายเจ้าขุน ทอง'}];
 
   constructor() { }
 
