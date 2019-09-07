@@ -23,6 +23,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a [routerLink]="['search']" routerLinkActive="active" class="nav-link">
+                        <i class="nav-icon fas fa-search"></i>
+                        <p>
+                            ค้นหาเรื่องร้องเรียน
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item has-treeview menu-open" *ngIf="authenService.hasAnyRole(['INTAKE'])">
                     <a class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>

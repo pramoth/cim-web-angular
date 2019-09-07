@@ -1,4 +1,3 @@
-<div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -11,12 +10,14 @@
                         <tr>
                             <th>ลำดับ</th>
                             <th>เลขดำที่</th>
+                            <th>เลขที่อ้างอิง</th>
                             <th width="30%">ชื่อเรื่องร้องเรียน</th>
                             <th>ประเด็น</th>
                             <th>ชื่อผู้ร้องเรียน</th>
                             <th>รับจาก</th>
                             <th>ชื่อผู้รับผิดชอบ</th>
-                            <th>พิจารณารับ</th>
+                            <th>ขั้นตอนล่าสุด</th>
+                            <th></th>
                             <th></th>
                         </tr>
                         </thead>
@@ -24,6 +25,7 @@
                         <tr *ngFor="let item of items; let i = index">
                             <td>{{i + 1}}</td>
                             <td>001/2558</td>
+                            <td>-</td>
                             <td style="text-align: left !important;">{{item.detail}}</td>
                             <td>ประเด็นที่1 ,ประเด็นที่2 ,ประเด็นที่3</td>
                             <td>-</td>
@@ -31,9 +33,12 @@
                             <td>-</td>
                             <td>รอรับเรื่อง</td>
                             <td>
-                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['..',item.route]">
+                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['../../check-complaint',item.route]">
                                     รายละเอียด
                                 </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-block btn-info btn-sm">พิมพ์ปก</button>
                             </td>
                         </tr>
                         </tbody>
@@ -45,5 +50,3 @@
             </div>
         </div>
     </div>
-
-</div>

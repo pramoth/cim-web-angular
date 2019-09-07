@@ -1,0 +1,220 @@
+<div class="container-fluid">
+    <div class="card card-default">
+        <div class="card-header">
+            <h3 class="card-title">ค้นหาเรื่องร้องเรียน</h3>
+
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row text-center" *ngIf="!advanceSearch">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+                           aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!advanceSearch">
+                <a style="float:right;color: #007bff;cursor: pointer;" (click)="advanceSearch = !advanceSearch">
+                    <i class="fas fa-search-plus"></i>
+                    Advance Search
+                </a>
+            </div>
+            <div *ngIf="advanceSearch">
+                <a style="float:right;color: #007bff;cursor: pointer;" (click)="advanceSearch = !advanceSearch">
+                    <i class="fa fa-search"></i>
+                    Fulltext Search
+                </a>
+            </div>
+        </div>
+
+        <div class="card-body" *ngIf="advanceSearch">
+            <div class="row text-center">
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck1">
+                        <label class="custom-control-label" for="exampleCheck1">เรื่องที่รับร้องเรียนแล้ว</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck2">
+                        <label class="custom-control-label" for="exampleCheck2">เรื่องร้องเรียนที่รับจาก Internet</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck3">
+                        <label class="custom-control-label" for="exampleCheck3">เรื่องร้องเรียนที่ ผผ. หยิบยก</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck4">
+                        <label class="custom-control-label" for="exampleCheck3">เรื่องที่ร้องเรียน Call center</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck5">
+                        <label class="custom-control-label" for="exampleCheck3">เรื่องที่ร้องเรียน ไปรษณีย์</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="exampleCheck6">
+                        <label class="custom-control-label" for="exampleCheck3">เรื่องที่ร้องเรียน Mobile App</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText" class="col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText1"
+                               class="col-lg-5 col-form-label font-weight-normal">เลขที่หนังสือ</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText2" class="col-lg-5 col-form-label font-weight-normal">ชื่อเรื่องร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText3" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText4" class="col-lg-5 col-form-label font-weight-normal">ถึง</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText5" class="col-lg-5 col-form-label font-weight-normal">ชื่อ-สกุล
+                            ผู้ร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText5">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText6"
+                               class="col-lg-5 col-form-label font-weight-normal">เลขที่บัตรประชาชน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText6">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText7" class="col-lg-5 col-form-label  font-weight-normal">หน่วยงานที่ถูกร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText8" class="col-lg-5 col-form-label font-weight-normal">ประเด็นหลักที่เกี่ยวข้อง</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText8">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText9" class="col-lg-5 col-form-label font-weight-normal">ประเด็นปัญหาที่ร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText9">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText10" class="col-lg-5 col-form-label font-weight-normal">ลักษณะเรื่องร้องเรียน</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText11" class="col-lg-5 col-form-label font-weight-normal">คำวินิจฉัย</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText11">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText12" class="col-lg-5 col-form-label font-weight-normal">สถานะ</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText12">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group row text-right">
+                        <label for="inputText13"
+                               class="col-lg-5 col-form-label font-weight-normal">เนื้อหาเอกสาร</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputText13">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer text-center" >
+            <div class="row justify-content-center">
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-primary btn-block" (click)="result = {}">ค้นหา</button>
+                </div>
+                <div class="col-5 col-xl-2">
+                    <button type="button" class="btn btn-secondary btn-block" (click)="result = undefined">เคลียร์ข้อความ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="result">
+        <app-table-content [items]="items" [page]="1"></app-table-content>
+    </ng-container>
+
+
+</div>
