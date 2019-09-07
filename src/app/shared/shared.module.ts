@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ShowByRolesDirective} from './show-by-roles.directive';
 import {HideByRolesDirective} from './hide-by-roles.directive';
-import {ColorPaletteDirective} from "../color-palette.directive";
+import {ColorPaletteDirective} from '../color-palette.directive';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -12,12 +13,13 @@ import {ColorPaletteDirective} from "../color-palette.directive";
         ColorPaletteDirective
     ],
     exports: [
-      ShowByRolesDirective,
-      HideByRolesDirective,
+        ShowByRolesDirective,
+        HideByRolesDirective,
         ColorPaletteDirective
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        HttpClientModule
     ]
 })
 export class SharedModule {
