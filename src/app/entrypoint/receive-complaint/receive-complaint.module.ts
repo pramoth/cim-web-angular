@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AllComponent} from './all/all.component';
+
 import {ReceiveComplaintRoutingModule} from './receive-complaint-routing.module';
 import {WalkInComplaintComponent} from './walk-in-complaint/walk-in-complaint.component';
 import {CallCenterComplaintComponent} from './call-center-complaint/call-center-complaint.component';
@@ -13,7 +13,7 @@ import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
-    declarations: [AllComponent,
+    declarations: [
         WalkInComplaintComponent,
         CallCenterComplaintComponent,
         PostComplaintComponent,

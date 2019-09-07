@@ -1,0 +1,51 @@
+<div class="row" >
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียนทั้งหมด</h3>
+            </div>
+            <div class="card-body  p-0">
+                <ng-container *ngFor="let item of items;let i = index;" >
+                    <div class="col-12 " style="padding: .75rem 1.25rem;" [ngClass]="{'mt-4': i != 0}">
+                        <div style="color: #1a0dab;font-size: 20px;    cursor: pointer;">
+                            เรื่องแจ้งที่ 1
+                        </div>
+                        <div class="block-ellipsis">
+                            <span style="color: #000;font-size: 16px;">มี.ค. 9, 2562</span>
+                            <span style="color: #000;font-size: 16px;"> - เลขดำที่ 00{{i+1}}/2562</span>
+                            <span style="color: #000;font-size: 16px;"> : {{item?.complainant}}</span>
+                            <span class="badge badge-pill badge-primary ml-1">รอรับเรื่อง</span>
+                            <span class="badge badge-pill badge-secondary ml-1">{{item?.name}}</span>
+                            <span style="color: #6b6b6b;">
+                                - มีคนนำวัคซีนอหิวาห์ไก่มาขาย ทั้งที่ซื้อที่ปศุสัตว์ราคา 30 บาทแต่นำมาขาย 200 บาท ในเฟสบุ๊ค
+                            ชื่อเฟส facebook "ฟามาโกร วัคซีนป้องกันโรคสัตว์ปีก"
+
+                            เรื่องนี้เกิดมา 2 ปีแล้ว ผมตามมานานมาก
+
+                            อย่าให้ซ้ำรอย วัคซีน พิษสุนัชบ้านะครับ
+
+                            ผมไม่เห็นด้วย เพราะผมปรึกษานายสัตวแพทย์จังหวัดแล้ว พบว่า เวลาไปซื้อไม่มีวัคซีนให้เกษตรกร แต่ทำไม มีขายในเฟสบุ๊ค ช่วยตรวจสอบหน่วยงานนี้ด้วยครับ
+
+                            ประชาชนข้องใจครับ
+
+                            ผมไม่ได้มีส่วนได้ส่วนเสียแต่ไม่เข้าใจว่า วัคซีน 30 บาท ทำไมมาขาย 200 บาท ทั้งที่เขียนไว้ว่าห้ามจำหน่าย
+                            </span>
+                        </div>
+                        <div>
+                            <button class="btn btn-info btn-sm" [routerLink]="['detail']">
+                                รายละเอียด
+                            </button>
+                            <button class="btn btn-info btn-sm ml-2" [routerLink]="['..',item.route]">
+                                พิมพ์ปก
+                            </button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="card-footer">
+                <button class="previous-btn">« Previous</button>
+                <button class="next-btn">Next »</button>
+            </div>
+        </div>
+    </div>
+</div>

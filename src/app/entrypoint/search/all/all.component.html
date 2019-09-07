@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="row text-center">
+            <div class="row text-center" *ngIf="!advanceSearch">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
                            aria-describedby="basic-addon2">
@@ -105,7 +105,7 @@
                     <div class="form-group row text-right">
                         <label for="inputText3" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน</label>
                         <div class="col-lg-7">
-                            <input type="date" class="form-control" id="inputText3">
+                            <input type="text" class="form-control" id="inputText3">
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="form-group row text-right">
                         <label for="inputText4" class="col-lg-5 col-form-label font-weight-normal">ถึง</label>
                         <div class="col-lg-7">
-                            <input type="date" class="form-control" id="inputText4">
+                            <input type="text" class="form-control" id="inputText4">
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
             </div>
 
         </div>
-        <div class="card-footer text-center">
+        <div class="card-footer text-center" >
             <div class="row justify-content-center">
                 <div class="col-5 col-xl-2">
                     <button type="button" class="btn btn-primary btn-block" (click)="result = {}">ค้นหา</button>
@@ -212,106 +212,9 @@
             </div>
         </div>
     </div>
-    <div class="row" *ngIf="result">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียนทั้งหมด</h3>
-                </div>
-                <div class="card-body  p-0">
-                    <ng-container *ngFor="let item of items;let i = index;" >
-                        <div class="col-12 " style="padding: .75rem 1.25rem;" [ngClass]="{'mt-4': i != 0}">
-                            <div style="color: #1a0dab;font-size: 20px;    cursor: pointer;">
-                                เรื่องแจ้งที่ 1
-                            </div>
-                            <div class="block-ellipsis">
-                                <span style="color: #000;font-size: 16px;">มี.ค. 9, 2562</span>
-                                <span style="color: #000;font-size: 16px;"> - เลขดำที่ 00{{i+1}}/2562</span>
-                                <span style="color: #000;font-size: 16px;"> : {{item?.complainant}}</span>
-                                <span class="badge badge-pill badge-primary ml-1">รอรับเรื่อง</span>
-                                <span class="badge badge-pill badge-secondary ml-1">{{item?.name}}</span>
-                                <span style="color: #6b6b6b;">
-                                - มีคนนำวัคซีนอหิวาห์ไก่มาขาย ทั้งที่ซื้อที่ปศุสัตว์ราคา 30 บาทแต่นำมาขาย 200 บาท ในเฟสบุ๊ค
-                            ชื่อเฟส facebook "ฟามาโกร วัคซีนป้องกันโรคสัตว์ปีก"
+    <ng-container *ngIf="result">
+        <app-table-content [items]="items" [page]="1"></app-table-content>
+    </ng-container>
 
-                            เรื่องนี้เกิดมา 2 ปีแล้ว ผมตามมานานมาก
-
-                            อย่าให้ซ้ำรอย วัคซีน พิษสุนัชบ้านะครับ
-
-                            ผมไม่เห็นด้วย เพราะผมปรึกษานายสัตวแพทย์จังหวัดแล้ว พบว่า เวลาไปซื้อไม่มีวัคซีนให้เกษตรกร แต่ทำไม มีขายในเฟสบุ๊ค ช่วยตรวจสอบหน่วยงานนี้ด้วยครับ
-
-                            ประชาชนข้องใจครับ
-
-                            ผมไม่ได้มีส่วนได้ส่วนเสียแต่ไม่เข้าใจว่า วัคซีน 30 บาท ทำไมมาขาย 200 บาท ทั้งที่เขียนไว้ว่าห้ามจำหน่าย
-                            </span>
-                            </div>
-                            <div>
-                                <button class="btn btn-info btn-sm" [routerLink]="['..','walk-in']">
-                                    รายละเอียด
-                                </button>
-                                <button class="btn btn-info btn-sm ml-2" [routerLink]="['..',item.route]">
-                                    พิมพ์ปก
-                                </button>
-                            </div>
-                        </div>
-                    </ng-container>
-                </div>
-                <div class="card-footer">
-                    <button class="previous-btn">« Previous</button>
-                    <button class="next-btn">Next »</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    <div class="row">-->
-    <!--        <div class="col-12">-->
-    <!--            <div class="card">-->
-    <!--                <div class="card-header">-->
-    <!--                    <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียนทั้งหมด</h3>-->
-    <!--                </div>-->
-    <!--                <div class="card-body table-responsive p-0">-->
-    <!--                    <table class="table table-hover text-center">-->
-    <!--                        <thead>-->
-    <!--                        <tr>-->
-    <!--                            <th>ลำดับ</th>-->
-    <!--                            <th>เรื่องร้องเรียนเลขดำที่</th>-->
-    <!--                            <th>เลขที่อ้างอิง</th>-->
-    <!--                            <th>ชื่อเรื่องร้องเรียน</th>-->
-    <!--                            <th>ชื่อผู้ร้องเรียน</th>-->
-    <!--                            <th>รับจาก</th>-->
-    <!--                            <th>ชื่อผู้รับผิดชอบ</th>-->
-    <!--                            <th>ขั้นตอนล่าสุด</th>-->
-    <!--                            <th></th>-->
-    <!--                            <th></th>-->
-    <!--                        </tr>-->
-    <!--                        </thead>-->
-    <!--                        <tbody>-->
-    <!--                        <tr *ngFor="let item of items; let i = index">-->
-    <!--                            <td>{{i + 1}}</td>-->
-    <!--                            <td>001/2558</td>-->
-    <!--                            <td>-</td>-->
-    <!--                            <td>เรื่องแจ้งที่ {{i + 1}}</td>-->
-    <!--                            <td>-</td>-->
-    <!--                            <td>{{item.name}}</td>-->
-    <!--                            <td>-</td>-->
-    <!--                            <td>รอรับเรื่อง</td>-->
-    <!--                            <td>-->
-    <!--                                <button class="btn btn-block btn-info btn-sm" [routerLink]="['..',item.route]">-->
-    <!--                                    รายละเอียด-->
-    <!--                                </button>-->
-    <!--                            </td>-->
-    <!--                            <td>-->
-    <!--                                <button type="button" class="btn btn-block btn-info btn-sm">พิมพ์ปก</button>-->
-    <!--                            </td>-->
-    <!--                        </tr>-->
-    <!--                        </tbody>-->
-    <!--                    </table>-->
-    <!--                </div>-->
-    <!--                <div class="card-footer">-->
-    <!--                    <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
 
 </div>

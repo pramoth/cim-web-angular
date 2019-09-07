@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AllComponent} from './all/all.component';
+
 import {WalkInComplaintComponent} from './walk-in-complaint/walk-in-complaint.component';
 import {CallCenterComplaintComponent} from './call-center-complaint/call-center-complaint.component';
 import {PostComplaintComponent} from './post-complaint/post-complaint.component';
@@ -9,12 +9,6 @@ import {OwnMotionComplaintComponent} from './own-motion-complaint/own-motion-com
 import {MobileComplaintComponent} from "./mobile-complaint/mobile-complaint.component";
 
 const routes: Routes = [
-    {
-        path: 'all',
-        pathMatch: 'full',
-        component: AllComponent,
-        data: {name: 'รับเรื่องร้องเรียน : ค้นหา', header: 'รับเรื่องร้องเรียน'}
-    },
     {
         path: 'walk-in',
         pathMatch: 'full',
