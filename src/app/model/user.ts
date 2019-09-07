@@ -25,4 +25,6 @@ export class User {
     username: string;
     name: string;
     authorities: Authority[] = [];
+    divisionName: string;
+    position: string;
 }
