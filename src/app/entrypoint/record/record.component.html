@@ -5,92 +5,8 @@
     </div>
 </div>
 <!-- <div class="row" style="border: 1px solid black"> -->
-<div class="row">
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-4 my-2 text-right" style="border:1px">
-                <p>เรื่องร้องเรียนดำเลขที่</p>
-            </div>
-            <div class="col-md-4" style="border: 1px">
-                <input type="text" class="form-control" [(ngModel)]="complainNumber" id="complainNumber">
-            </div>
-            <div class="col-md-3 col-sm text-left">
-                <!-- <button type="button" class="btn btn-primary" style="width: 110px">QR Code
-                </button> -->
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-4 col-sm my-2 text-right" style="border:1px">
-                <p>เรื่องเสนอ</p>
-            </div>
-            <div class="col-md-4 " style="border: 1px">
-                <div class="form-group">
-                    <select class="form-control" [(ngModel)]="present" id="present">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm text-left">
 
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-4 col-sm my-2 text-right">
-                <p>วันที่รับแฟ้ม</p>
-            </div>
-            <div class="col-md-4 mb" style="border: 1px">
-                <input type="text" class="form-control" [(ngModel)]="dateInput" id="dateInput"></div>
-            <div class="col-md-3 col-sm text-left">
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-4 col-sm my-2 text-right">
-                <p>เลขที่รับแฟ้ม</p>
-            </div>
-            <div class="col-md-4 mb" style="border: 1px">
-                <input type="number" class="form-control" [(ngModel)]="numberInput" id="numberInput"></div>
-            <div class="col-md-3 col-sm text-left">
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-10">
-        <div class="row">
-            <div class="col-6 my-2 text-right">
-                <button type="button" class="btn btn-primary" style="width: 130px">ค้นหา</button>
-            </div>
-            <div class="col-4 my-2 text-left">
-                <button type="button" (click)="clearInput()" class="btn btn-secondary"
-                        style="width: 130px">เคลียร์ข้อความ
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <div class="col-11 mx-5" style="padding: 20px 0 0 0">
     <!--    <hr class="style1">-->
@@ -101,16 +17,13 @@
 </div>
 <div class="row">
     <div class="col-11 mx-5">
-        <div class="checkbox mx-2">
-            <label><input type="checkbox" name="allTrades" [value]="trade"
-                          (change)="allTrades($event)">&nbsp;ทั้งหมด</label>
-        </div>
+
         <div class="card">
             <div class="card-body table-responsive p-0">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">ลำดับ</th>
+                        <th class="row justify-content-center" scope="col">ลำดับ</th>
                         <th scope="col">เลขที่รับแฟ้ม</th>
                         <th scope="col">เรื่องเสนอ</th>
                         <th scope="col">เรื่องร้องเรียนดำเลขที่</th>
@@ -122,13 +35,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr *ngFor="let trd of trade">
-                        <th scope="row"><label><input type="checkbox" name="trades" [checked]="trd.selected"
-                                                      (change)="changeTradesByCategory($event)">{{ trd.label }}</label>
-                        </th>
-                        <td>00{{ trd.label }}/2558</td>
+                    <tr *ngFor="let item  of trade  ; let i = index">
+                        <th class="row justify-content-center">{{i + 1}}  </th>
+                        <td>00{{ item.label }}/2558</td>
                         <td></td>
-                        <td>เรื่องแจ้งที่ {{ trd.label }}</td>
+                        <td>เรื่องแจ้งที่ {{ item.selected }}</td>
                         <td></td>
                         <td></td>
                         <td></td>

@@ -1,37 +1,68 @@
 ﻿<div class="container-fluid">
-
-    <div class="row">
-        <div class=" col-md-4">
-            <div class="form-group row text-right">
-                <label class="col-lg-5 col-form-label font-weight-normal">เลขดำ</label>
-                <div class="col-sm-4 col-lg-7">
-                    <input type="text" class="form-control" placeholder="Input Filed">
+    <div class="form-group">
+        <div class="row">
+            <div class=" col-md-2">
+                <div class="form-group row text-right ">
+                    <label class="col-lg-4 col-form-label font-weight-normal">เลขดำ : </label>
+                    <div class="col-lg-8 ">
+                        <input type="text" class="form-control" #black (click)="getBlackNumber(black.value)">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 col-md-2 col-xl-1">
-            <button type="button" class="btn btn-primary btn-block">ค้นหา</button>
+            <div class=" col-md-2">
+                <div class="form-group row">
+                    <label class="col-lg-4 col-form-label font-weight-normal">เลขแดง : </label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" #red (click)="getRedNumber(red.value)">
+                    </div>
+                </div>
+            </div>
 
+            <div class="  col-sm-4 col-md-2 col-xl-2">
+                <button type="button" class="btn btn-primary btn-block" (click)=" openDetail()">ค้นหา
+                </button>
+
+            </div>
+            <div class="col-sm-4 col-md-2 col-xl-2">
+                <button type="button" class="btn btn-secondary btn-block" (click)="closeDetail()">
+                    เคลียร์ข้อความ
+                </button>
+            </div>
         </div>
-        <div class="col-sm-4 col-md-2 col-xl-1">
-            <button type="button" class="btn btn-secondary btn-block">ยกเลิก</button>
-        </div>
+
     </div>
-    <div class="card card-primary">
-        <div class="card-header">
-            <h3 class="card-title">ค้นหาเลขดำ</h3>
+    <div *ngIf="show" class="card card-primary">
+        <div class="card-header ">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="col-md-2"></div>
+                        <h3 class="card-title text-right">รายละเอียด :</h3>
+
+                </div>
+                    <div class="col-md-2">
+                        <h3 class="card-title text-center" *ngIf="black.value !='' "> เลขดำ  {{black.value}}</h3>
+
+                </div>
+                <div class="col-md-2">
+                    <h3 class="card-title text-left" *ngIf="red.value !='' ">เลขแดง {{red.value}}</h3>
+
+                </div>
+
+            </div>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
             </div>
+
         </div>
         <div class="card-body">
             <div class="row ">
                 <div class="col-md-6 col-lg-4">
                     <div class="form-group row text-right">
                         <label for="numberOfComplaint" class=" col-md-4 col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
-                        <div class="col-lg-6">
-                            <input type="text" class="form-control" id="numberOfComplaint" placeholder="Input Filed">
+                        <div class="col-lg-6 ">
+                            <a type="text" class="form-control" id="numberOfComplaint"
+                               readonly>{{data.numberOfComplaint}}</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +79,8 @@
                         <label for="dateOfComplaint" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน
                         </label>
                         <div class="col-lg-6">
-                            <input type="date" class="form-control" id="dateOfComplaint">
+                            <a type="date" class="form-control" id="dateOfComplaint"
+                               readonly> {{data.timeOfComplaint}}</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +89,7 @@
                         <label for="timeOfComplaint"
                                class="col-lg-5 col-form-label font-weight-normal">เวลา</label>
                         <div class="col-lg-6">
-                            <input type="time" class="form-control" id="timeOfComplaint">
+                            <a type="time" class="form-control" id="timeOfComplaint" readonly>{{data.time}}</a>
                         </div>
                     </div>
                 </div>
@@ -71,16 +103,15 @@
                         <label for="numberOfBook"
                                class="col-lg-5 col-form-label font-weight-normal">เลขที่หนังสือ</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="numberOfBook" placeholder="Input Filed">
+                            <a type="text" class="form-control" id="numberOfBook" readonly>{{data.bookNumber}}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6  col-lg-4">
                     <div class="form-group row text-right">
-                        <label for="date" class="col-lg-5 col-form-label font-weight-normal">
-                            ลงวันที่</label>
+                        <label for="date" class="col-lg-5 col-form-label font-weight-normal">ลงวันที่</label>
                         <div class="col-lg-6">
-                            <input type="date" class="form-control" id="date">
+                            <a type="date" class="form-control" id="date" readonly>{{data.date}}</a>
                         </div>
                     </div>
                 </div>
@@ -93,8 +124,8 @@
                         <label for="nameOfComplaint"
                                class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ร้องเรียน</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="nameOfComplaint"
-                                   placeholder="Input Filed">
+                            <a type="text" class="form-control" id="nameOfComplaint"
+                               readonly>{{data.nameOfComplaint}}</a>
                         </div>
                     </div>
 
@@ -103,8 +134,8 @@
                     <div class="form-group row text-right">
                         <label for="nameOfComplained" class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ถูกร้องเรียน</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="nameOfComplained"
-                                   placeholder="Input Filed">
+                            <a type="text" class="form-control" id="nameOfComplained"
+                               readonly>{{data.nameOfComplained}}</a>
                         </div>
                     </div>
                 </div>
@@ -123,12 +154,12 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div *ngIf="show" class="card">
         <div class="row">
             <div class="card-body">
                 <div class="col-md-12">
                     <div>
-                        <h4 class="card-title"> ประวัติสถานะ
+                        <h4 class="card-title"> ติดตามขั้นตอนการดำเนินการ
                         </h4>
                     </div>
                     <div class="card-body">
@@ -136,10 +167,10 @@
                             <thead class="table text-secondary">
                             <th>ลำดับ</th>
                             <th>วันที่เปลี่ยนสถานะ</th>
-                            <th>การกำเนินการ</th>
-                            <th>เลขที่หนังสื่อ</th>
+                            <th>การดำเนินการ</th>
+                            <th>เลขที่หนังสือ</th>
                             <th>วันออกหนังสือแจ้ง</th>
-                            <th>ประเภทหนังสื่อ</th>
+                            <th>ประเภทหนังสือ</th>
                             </thead>
                             <tbody>
                             <tr>
