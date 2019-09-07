@@ -9,14 +9,15 @@ import {isEmpty} from "rxjs/operators";
 export class FollowStatusComponent implements OnInit {
     show: boolean = false;
     blackNumber;
-    data:any = {
+    RedNumber;
+    data: any = {
         dateOfComplaint: "1/8/2562",
         timeOfComplaint: "30/7/2562",
-        numberOfComplaint:"7753",
+        numberOfComplaint: "00001/2562",
         bookNumber: "4451",
         time: "18.03",
         date: "1/8/2562",
-        nameOfComplaint:"ธนชัย",
+        nameOfComplaint: "ธนชัย",
         nameOfComplained: "จันทร์เจริญ"
     }
 
@@ -28,15 +29,15 @@ export class FollowStatusComponent implements OnInit {
 
     openDetail() {
         this.show = true;
-
     }
 
     closeDetail() {
         this.show = false;
     }
-
-    getBlackNumber(number) {
-        this.blackNumber = number
+    getBlackNumber(blacknumber) {
+        this.blackNumber = blacknumber;
     }
-
+    getRedNumber(blacknumber) {
+        this.RedNumber = blacknumber;
+    }
 }

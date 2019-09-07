@@ -19,19 +19,19 @@ export class RecordComponent implements OnInit {
     checkAllTrades: boolean = false
     trade = [{
         label: '1',
-        selected: false
+        selected: "00001/2562"
     },
         {
             label: '2',
-            selected: false
+            selected: "00773/2562"
         },
         {
             label: '3',
-            selected: false
+            selected: "00787/2562"
         },
         {
             label: '4',
-            selected: false
+            selected: "00963/2560"
         }
     ];
 
