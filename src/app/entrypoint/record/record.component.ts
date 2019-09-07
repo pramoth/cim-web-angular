@@ -17,7 +17,6 @@ export class RecordComponent implements OnInit {
 
     isTrade: boolean = false
     checkAllTrades: boolean = false
-
     trade = [{
         label: '1',
         selected: false
