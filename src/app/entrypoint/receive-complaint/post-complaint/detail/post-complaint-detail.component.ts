@@ -11,9 +11,18 @@ export class PostComplaintDetailComponent implements OnInit {
 
   complainantType: 'thai' | 'foreign' | 'agent' | 'group';
 
+  subjects: string[] = [''];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  addSubject() {
+    this.subjects.push('');
+  }
+
+  deleteSubject() {
+    this.subjects.pop();
+  }
 }

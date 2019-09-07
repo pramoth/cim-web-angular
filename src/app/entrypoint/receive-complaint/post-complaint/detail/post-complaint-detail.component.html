@@ -58,18 +58,55 @@
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            รายละเอียดคำร้องเรียน
+                            คำร้องเรียน
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-8 form-group">
                             <textarea rows="4" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            ประเด็น
+                            สรุปคำร้องเรียน
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-8 form-group">
                             <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <h5>ประเด็น</h5>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <button class="btn btn-outline-primary mr-2" (click)="addSubject()"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-danger mr-2" (click)="deleteSubject()"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div *ngFor="let subject of subjects ; let i = index">
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                {{i + 1}}.) ประเด็นหลักที่เกี่ยวข้อง
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <select class="form-control">
+                                    <option>-</option>
+                                    <option>ประเด็นที่ 1</option>
+                                    <option>ประเด็นที่ 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                ประเด็นปัญหาที่ร้องเรียน
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <select class="form-control">
+                                    <option>-</option>
+                                    <option>ประเด็นที่ 1</option>
+                                    <option>ประเด็นที่ 2</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -249,8 +286,12 @@
                         <div class="row">
                             <div class="col-md-2 text-md-right">
                             </div>
-                            <div class="col-md-2 form-group">
+                            <div class="col-md-1 form-group">
                                 <h5>ชื่อผู้ร้องร่วม</h5>
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-outline-danger mr-2"><i class="fa fa-minus"></i></button>
                             </div>
                         </div>
                         <div class="row">
@@ -279,13 +320,6 @@
                             </div>
                             <div class="col-md-2 form-group">
                                 <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>
                     </div>
@@ -750,7 +784,8 @@
                         <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="check-report">
-                                <label class="custom-control-label" for="check-report">เรื่องที่เห็นควรลงในรายงานประจำปี</label>
+                                <label class="custom-control-label"
+                                       for="check-report">เรื่องที่เห็นควรลงในรายงานประจำปี</label>
                             </div>
                         </div>
                     </div>

@@ -181,43 +181,42 @@
                         <div class="row">
                             <div class="col-md-2 text-md-right">
                             </div>
-                            <div class="col-md-2 form-group">
+                            <div class="col-md-1 form-group">
                                 <h5>ชื่อผู้ร้องร่วม</h5>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                คำนำหน้าชื่อ
-                            </div>
                             <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-2 text-md-right">
-                                เพศ
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
+                                <button class="btn btn-outline-primary mr-2" (click)="addSubComplainant()"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-outline-danger mr-2" (click)="deleteSubComplainant()"><i class="fa fa-minus"></i></button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                ชื่อ
+                        <div *ngFor="let subComplainant of subComplainants; let i = index">
+                            <div class="row">
+                                <div class="col-md-2 text-md-right">
+                                    {{i + 1}}.) คำนำหน้าชื่อ
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-2 text-md-right">
+                                    เพศ
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input type="text" class="form-control">
+                                </div>
                             </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-2 text-md-right">
-                                นามสกุล
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                            </div>
-                            <div class="col-md-2 form-group">
-                                <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
+                            <div class="row">
+                                <div class="col-md-2 text-md-right">
+                                    ชื่อ
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input type="text" class="form-control" [(ngModel)]="subComplainant">
+                                </div>
+                                <div class="col-md-2 text-md-right">
+                                    นามสกุล
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input type="text" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -493,10 +492,15 @@
                         </button>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" *ngFor="let department of accusedDepartments; let i = index">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5>หน่วยงานที่ {{i + 1}}</h5>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            ชื่อหน่วยงาน **
+                            ชื่อหน่วยงาน <span style="color: red">**</span>
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="text" class="form-control">
@@ -512,7 +516,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            กระทรวง **
+                            กระทรวง
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="text" class="form-control">
@@ -617,7 +621,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-outline-primary mr-2"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-primary mr-2" (click)="addDepartment()"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-danger mr-2" (click)="deleteDepartment()"><i class="fa fa-minus"></i></button>
                             เพิ่มหน่วยงาน / ผู้ถูกร้องเรียน
                         </div>
                     </div>
@@ -701,7 +706,7 @@
         <div class="card-footer">
             <div class="row">
                 <button class="btn btn-primary">บันทึกรับเรื่องร้องเรียน</button>
-                <button class="btn btn-secondary ml-2">ยกเลิกการบันทึก</button>
+                <!--<button class="btn btn-secondary ml-2" [routerLink]="['']">ยกเลิกการบันทึก</button>-->
             </div>
         </div>
     </div>
