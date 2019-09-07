@@ -11,9 +11,9 @@ export class WalkInComplaintComponent implements OnInit {
 
     complainantType: 'thai' | 'foreign' | 'agent' | 'group';
 
-    subComplainants: string[] = [''];
+    subComplainants: any[] = [{}];
 
-    accusedDepartments: string[] = [''];
+    accusedDepartments: any[] = [{}];
 
     constructor() {
     }
