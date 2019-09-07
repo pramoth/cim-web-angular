@@ -21,6 +21,8 @@ import {ReceiveDocComponent} from './detail/receive-doc/receive-doc.component';
 import {PlanComponent} from "./detail/plan/plan.component";
 import {AddPlanModalComponent} from './detail/plan/add-plan-modal/add-plan-modal.component';
 import {FormsModule} from "@angular/forms";
+import {IssueDocComponent} from './detail/issue-doc/issue-doc.component';
+import { StepComponent } from './detail/step/step.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {FormsModule} from "@angular/forms";
         ReceiveDocComponent,
         PlanComponent,
         ConcludeComponent,
-        AddPlanModalComponent
+        AddPlanModalComponent,
+        IssueDocComponent,
+        StepComponent,
     ],
     imports: [
         CommonModule,
