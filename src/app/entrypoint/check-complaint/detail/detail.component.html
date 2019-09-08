@@ -119,6 +119,13 @@
                     </div>
                 </ng-template>
             </ngb-tab>
+            <ngb-tab title="ส่ง">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-send></app-send>
+                    </div>
+                </ng-template>
+            </ngb-tab>
             <ngb-tab title="ส่งต่อ สส 1-4 สกค. สตท." *ngIf="authenService.hasAnyRole(['INTAKE'].concat(moreThanDeputy))">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">

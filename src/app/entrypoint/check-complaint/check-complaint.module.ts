@@ -22,6 +22,7 @@ import {AddPlanModalComponent} from './detail/plan/add-plan-modal/add-plan-modal
 import {FormsModule} from "@angular/forms";
 import {IssueDocComponent} from './detail/issue-doc/issue-doc.component';
 import { StepComponent } from './detail/step/step.component';
+import { SendComponent } from './detail/send/send.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { StepComponent } from './detail/step/step.component';
         AddPlanModalComponent,
         IssueDocComponent,
         StepComponent,
+        SendComponent,
     ],
     imports: [
         CommonModule,
