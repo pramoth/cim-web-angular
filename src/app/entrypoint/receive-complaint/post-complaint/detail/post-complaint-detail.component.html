@@ -157,43 +157,54 @@
                             </div>
                         </div>
                     </div>
+
+
+                </div>
+            </div>
+
+            <div class="card card-primary mt-5">
+                <div class="card-header">
+                    <h3 class="card-title">ประเด็น</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" *ngFor="let subject of subjects ; let i = index">
                     <div class="row">
                         <div class="col-md-2 text-md-right">
+                            {{i + 1}}.) ประเด็นหลักที่เกี่ยวข้อง
                         </div>
-                        <div class="col-md-1 form-group">
-                            <h5>ประเด็น</h5>
+                        <div class="col-md-4 form-group">
+                            <select class="form-control">
+                                <option>-</option>
+                                <option>ประเด็นที่ 1</option>
+                                <option>ประเด็นที่ 2</option>
+                            </select>
                         </div>
-                        <div class="col-md-2 form-group">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            ประเด็นปัญหาที่ร้องเรียน
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <select class="form-control">
+                                <option>-</option>
+                                <option>ประเด็นที่ 1</option>
+                                <option>ประเด็นที่ 2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-12">
                             <button class="btn btn-outline-primary mr-2" (click)="addSubject()"><i
                                     class="fa fa-plus"></i></button>
                             <button class="btn btn-outline-danger mr-2" (click)="deleteSubject()"><i
                                     class="fa fa-minus"></i></button>
-                        </div>
-                    </div>
-                    <div *ngFor="let subject of subjects ; let i = index">
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                {{i + 1}}.) ประเด็นหลักที่เกี่ยวข้อง
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <select class="form-control">
-                                    <option>-</option>
-                                    <option>ประเด็นที่ 1</option>
-                                    <option>ประเด็นที่ 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2 text-md-right">
-                                ประเด็นปัญหาที่ร้องเรียน
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <select class="form-control">
-                                    <option>-</option>
-                                    <option>ประเด็นที่ 1</option>
-                                    <option>ประเด็นที่ 2</option>
-                                </select>
-                            </div>
+                            เพิ่มประเด็น
                         </div>
                     </div>
                 </div>

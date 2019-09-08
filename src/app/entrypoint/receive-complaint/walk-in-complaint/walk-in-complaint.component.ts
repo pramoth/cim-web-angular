@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
     selector: 'app-walk-in-complaint',
@@ -17,7 +18,7 @@ export class WalkInComplaintComponent implements OnInit {
 
     accusedDepartments: any[] = [{}];
 
-    constructor() {
+    constructor(private toastr: ToastrService) {
     }
 
     ngOnInit() {
@@ -45,6 +46,11 @@ export class WalkInComplaintComponent implements OnInit {
 
     deleteDepartment() {
         this.accusedDepartments.pop();
+    }
+
+    save(): void {
+        console.log(this.toastr)
+        this.toastr.success('บันทึกเสร็จสิ้น','Success')
     }
 
 }

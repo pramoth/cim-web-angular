@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="text-center mt-5 mb-5">
-                    <button type="button" class="btn btn-success" style="width: 150px">บันทึก</button>
+                    <button type="button" class="btn btn-primary" style="width: 150px">บันทึก</button>
                     <button type="button" class="btn btn-secondary ml-2" style="width: 150px">ยกเลิก</button>
                 </div>
 
@@ -87,8 +87,8 @@
                                             <td>{{item.name}}</td>
                                             <td>{{item.total_work_inprocess | number}}</td>
                                             <td>{{item.total_works | number}}</td>
-                                            <td>
-                                                {{i==0?'Primary':'Secondary'}}
+                                            <td class="text-center text-nowrap">
+                                                {{i==0?'ผู้รับผิดชอบหลัก':'ผู้รับผิดชอบรอง'}}
                                             </td>
                                             <td class="text-center">
                                                 <button *ngIf="!item.header" type="button" class="btn btn-danger" (click)="removeResponsible(item)">
@@ -811,10 +811,15 @@
     </div>
     <div class="modal-body">
         <div class="form-group row text-right">
+
+            <label class="col-sm-2 col-form-label font-weight-normal">ค้นหาผู้รับผิดชอบ</label>
+            <div class="col-sm-6">
+                <input class="form-control ">
+
+            </div>
+            <div class="col-sm-3"> <button type="button" class="btn btn-primary ml-2" style="width: 150px;float: left">ค้นหา</button></div>
         </div>
         <div class="card-body">
-
-
             <div class="row">
                 <div class="col">
                     <div class="table-responsive">
