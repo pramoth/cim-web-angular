@@ -193,7 +193,7 @@
         </div>
         <!-- ./col -->
 
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-3 col-6" *ngIf="authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
             <!-- small box -->
             <div class="info-box bg-white">
                 <div class="info-box-content">
@@ -360,7 +360,7 @@
     </div>
     <!-- Main row -->
     <div class="row">
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-3 col-6" *ngIf="authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
             <!-- small box -->
             <div class="info-box bg-white">
                 <div class="info-box-content">
@@ -420,10 +420,6 @@
             </div>
         </div>
         <!-- ./col -->
-    </div>
-
-    <!-- Main row -->
-    <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="info-box bg-white">
@@ -484,10 +480,7 @@
             </div>
         </div>
         <!-- ./col -->
-    </div>
 
-    <!-- Main row -->
-    <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="info-box bg-white">
@@ -548,9 +541,7 @@
             </div>
         </div>
         <!-- ./col -->
-    </div>
 
-    <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="info-box bg-white">
@@ -581,38 +572,7 @@
             </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">อื่นๆ</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">?? รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 50%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">อื่นๆ</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">?? รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 50%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
     </div>
-    <!-- /.row (main row) -->
     <!-- /.row -->
 </ng-container>
 <ng-container *ngIf="authenService.hasAnyRole(['OMBUDSMAN'])">
@@ -625,114 +585,6 @@
     </div>
     <!-- Main row -->
     <div class="row">
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">รอมอบหมาย</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">พิจารณารับ</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">ขอข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">ได้รับข้อมูลเพิ่มเติมจากผู้ร้อง</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-    </div>
-
-    <!-- Main row -->
-    <div class="row">
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">ให้หน่วยงานชี้แจง</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">หน่วยงานชี้แจงเข้ามา</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="info-box bg-white">
-                <div class="info-box-content">
-                    <span class="info-box-text">เสนอแนะต่อหน่วยงาน</span>
-                    <span class="info-box-text">จำนวน</span>
-                    <span class="info-box-number">99 รายการ</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                    <a href="#" class="small-box-footer">ดูข้อมูล <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-        </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -749,10 +601,6 @@
             </div>
         </div>
         <!-- ./col -->
-    </div>
-
-    <!-- Main row -->
-    <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="info-box bg-white">
