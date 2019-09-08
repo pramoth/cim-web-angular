@@ -10,7 +10,7 @@ import {Label} from "ng2-charts";
 })
 export class ReportComponent implements OnInit {
 
-    public pieChartLabels: Label[] = [['เรื่องร้องเรียน'], ['เรื่องยุติ']];
+    public pieChartLabels: Label[] = [['เรื่องร้องเรียนแล้วเสร็จ'], ['อยู่ระหว่างการดำเนินงาน']];
     public pieChartData: number[] = [300, 500];
     public pieChartType: ChartType = 'pie';
     public pieChartLegend = true;
@@ -119,6 +119,11 @@ export class ReportComponent implements OnInit {
             ['ลพบุรี', 10],
             ['นครราชสีมา', 10],
             ['สระบุรี', 100],
+            ['พะเยา', 1000],
+            ['น่าน', 1000],
+            ['แพร่', 1000],
+            ['อุตรดิตถ์', 1000],
+            ['ลำปาง', 1000],
         ];
         let data = [['จังหวัด', 'จำนวน'], ...result];
 
