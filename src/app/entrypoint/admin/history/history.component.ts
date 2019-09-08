@@ -6,7 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
-
+    pages: any = {id: 10};
+    page = 1;
 
     data: { username: string, nameOfuser: string, dateAccess: string, ip: string }[] = [{
         username: 'admin',
@@ -48,6 +49,10 @@ export class HistoryComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+    callPage(value) {
+        this.pages.id = value;
+        return value
     }
 
 }
