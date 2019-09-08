@@ -8,19 +8,18 @@ import {Component, OnInit} from '@angular/core';
 export class AttachmentComponent implements OnInit {
 
     data: number[];
-    id: number;
+
 
     constructor() {
     }
 
     ngOnInit() {
-        this.data = [1,1,1,1,1,1,1]
+        this.data= [1,2,3,4,5,6,7]
     }
 
-    deleteRow(d) {
+    deleteRow(i) {
         const index = this.data.indexOf(this.data.length);
         this.data.splice(index, 1);
-        console.log("id "+ this.data.values())
     }
 }
 

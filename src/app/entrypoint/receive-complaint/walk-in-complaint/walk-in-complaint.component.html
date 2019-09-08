@@ -38,26 +38,73 @@
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            เลขที่หนังสือ
+                            คำร้องเรียน
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            ส่วนงานที่รับผิดชอบ
                         </div>
                         <div class="col-md-2 form-group">
+                            <select class="form-control">
+                                <option>-</option>
+                                <option>สำนักกฎหมายและคดี</option>
+                                <option>สำนักตรวจสอบเรื่องร้องเรียน</option>
+                                <option>สำนักสอบสวน 1</option>
+                                <option>สำนักสอบสวน 2</option>
+                                <option>สำนักสอบสวน 3</option>
+                                <option>สำนักตรวจสอบจริยธรรมและกิจการพิเศษ</option>
+                                <option>กลุ่มกลั่งกรองและพัฒนางานสอบสวน</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 text-md-right">
+                            เจ้าหน้าที่สอบสวน
+                        </div>
+                        <div class="col-md-4 form-group">
                             <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            รายละเอียดคำร้องเรียน
+                            ท่านรู้จัก สผผ. จากแหล่งใด
                         </div>
-                        <div class="col-md-6 form-group">
-                            <textarea rows="4" class="form-control"></textarea>
+                        <div class="col-md-2 form-group">
+                            <select class="form-control">
+                                <option>-</option>
+                                <option>สัมนาวิชาการ</option>
+                                <option>วิทยุ</option>
+                                <option>โทรทัศน์</option>
+                                <option>หนังสือพิมพ์</option>
+                                <option>แผ่นพับ/โปสเตอร์</option>
+                                <option>เว็บไซต์/อินเทอร์เน็ต</option>
+                                <option>บุคคลอื่นแนะนำ</option>
+                                <option>ทสท. 1133</option>
+                                <option>ส.ส.</option>
+                                <option>ส.ว.</option>
+                                <option>อ.ส.ม.</option>
+                                <option>สภาทนายความ</option>
+                                <option>GCC 1111</option>
+                                <option>หน่วยงานของรัฐ</option>
+                                <option>NGO (องค์กรเอกชน)</option>
+                                <option>ติดตามเรื่องร้องเรียน</option>
+                                <option>ไม่ระบุแหล่งที่มา</option>
+                                <option>อัยการจังหวัด</option>
+                                <option>รถประชาสัมพันธ์เคลื่อนที่ (Mobile Unit)</option>
+                                <option>อื่นๆ</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
-                            ประเด็น
+                            ห้องประชุม
                         </div>
-                        <div class="col-md-6 form-group">
-                            <textarea rows="4" class="form-control"></textarea>
+                        <div class="col-md-2 form-group">
+                            <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -93,41 +140,46 @@
                         </button>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" *ngFor="let complainant of complainants; let i = index">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h5>ผู้ร้องที่ {{i + 1}}</h5>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-2 text-md-right">
                             ประเภทผู้ร้องเรียน
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio1"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio1' + i]"
                                        [value]="'thai'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio1">ชาวไทย</label>
+                                       [(ngModel)]="complainant.complainantType">
+                                <label class="custom-control-label" [for]="['radio1' + i]">ชาวไทย</label>
                             </div>
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio2"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio2' + i]"
                                        [value]="'foreign'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio2">ชาวต่างชาติ</label>
+                                       [(ngModel)]="complainant.complainantType">
+                                <label class="custom-control-label" [for]="['radio2' + i]">ชาวต่างชาติ</label>
                             </div>
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio3"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio3' + i]"
                                        [value]="'agent'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio3">ตัวแทน</label>
+                                       [(ngModel)]="complainant.complainantType">
+                                <label class="custom-control-label" [for]="['radio3' + i]">ตัวแทน</label>
                             </div>
                         </div>
                         <div class="col-md-4 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" name="complainant-type" class="custom-control-input" id="radio4"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio4' + i]"
                                        [value]="'group'"
-                                       [(ngModel)]="complainantType">
-                                <label class="custom-control-label" for="radio4">หมู่คณะ
+                                       [(ngModel)]="complainant.complainantType">
+                                <label class="custom-control-label" [for]="['radio4' + i]">หมู่คณะ
                                     (สามารถเพิ่มผู้ร้องได้หลายคน)</label>
                             </div>
                         </div>
@@ -137,8 +189,8 @@
                         </div>
                         <div class="col-md-2 form-group">
                             <div class="form-group custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check-hide">
-                                <label class="custom-control-label" for="check-hide">ปกปิดชื่อ</label>
+                                <input type="checkbox" class="custom-control-input" [id]="['check-hide' + i]">
+                                <label class="custom-control-label" [for]="['check-hide' + i]">ปกปิดชื่อ</label>
                             </div>
                         </div>
                     </div>
@@ -177,7 +229,7 @@
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div *ngIf="complainantType == 'group'">
+                    <div *ngIf="complainant.complainantType == 'group'">
                         <div class="row">
                             <div class="col-md-2 text-md-right">
                             </div>
@@ -185,11 +237,11 @@
                                 <h5>ชื่อผู้ร้องร่วม</h5>
                             </div>
                             <div class="col-md-2 form-group">
-                                <button class="btn btn-outline-primary mr-2" (click)="addSubComplainant()"><i class="fa fa-plus"></i></button>
-                                <button class="btn btn-outline-danger mr-2" (click)="deleteSubComplainant()"><i class="fa fa-minus"></i></button>
+                                <button class="btn btn-outline-primary mr-2" (click)="addSubComplainant(complainant)"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-outline-danger mr-2" (click)="deleteSubComplainant(complainant)"><i class="fa fa-minus"></i></button>
                             </div>
                         </div>
-                        <div *ngFor="let subComplainant of subComplainants; let i = index">
+                        <div *ngFor="let subComplainant of complainant.subComplainants; let i = index">
                             <div class="row">
                                 <div class="col-md-2 text-md-right">
                                     {{i + 1}}.) คำนำหน้าชื่อ
@@ -331,7 +383,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div *ngIf="complainantType == 'agent'">
+                        <div *ngIf="complainant.complainantType == 'agent'">
                             <hr>
                             <div class="row">
                                 <div class="col-md-2">
@@ -478,6 +530,15 @@
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-outline-primary mr-2" (click)="addComplainant()"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-danger mr-2" (click)="deleteComplainant()"><i class="fa fa-minus"></i></button>
+                            เพิ่มผู้ร้องเรียน
                         </div>
                     </div>
                 </div>

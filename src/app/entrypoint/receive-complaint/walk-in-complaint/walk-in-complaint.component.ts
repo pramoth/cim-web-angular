@@ -11,7 +11,9 @@ export class WalkInComplaintComponent implements OnInit {
 
     complainantType: 'thai' | 'foreign' | 'agent' | 'group';
 
-    subComplainants: any[] = [{}];
+    complainants: any[] = [{complainantType: null, subComplainants: [{}]}];
+
+    subComplainants: any[];
 
     accusedDepartments: any[] = [{}];
 
@@ -21,16 +23,24 @@ export class WalkInComplaintComponent implements OnInit {
     ngOnInit() {
     }
 
-    addSubComplainant() {
-        this.subComplainants.push('');
+    addComplainant() {
+        this.complainants.push({complainantType: null, subComplainants: [{}]});
     }
 
-    deleteSubComplainant() {
-        this.subComplainants.pop();
+    deleteComplainant() {
+        this.complainants.pop();
+    }
+
+    addSubComplainant(complainant: any) {
+        complainant.subComplainants.push({});
+    }
+
+    deleteSubComplainant(complainant: any) {
+        complainant.subComplainants.pop();
     }
 
     addDepartment() {
-        this.accusedDepartments.push('');
+        this.accusedDepartments.push({});
     }
 
     deleteDepartment() {
