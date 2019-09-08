@@ -52,9 +52,9 @@ export class WalkInComplaintComponent implements OnInit {
         this.accusedDepartments.pop();
     }
 
-    save(): void {
+    save(innerText: string): void {
         const modalRef = this.ngbModal.open(ComfirmDialogComponent);
-        modalRef.componentInstance.content = 'ยืนยันการบันทึก'
+        modalRef.componentInstance.content = 'ยืนยันการ'+innerText;
         from(modalRef.result)
             .pipe(filter(e => !!e))
             .subscribe(e => {

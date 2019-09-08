@@ -8,8 +8,8 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./comfirm-dialog.component.scss']
 })
 export class ComfirmDialogComponent implements OnInit {
-  content: string;
-  title: string = 'กรุณายืนยัน';
+  content: string = 'ยืนยันการบันทึก'
+  title: string = 'ยืนยัน';
   confirmButtonMsg = 'ยืนยัน';
   closeButtonMsg = 'ยกเลิก';
 
