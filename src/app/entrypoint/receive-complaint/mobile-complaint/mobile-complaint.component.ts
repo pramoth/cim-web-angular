@@ -14,6 +14,15 @@ export class MobileComplaintComponent implements OnInit {
     { route: 'mobile', complainant: 'นางสมหญิง ใจเด็ด'},
     { route: 'mobile', complainant: 'นางสาวมะนาว โซดา'},
     { route: 'mobile', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'mobile', complainant: 'นายเจ้าขุน ทอง'},
+    { route: 'mobile', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'mobile', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'mobile', complainant: 'นายเจ้าขุน ทอง'},
+    { route: 'mobile', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'mobile', complainant: 'นายรุ่งเรือง จิตใจดี'},
+    { route: 'mobile', complainant: 'นายเจ้าขุน ทอง'},
+    { route: 'mobile', complainant: 'นางสาวมะนาว โซดา'},
+    { route: 'mobile', complainant: 'นายรุ่งเรือง จิตใจดี'},
     { route: 'mobile', complainant: 'นายเจ้าขุน ทอง'}];
 
   constructor() { }
@@ -21,10 +30,9 @@ export class MobileComplaintComponent implements OnInit {
   ngOnInit() {
   }
 
-  types: any = [10, 25, 50, 100];
-  order: any = {id: 10};
+  pages: any = {id: 10};
   callPage(value) {
-    this.order.type = value;
+    this.pages.id = value;
     return value
   }
 

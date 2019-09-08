@@ -1,0 +1,147 @@
+<div class="accordion mt-2" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ช่องทาง e-mail
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        จาก
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2 text-md-right">
+                        ถึง
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        สำเนา
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2 text-md-right">
+                        สำเนาลับ
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        เรื่อง
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2 text-md-right">
+                        แนบเพิ่มเติม
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <textarea class="form-control" [rows]="6">
+                    </textarea>
+                </div>
+                <div class="row mt-3">
+                    <button type="button" class="btn btn-secondary" style="width: 150px">
+                        <i class="fas fa-upload"></i>
+                        อัปโหลด
+                    </button>
+                </div>
+                <div class="row mt-3">
+                    <button type="button" class="btn btn-primary" style="width: 150px">ส่ง</button>
+                    <button type="button" class="btn btn-secondary ml-2" style="width: 150px">ยกเลิก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ช่องทาง SMS
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-outline-primary mr-2" ><i
+                                class="fa fa-plus" (click)="addNumber()"></i></button>
+                        <button class="btn btn-outline-danger mr-2" ><i
+                                class="fa fa-minus" (click)="deleteNumber()"></i></button>
+                    </div>
+                </div>
+                <div class="row" *ngFor="let number of phoneNumbers;let i = index">
+                    <div class="col-md-2 text-md-right">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" [(ngModel)]="number.checked">
+                            <label class="form-check-label ">{{i + 1}}.)  เบอร์โทรศัพท์ </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        Message
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <textarea class="form-control" [rows]="6">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <button type="button" class="btn btn-primary" style="width: 150px">ส่ง</button>
+                    <button type="button" class="btn btn-secondary ml-2" style="width: 150px">ยกเลิก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ช่องทาง ส่งเรื่องกลับ
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        วันที่ตอบกลับ
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-md-right">
+                        ข้อคิดเห็น
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <textarea class="form-control" [rows]="6">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

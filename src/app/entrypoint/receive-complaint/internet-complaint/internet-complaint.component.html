@@ -67,8 +67,8 @@
                             <th></th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr *ngFor="let item of items; let i = index">
+                        <tbody *ngFor="let item of items; let i = index">
+                        <tr *ngIf="i<callPage(t.value)">
                             <td>{{i + 1}}</td>
                             <td>-</td>
                             <td>เรื่องแจ้งที่ {{i + 1}}</td>
@@ -83,23 +83,29 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    <div class="dataTables_length">
-                        <label>
+
+                    <div class="row">
+                        <label class="col-md-1">
                             <select #t name="example1_length"
-                                    class="custom-select custom-select-sm form-control form-control-sm"
+                                    class="custom-select form-control"
                                     (change)="callPage(t.value) ">
-                                <option id="10" value="10">10</option>
-                                <option id="25" value="25">25</option>
-                                <option id="50" value="50">50</option>
-                                <option id="100" value="100">100</option>
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
                             </select>
+
                         </label>
+                        <label class="col-md-6">
+                            <ngb-pagination [collectionSize]="items.length" [(page)]="page"></ngb-pagination>
+
+                        </label>
+
+
                     </div>
-                    <div></div>
-                    <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
+

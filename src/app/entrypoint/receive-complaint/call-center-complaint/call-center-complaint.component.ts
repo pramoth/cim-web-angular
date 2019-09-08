@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CallCenterComplaintComponent implements OnInit {
 
+    pages: any = {id: 10};
     page = 1;
     items: { route: string, complainant: string }[] = [
         {route: 'call-center', complainant: 'นายสมชาย ใจดี'},
@@ -16,28 +17,17 @@ export class CallCenterComplaintComponent implements OnInit {
         {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
-        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
         {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'}];
 
     constructor() {
@@ -46,14 +36,10 @@ export class CallCenterComplaintComponent implements OnInit {
     ngOnInit() {
     }
 
-    types: any = [10, 25, 50, 100];
-    order: any = {id: 10};
     callPage(value) {
-        this.order.type = value;
+        this.pages.id = value;
         return value
     }
-
-
 
 
 }
