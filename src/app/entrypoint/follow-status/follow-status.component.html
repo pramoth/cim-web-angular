@@ -1,205 +1,87 @@
 ﻿<div class="container-fluid">
-    <div class="form-group">
+    <form class="form-group">
         <div class="row">
-            <div class=" col-md-2">
-                <div class="form-group row text-right ">
-                    <label class="col-lg-4 col-form-label font-weight-normal">เลขดำ : </label>
-                    <div class="col-lg-8 ">
-                        <input type="text" class="form-control" #black (click)="getBlackNumber(black.value)">
+            <div class="col-md-2 text-right">
+                <label class="col-form-label font-weight-normal">เลขดำ/แดง: </label>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="blackandred" value="{{getnumber}}">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                                <i class="fas fa-qrcode"></i>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class=" col-md-2">
-                <div class="form-group row">
-                    <label class="col-lg-4 col-form-label font-weight-normal">เลขแดง : </label>
-                    <div class="col-lg-8">
-                        <input type="text" class="form-control" #red (click)="getRedNumber(red.value)">
-                    </div>
-                </div>
-            </div>
-
-            <div class="  col-sm-4 col-md-2 col-xl-2">
-                <button type="button" class="btn btn-primary btn-block" (click)=" openDetail()">ค้นหา
+            <div class="col-md-1 ">
+                <button type="button" class="btn btn-primary " (click)="openDetail(blackandred)" style="width: 125px">
+                    ค้นหา
                 </button>
 
             </div>
-            <div class="col-sm-4 col-md-2 col-xl-2">
-                <button type="button" class="btn btn-secondary btn-block" (click)="closeDetail()">
-                    เคลียร์ข้อความ
-                </button>
-            </div>
-        </div>
-
-    </div>
-    <div *ngIf="show" class="card card-primary">
-        <div class="card-header ">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="col-md-2"></div>
-                        <h3 class="card-title text-right">รายละเอียด :</h3>
-
+            <div class="col-md-2">
+                <div class="offset-1 col-md-10">
+                    <button type="button" class="btn btn-secondary " (click)="closeDetail()" style="width: 125px">
+                        เคลียร์ข้อความ
+                    </button>
                 </div>
-                    <div class="col-md-2">
-                        <h3 class="card-title text-center" *ngIf="black.value !='' "> เลขดำ  {{black.value}}</h3>
-
-                </div>
-                <div class="col-md-2">
-                    <h3 class="card-title text-left" *ngIf="red.value !='' ">เลขแดง {{red.value}}</h3>
-
-                </div>
-
-            </div>
-
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
-            </div>
-
-        </div>
-        <div class="card-body">
-            <div class="row ">
-                <div class="col-md-6 col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="numberOfComplaint" class=" col-md-4 col-lg-5 col-form-label font-weight-normal">เลขที่เรื่องร้องเรียน</label>
-                        <div class="col-lg-6 ">
-                            <a type="text" class="form-control" id="numberOfComplaint"
-                               readonly>{{data.numberOfComplaint}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                </div>
-                <div class="col-md-6 col-lg-4">
-                </div>
-
-
-            </div>
-            <div class="row">
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="dateOfComplaint" class="col-lg-5 col-form-label font-weight-normal">วันที่รับเรื่องร้องเรียน
-                        </label>
-                        <div class="col-lg-6">
-                            <a type="date" class="form-control" id="dateOfComplaint"
-                               readonly> {{data.timeOfComplaint}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="timeOfComplaint"
-                               class="col-lg-5 col-form-label font-weight-normal">เวลา</label>
-                        <div class="col-lg-6">
-                            <a type="time" class="form-control" id="timeOfComplaint" readonly>{{data.time}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="numberOfBook"
-                               class="col-lg-5 col-form-label font-weight-normal">เลขที่หนังสือ</label>
-                        <div class="col-lg-6">
-                            <a type="text" class="form-control" id="numberOfBook" readonly>{{data.bookNumber}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="date" class="col-lg-5 col-form-label font-weight-normal">ลงวันที่</label>
-                        <div class="col-lg-6">
-                            <a type="date" class="form-control" id="date" readonly>{{data.date}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4"></div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="nameOfComplaint"
-                               class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ร้องเรียน</label>
-                        <div class="col-lg-6">
-                            <a type="text" class="form-control" id="nameOfComplaint"
-                               readonly>{{data.nameOfComplaint}}</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6  col-lg-4">
-                    <div class="form-group row text-right">
-                        <label for="nameOfComplained" class="col-lg-5 col-form-label font-weight-normal">ชื่อผู้ถูกร้องเรียน</label>
-                        <div class="col-lg-6">
-                            <a type="text" class="form-control" id="nameOfComplained"
-                               readonly>{{data.nameOfComplained}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-5 col-form-label ">
-                    <div class="col-md-9 text-right ">
-                        <button class="btn btn-primary " style="width: 121px">รับแฟ้ม</button>
-                        <button class="btn btn-primary ml-2">ส่งแฟ้ม (สผศ)</button>
-                    </div>
-                </div>
-
 
             </div>
         </div>
-    </div>
-    <div *ngIf="show" class="card">
-        <div class="row">
-            <div class="card-body">
-                <div class="col-md-12">
-                    <div>
-                        <h4 class="card-title"> ติดตามขั้นตอนการดำเนินการ
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                        <table class="table">
-                            <thead class="table text-secondary">
-                            <th>ลำดับ</th>
-                            <th>วันที่เปลี่ยนสถานะ</th>
-                            <th>การดำเนินการ</th>
-                            <th>เลขที่หนังสือ</th>
-                            <th>วันออกหนังสือแจ้ง</th>
-                            <th>ประเภทหนังสือ</th>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>1/8/2562</td>
-                                <td>รับเรื่องร้องเรียน</td>
-                                <td></td>
-                                <td>1/8/2562</td>
-                                <td>หนังสือแจ้งการรับเรื่องร้องเรียน</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>10/8/2562</td>
-                                <td>ออกเลขดำ</td>
-                                <td></td>
-                                <td>10/8/2562</td>
-                                <td>หนังสือแจ้งการออกเลขดำ</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-footer">
-
-            <ngb-pagination [collectionSize]="70" [page]="0"></ngb-pagination>
-        </div>
-    </div>
-
+    </form>
 </div>
+
+<div *ngIf="show" class="card ">
+
+    <div class="row">
+
+        <div class="card-body">
+            <div class="col-md-12">
+                <div>
+                    <h4 class="card-title"> ติดตามขั้นตอนการดำเนินการ
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="table text-secondary">
+                        <th class="text-center">ลำดับ</th>
+                        <th>วันที</th>
+                        <th>วันที่เสร็จ</th>
+                        <th>จำนวนวัน</th>
+                        <th>ขั้นตอน</th>
+                        <th>เลขที่หนังสือ</th>
+                        <th>วันที่รับหนังสือ</th>
+                        <th>เลขที่หนังสือออก</th>
+                        <th>วันที่ออกหนังสือ</th>
+                        <th>ประเภทหนังสือ</th>
+                        <th>ผู้ดำเนินการ</th>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of data; let i = index">
+                            <td class="text-center">{{i + 1}}</td>
+                            <td>{{item.date}}</td>
+                            <td>{{item.completedate}}</td>
+                            <td>{{item.amountdate}}</td>
+                            <td>{{item.step}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{item.operator}}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+
+        <ngb-pagination [collectionSize]="70" [page]="0"></ngb-pagination>
+    </div>
+</div>
+

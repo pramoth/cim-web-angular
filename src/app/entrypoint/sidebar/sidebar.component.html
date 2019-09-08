@@ -96,14 +96,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
-                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">
-                        <i class="nav-icon fas fa-clipboard"></i>
-                        <p>
-                            บันทึกรับแฟ้ม
-                        </p>
-                    </a>
-                </li>
+<!--                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">-->
+<!--                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">-->
+<!--                        <i class="nav-icon fas fa-clipboard"></i>-->
+<!--                        <p>-->
+<!--                            บันทึกรับแฟ้ม-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li class="nav-item"  *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
                     <a class="nav-link" [routerLink]="['sign-complaint']" routerLinkActive="active">
                         <i class="nav-icon fas fa-pen"></i>

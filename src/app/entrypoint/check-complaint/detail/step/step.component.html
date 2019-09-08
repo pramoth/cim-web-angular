@@ -1,22 +1,31 @@
 <table class="table table-bordered mt-3 mb-5">
-    <thead>
-    <tr>
-        <th class="text-center">วันที่</th>
-        <th>วันที่เสร็จ</th>
-        <th>จำนวนวัน</th>
-        <th>ขั้นตอน</th>
-        <th>ผู้ดำเนินการ</th>
-        <th>รายละเอียด</th>
-    </tr>
+    <thead class="table text-secondary">
+    <th class="text-center">ลำดับ</th>
+    <th>วันที</th>
+    <th>วันที่เสร็จ</th>
+    <th>จำนวนวัน</th>
+    <th>ขั้นตอน</th>
+    <th>เลขที่หนังสือ</th>
+    <th>วันที่รับหนังสือ</th>
+    <th>เลขที่หนังสือออก</th>
+    <th>วันที่ออกหนังสือ</th>
+    <th>ประเภทหนังสือ</th>
+    <th>ผู้ดำเนินการ</th>
     </thead>
     <tbody>
-    <tr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1]; let i = index">
-        <td class="text-center">01/03/2562</td>
+    <tr *ngFor="let item of data; let i = index">
+        <td class="text-center">{{i + 1}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.completedate}}</td>
+        <td>{{item.amountdate}}</td>
+        <td>{{item.step}}</td>
         <td></td>
         <td></td>
-        <td>ให้หน่วยงานชี้แจง</td>
-        <td>ผู้ดูแลระบบ</td>
-        <td class="text-center"><a style="color: #0d87e9;cursor: pointer;">ลงทะเบียนหนังสือออกภายนอก 00001/2562(ผผ 19/000001)</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{item.operator}}</td>
     </tr>
+
     </tbody>
 </table>

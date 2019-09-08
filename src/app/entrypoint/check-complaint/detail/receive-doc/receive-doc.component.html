@@ -82,6 +82,7 @@
                     <td class="text-center">File</td>
                     <td>
                         <button type="button" class="btn btn-secondary" style="width: 150px">อัปโหลด</button>
+                        <button type="button" class="btn btn-secondary ml-2" style="width: 150px">สแกนเอกสาร</button>
                     </td>
                 </tr>
                 <tr>
@@ -111,9 +112,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr *ngFor="let item of data; let i = index" [attr.id]="item">
-                        <td class="text-center">{{i + 1}}</td>
-                        <td>test{{i + 1}}.pdf</td>
+                    <tr *ngFor="let item of data; let i = index" [attr.id]="item.id">
+                        <td class="text-center">{{item.id}}</td>
+                        <td>test{{item.id}}.pdf</td>
                         <td>-</td>
                         <td>
                             <div class="row">
@@ -123,7 +124,7 @@
                                     </button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button   (click)= "deleteRow(i)" class="btn btn-outline-danger" ><i class="fa fa-trash"></i>
+                                    <button   (click)= "deleteRow(item.id)" class="btn btn-outline-danger" ><i class="fa fa-trash"></i>
                                     </button>
                                 </div>
                             </div>
