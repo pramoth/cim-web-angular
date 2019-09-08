@@ -1,28 +1,69 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-post-complaint',
-  templateUrl: './post-complaint-detail.component.html',
-  styleUrls: ['./post-complaint-detail.component.scss']
+    selector: 'app-post-complaint',
+    templateUrl: './post-complaint-detail.component.html',
+    styleUrls: ['./post-complaint-detail.component.scss']
 })
 export class PostComplaintDetailComponent implements OnInit {
 
-  complaintType: string = 'ไปรษณีย์';
+    complaintType: string = 'ไปรษณีย์';
 
-  complainantType: 'thai' | 'foreign' | 'agent' | 'group';
+    complainantType: 'thai' | 'foreign' | 'agent' | 'group';
 
-  subjects: string[] = [''];
+    subjects: any[] = [{}];
 
-  constructor() { }
+    complainants: any[] = [{complainantType: null, subComplainants: [{}]}];
 
-  ngOnInit() {
-  }
+    subComplainants: any[];
 
-  addSubject() {
-    this.subjects.push('');
-  }
+    accusedDepartments: any[] = [{}];
 
-  deleteSubject() {
-    this.subjects.pop();
-  }
+    sendAddresses: any[] = [{}];
+
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
+
+    addSubject() {
+        this.subjects.push({});
+    }
+
+    deleteSubject() {
+        this.subjects.pop();
+    }
+
+    addComplainant() {
+        this.complainants.push({complainantType: null, subComplainants: [{}]});
+    }
+
+    deleteComplainant() {
+        this.complainants.pop();
+    }
+
+    addSubComplainant(complainant: any) {
+        complainant.subComplainants.push({});
+    }
+
+    deleteSubComplainant(complainant: any) {
+        complainant.subComplainants.pop();
+    }
+
+    addDepartment() {
+        this.accusedDepartments.push({});
+    }
+
+    deleteDepartment() {
+        this.accusedDepartments.pop();
+    }
+
+    addSendAddress() {
+        this.sendAddresses.push({});
+    }
+
+    deleteSendAddress() {
+        this.sendAddresses.pop();
+    }
 }
