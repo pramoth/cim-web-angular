@@ -9,47 +9,40 @@ export class HistoryComponent implements OnInit {
 
 
     data: { username: string, nameOfuser: string, dateAccess: string, ip: string }[] = [{
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
+        username: 'admin',
+        nameOfuser: 'admin',
+        dateAccess: '8/10/2562',
+        ip: '171.7.35.229'
+    }, {
+        username: 'anonymous',
+        nameOfuser: 'นายฐนภณ ธนวชิรนนท์',
+        dateAccess: '8/10/2562',
+        ip: '10.1.210.6'
+    }, {
+        username: 'anonymous',
+        nameOfuser: 'นายฐนภณ ธนวชิรนนท์',
+        dateAccess: '8/10/2562',
+        ip: '10.1.210.6'
     },
-      {
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      },
-      {
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      },
-      {
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      },
-      {
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      },
-      {
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      },{
-        username: '',
-        nameOfuser: '',
-        dateAccess: '',
-        ip: ''
-      }
-      ];
+        {
+            username: 'anonymous',
+            nameOfuser: 'นายฐนภณ ธนวชิรนนท์',
+            dateAccess: '8/10/2562',
+            ip: '10.1.210.6'
+        },
+        {
+            username: 'anonymous',
+            nameOfuser: 'นายฐนภณ ธนวชิรนนท์',
+            dateAccess: '8/10/2562',
+            ip: '10.1.210.6'
+        },
+        {
+            username: 'anonymous',
+            nameOfuser: 'นายฐนภณ ธนวชิรนนท์',
+            dateAccess: '8/10/2562',
+            ip: '10.1.210.6'
+        },
+    ];
 
     constructor() {
     }
