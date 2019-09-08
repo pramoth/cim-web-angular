@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ChartDataSets, ChartOptions} from "chart.js";
+import {ChartDataSets, ChartOptions, ChartType} from "chart.js";
 import {Label} from "ng2-charts";
+
 
 @Component({
     selector: 'app-report',
@@ -8,6 +9,16 @@ import {Label} from "ng2-charts";
     styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
+
+    public pieChartLabels: Label[] = [['เรื่องร้องเรียน'], ['เรื่องยุติ']];
+    public pieChartData: number[] = [300, 500];
+    public pieChartType: ChartType = 'pie';
+    public pieChartLegend = true;
+    public pieChartColors = [
+        {
+            backgroundColor: ['rgba(255,162,182,1)', 'rgba(140,200,243,1)'],
+        },
+    ];
 
     reportList: string[] = [
         'รายงานเรื่องร้องเรียนที่อยู่ระหว่างดำเนินการ',

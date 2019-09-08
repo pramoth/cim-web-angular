@@ -9,14 +9,14 @@ export class StepComponent implements OnInit {
 
   data: { date: string, completedate: string, amountdate: string, step: string, operator: string }[] = [{
     date: "31/05/2561",
-    completedate: " ",
+    completedate: "",
     amountdate: "",
     step: "รับเรื่องร้องเรียน",
     operator: "นางสาวรศิพร เสวกพันธ์"
   }, {
     date: "04/06/2561",
     completedate: "04/06/2561",
-    amountdate: "",
+    amountdate: "1",
     step: "ส่งสารรับผิดชอบ",
     operator: "นายทิฆมพร ยะลา"
   }, {
@@ -28,19 +28,19 @@ export class StepComponent implements OnInit {
   }, {
     date: "12/06/2561",
     completedate: "12/06/2561",
-    amountdate: "",
+    amountdate: "1",
     step: "ส่งสำนักงานรับผิดชอบ",
     operator: "นายทิฆมพร ยะลา"
   }, {
     date: "12/06/2561",
     completedate: "12/06/2561",
-    amountdate: "",
+    amountdate: "1",
     step: "ส่งสำนักงานรับผิดชอบ",
     operator: "นายทิฆมพร ยะลา"
   }, {
     date: "18/06/2561",
     completedate: "18/06/2561",
-    amountdate: "",
+    amountdate: "1",
     step: "ส่งสำนักงานรับผิดชอบ",
     operator: "นายทิฆมพร ยะลา"
   }, {
