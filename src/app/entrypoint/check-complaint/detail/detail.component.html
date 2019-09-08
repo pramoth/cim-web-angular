@@ -40,13 +40,6 @@
 
     <div class="card mt-5">
         <ngb-tabset [justify]="'fill'">
-            <ngb-tab title="แผนการดำเนินการ">
-                <ng-template ngbTabContent>
-                    <div class="ml-4 mr-4">
-                        <app-plan></app-plan>
-                    </div>
-                </ng-template>
-            </ngb-tab>
             <ngb-tab title="รายละเอียดเรื่อง">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
@@ -54,6 +47,14 @@
                     </div>
                 </ng-template>
             </ngb-tab>
+            <ngb-tab title="แผนการดำเนินการ">
+                <ng-template ngbTabContent>
+                    <div class="ml-4 mr-4">
+                        <app-plan></app-plan>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+
 <!--            <ngb-tab id="complaint-info" title="ข้อมูลผู้ร้อง">-->
 <!--                <ng-template ngbTabContent>-->
 <!--                    <div class="ml-4 mr-4">-->
@@ -68,10 +69,10 @@
 <!--                    </div>-->
 <!--                </ng-template>-->
 <!--            </ngb-tab>-->
-            <ngb-tab title="เอกสารแนบ">
+            <ngb-tab title="ออกหนังสือ">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
-                        <app-attachment></app-attachment>
+                        <app-issue-doc></app-issue-doc>
                     </div>
                 </ng-template>
             </ngb-tab>
@@ -79,13 +80,6 @@
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
                         <app-receive-doc></app-receive-doc>
-                    </div>
-                </ng-template>
-            </ngb-tab>
-            <ngb-tab title="ออกหนังสือ">
-                <ng-template ngbTabContent>
-                    <div class="ml-4 mr-4">
-                        <app-issue-doc></app-issue-doc>
                     </div>
                 </ng-template>
             </ngb-tab>
@@ -103,10 +97,10 @@
                     </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="ส่งต่อ สส 1-4 สกค. สตท.">
+            <ngb-tab title="พิมพ์">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
-                        <app-forward></app-forward>
+                        <app-print></app-print>
                     </div>
                 </ng-template>
             </ngb-tab>
@@ -117,10 +111,10 @@
                     </div>
                 </ng-template>
             </ngb-tab>
-            <ngb-tab title="พิมพ์">
+            <ngb-tab title="ส่งต่อ สส 1-4 สกค. สตท.">
                 <ng-template ngbTabContent>
                     <div class="ml-4 mr-4">
-                        <app-print></app-print>
+                        <app-forward></app-forward>
                     </div>
                 </ng-template>
             </ngb-tab>
