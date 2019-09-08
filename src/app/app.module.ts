@@ -9,6 +9,8 @@ import {LoginComponent} from "./login/login.component";
 import {SharedModule} from './shared/shared.module';
 import {CustomDatepickerI18n, I18n} from "./shared/custom-datepicker";
 import {NgbDateParser} from "./shared/custom-ngb-date-parser";
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,13 @@ import {NgbDateParser} from "./shared/custom-ngb-date-parser";
         AppRoutingModule,
         FormsModule,
         NgbModule,
-        SharedModule
+        SharedModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot({
+            positionClass: 'toast-bottom-right',
+            preventDuplicates: true,
+            closeButton:true
+        })
     ],
     providers: [
         I18n,
