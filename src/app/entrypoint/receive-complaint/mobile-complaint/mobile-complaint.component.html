@@ -83,6 +83,19 @@
                     </table>
                 </div>
                 <div class="card-footer">
+                    <div class="dataTables_length">
+                        <label>
+                            <select #t name="example1_length"
+                                    class="custom-select custom-select-sm form-control form-control-sm"
+                                    (change)="callPage(t.value) ">
+                                <option id="10" value="10">10</option>
+                                <option id="25" value="25">25</option>
+                                <option id="50" value="50">50</option>
+                                <option id="100" value="100">100</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div></div>
                     <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
                 </div>
             </div>
