@@ -60,6 +60,10 @@ const routes: Routes = [
                 path: 'search',
                 loadChildren: () => import('./search/search.module').then(m => m.SearchModule)
             },
+            {
+                path: 'admin',
+                loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+            },
         ]
     }
 ];
