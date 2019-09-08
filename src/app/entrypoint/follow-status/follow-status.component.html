@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-2">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control"  id="blackandred"  value="{{getnumber}}" >
+                    <input type="text" class="form-control" id="blackandred" value="{{getnumber}}">
                     <div class="input-group-append">
                         <span class="input-group-text">
                                 <i class="fas fa-qrcode"></i>
@@ -46,8 +46,8 @@
                     <table class="table">
                         <thead class="table text-secondary">
                         <th class="text-center">ลำดับ</th>
-                        <th>วันที่ดำเนินการ</th>
-                        <th>วันนที่สิ้นสุดการดำเนินการ</th>
+                        <th>วันที</th>
+                        <th>วันที่เสร็จ</th>
                         <th>จำนวนวัน</th>
                         <th>ขั้นตอน</th>
                         <th>เลขที่หนังสือ</th>
@@ -58,32 +58,20 @@
                         <th>ผู้ดำเนินการ</th>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td class="text-center">1</td>
-                            <td>1/8/2562</td>
-                            <td>1/8/2562</td>
-                            <td>1</td>
-                            <td>รับร้องเรียน</td>
-                            <td>001/2558</td>
-                            <td>1/8/2562</td>
-                            <td>001/2558</td>
-                            <td>1/8/2562</td>
-                            <td>หนังสือรับแจ้งการรับเรื่องร้องเรียน</td>
-                            <td>สมชาย ใจดี</td>
+                        <tr *ngFor="let item of data; let i = index">
+                            <td class="text-center">{{i + 1}}</td>
+                            <td>{{item.date}}</td>
+                            <td>{{item.completedate}}</td>
+                            <td>{{item.amountdate}}</td>
+                            <td>{{item.step}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{item.operator}}</td>
                         </tr>
-                        <tr>
-                            <td class="text-center">2</td>
-                            <td>1/8/2562</td>
-                            <td>1/8/2562</td>
-                            <td>1</td>
-                            <td>รับร้องเรียน</td>
-                            <td>001/2558</td>
-                            <td>1/8/2562</td>
-                            <td>001/2558</td>
-                            <td>1/8/2562</td>
-                            <td>หนังสือรับแจ้งการรับเรื่องร้องเรียน</td>
-                            <td>สมชาย ใจดี</td>
-                        </tr>
+
                         </tbody>
                     </table>
                 </div>
