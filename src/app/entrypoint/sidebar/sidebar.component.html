@@ -124,31 +124,36 @@
                     <a [routerLink]="['report']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>
-                            รายงาน, สถิติ
+                                รายงาน, สถิติ
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview menu-open" *ngIf="authenService.hasAnyRole(['ADMIN'])">
+                <li class="nav-item has-treeview menu-open" *ngIf="authenService.hasAnyRole(['ADMIN'])" >
                     <a class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon fas fa-user-cog"></i>
                         <p>
                             จัดการข้อมูลแอดมิน
-                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a routerLinkActive="active" [routerLink]="['admin','user']"
-                               class="nav-link">
+                            <a routerLinkActive="active" class="nav-link" [routerLink]="['admin','user']">
                                 <i class="far nav-icon"></i>
                                 <p>ผู้ใช้งาน</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a routerLinkActive="active"
-                               class="nav-link" [routerLink]="['admin','group']">
+                            <a  routerLinkActive="active"
+                                class="nav-link" [routerLink]="['admin','group']">
                                 <i class="far nav-icon"></i>
                                 <p>กลุ่มผู้ใช้งาน</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['admin/history']" routerLinkActive="active"
+                               class="nav-link">
+                                <i class="far nav-icon"></i>
+                                <p>ประวัติการเข้าใช้ระบบ</p>
                             </a>
                         </li>
                     </ul>
