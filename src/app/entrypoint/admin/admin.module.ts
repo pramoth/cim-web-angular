@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import {FormsModule} from "@angular/forms";
 import { HistoryComponent } from './history/history.component';
+import {NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HistoryComponent } from './history/history.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbPaginationModule
   ]
 })
 export class AdminModule { }

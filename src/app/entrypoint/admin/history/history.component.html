@@ -1,22 +1,66 @@
 <div class="container-fluid">
+    <div class="card-header">
 
-    <div class="row">
-        <div class=" col-md-4">
-            <div class="row text-center">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="ค้นหาด้วย username หรือ ผู้ใช้งาน"
-                           aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">
-                            <i class="fa fa-search"></i></span>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-2 col-md-7">
+                    <div class="row text-center">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="ค้นหาด้วย username หรือ ผู้ใช้งาน">
+                            <div class="input-group-append">
+                        <span class="input-group-text">
+                           </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="  col-md-5">
+                <div class="row">
+                    <div class="offset-md-5 input-group mb-3">
+                        <label class="col-form-label font-weight-normal"> ตั้งแต่ : </label>
+                        <input type="date" class="form-control">
+                        <div class="input-group-append">
+                        <span class="input-group-text ">
+                    <i class="far fa-calendar-alt"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-4">
+                <div class="row ">
+                    <div class=" offset-2 input-group mb-3">
+                        <label class="col-form-label font-weight-normal"> สิ้นสุด : </label>
+                        <input type="date" class="form-control">
+                        <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="far fa-calendar-alt"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col">
+            <div class="col-md-6 text-right ">
+                <button type="button" class="btn btn-primary " style="width: 150px">
+                    ค้นหา
+                </button>
+            </div>
+            <div class=" col-md-6 text-left">
+                <div class=" col-md-10">
+                    <button type="button" class="btn btn-secondary " style="width: 150px">
+                        เคลียร์ข้อความ
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 </div>
-
 <div class="card ">
     <div class="row">
         <div class="card-body">
@@ -32,21 +76,41 @@
                         <th>IP</th>
 
                         </thead>
-                        <tbody>
+                        <tbody *ngFor=" let item of data ; let i =index">
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{i + 1}}</td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.nameOfuser}}</td>
+                            <td>{{item.dateAccess}}</td>
+                            <td>{{item.ip}}</td>
                         </tr>
 
                         </tbody>
                     </table>
                 </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <label class="col-md-1">
+                            <select #t name="example1_length"
+                                    class="custom-select form-control"
+                                    (change)="callPage(t.value) ">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+
+                        </label>
+                        <label class="col-md-6">
+                            <ngb-pagination [collectionSize]="data.length" [(page)]="page"></ngb-pagination>
+                        </label>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
 </div>
+
 
