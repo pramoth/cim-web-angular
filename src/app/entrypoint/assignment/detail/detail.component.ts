@@ -38,7 +38,11 @@ export class DetailComponent implements OnInit {
         }else{
             this.assignTo = false
         }
+    }
 
+
+    onShowHistory(history) {
+        this.openXl(history);
     }
 
 
@@ -60,6 +64,30 @@ export class DetailComponent implements OnInit {
             this.divisionsList = resp;
         })
     }
+
+    historyResponse = [
+        {
+            id:0,
+            date:new Date(),
+            from:"สำนักกฏหมายและคดี",
+            to:"สำนักตรวจสอบเรื่องร้องเรียน",
+            assigner:"สมชาติ ทองดี",
+
+
+        },{
+            id:1,
+            date:new Date(),
+            from:"สำนักตรวจสอบเรื่องร้องเรียน",
+            to:"สำนักสอบสวน 1",
+            assigner:"สมใจ ปราถนา",
+        },{
+            id:2,
+            date:new Date(),
+            from:"สำนักสอบสวน 1",
+            to:"สำนักตรวจสอบเรื่องร้องเรียน",
+            assigner:"ทนง องอาจ",
+        }
+    ];
 
     employeeList = [
         {
@@ -147,8 +175,6 @@ export class DetailComponent implements OnInit {
     responsibleofficerList=[
 
     ];
-
-
 
 
 }
