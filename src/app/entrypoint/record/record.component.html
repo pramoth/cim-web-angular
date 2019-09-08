@@ -6,6 +6,22 @@
 </div>
 <!-- <div class="row" style="border: 1px solid black"> -->
 
+<div class="row">
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4 my-2 text-right" style="border:1px">
+                <p>เรื่องร้องเรียนดำเลขที่</p>
+            </div>
+            <div class="col-md-4" style="border: 1px">
+                <input type="text" class="form-control" [(ngModel)]="complainNumber" id="complainNumber">
+            </div>
+            <div class="col-md-3 col-sm text-left">
+                <!-- <button type="button" class="btn btn-primary" style="width: 110px">QR Code
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="col-11 mx-5" style="padding: 20px 0 0 0">
@@ -39,7 +55,7 @@
                         <th class="row justify-content-center">{{i + 1}}  </th>
                         <td>00{{ item.label }}/2558</td>
                         <td></td>
-                        <td>เรื่องแจ้งที่ {{ item.selected }}</td>
+                        <td>เรื่องแจ้งที่ {{ i+1 }}</td>
                         <td></td>
                         <td></td>
                         <td></td>

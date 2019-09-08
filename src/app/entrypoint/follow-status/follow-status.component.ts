@@ -8,8 +8,8 @@ import {isEmpty} from "rxjs/operators";
 })
 export class FollowStatusComponent implements OnInit {
     show: boolean = false;
-    blackNumber;
-    RedNumber;
+    getnumber = "";
+    blackandred: any = "001/2562";
     data: any = {
         dateOfComplaint: "1/8/2562",
         timeOfComplaint: "30/7/2562",
@@ -27,17 +27,15 @@ export class FollowStatusComponent implements OnInit {
     ngOnInit() {
     }
 
-    openDetail() {
+    openDetail(redandblack) {
         this.show = true;
+        this.getnumber = redandblack;
     }
 
     closeDetail() {
         this.show = false;
+        this.getnumber= '';
     }
-    getBlackNumber(blacknumber) {
-        this.blackNumber = blacknumber;
-    }
-    getRedNumber(blacknumber) {
-        this.RedNumber = blacknumber;
-    }
+
+
 }
