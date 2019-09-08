@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h4 class="modal-title">Scanner</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="modal-body">
+    <form class="form-inline">
+        <label class="my-1 mr-2" for="scannerSel">Scanner</label>
+        <select class="custom-select my-1 mr-sm-2" id="scannerSel">
+            <option selected>Canon SP1</option>
+            <option value="1">EPSON XY1</option>
+        </select>
+
+        <label class="my-1 mr-2" for="dipSel">DPI</label>
+        <select class="custom-select my-1 mr-sm-2" id="dipSel">
+            <option selected>100</option>
+            <option value="1">300</option>
+        </select>
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customControlInline">
+            <label class="custom-control-label" for="customControlInline">Color</label>
+        </div>
+
+        <button type="button" class="btn btn-primary my-1" (click)="startScan()">เริ่มสแกน</button>
+    </form>
+    <ng-container *ngFor="let img of scanImages">
+        <div class="row bg-secondary mb-auto p-4" style="text-align: center">
+            <img style="max-width:96%;" src="/assets/mock-data/{{img}}">
+        </div>
+    </ng-container>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-light" (click)="activeModal.close('Close click')">Save</button>
+</div>

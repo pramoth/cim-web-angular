@@ -140,7 +140,10 @@
                 <div class="card-body" *ngFor="let complainant of complainants; let i = index">
                     <div class="row">
                         <div class="col-md-2">
-                            <h5>ผู้ร้องที่ {{i + 1}}</h5>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" [(ngModel)]="complainant.checked">
+                                <label class="form-check-label">ผู้ร้องที่ {{i + 1}}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -149,7 +152,8 @@
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio1' + i]"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input"
+                                       [id]="['radio1' + i]"
                                        [value]="'thai'"
                                        [(ngModel)]="complainant.complainantType">
                                 <label class="custom-control-label" [for]="['radio1' + i]">ชาวไทย</label>
@@ -157,7 +161,8 @@
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio2' + i]"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input"
+                                       [id]="['radio2' + i]"
                                        [value]="'foreign'"
                                        [(ngModel)]="complainant.complainantType">
                                 <label class="custom-control-label" [for]="['radio2' + i]">ชาวต่างชาติ</label>
@@ -165,7 +170,8 @@
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio3' + i]"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input"
+                                       [id]="['radio3' + i]"
                                        [value]="'agent'"
                                        [(ngModel)]="complainant.complainantType">
                                 <label class="custom-control-label" [for]="['radio3' + i]">ตัวแทน</label>
@@ -173,7 +179,8 @@
                         </div>
                         <div class="col-md-4 text-center">
                             <div class="form-group custom-radio">
-                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input" [id]="['radio4' + i]"
+                                <input type="radio" [name]="['complainant-type' + i]" class="custom-control-input"
+                                       [id]="['radio4' + i]"
                                        [value]="'group'"
                                        [(ngModel)]="complainant.complainantType">
                                 <label class="custom-control-label" [for]="['radio4' + i]">หมู่คณะ
@@ -225,6 +232,9 @@
                         <div class="col-md-2 form-group">
                             <input type="text" class="form-control">
                         </div>
+                        <div class="col-md-2 form-group">
+                            <button class="btn btn-info">ตรวจสอบชื่อซ้ำ</button>
+                        </div>
                     </div>
                     <div *ngIf="complainant.complainantType == 'group'">
                         <div class="row">
@@ -234,8 +244,10 @@
                                 <h5>ชื่อผู้ร้องร่วม</h5>
                             </div>
                             <div class="col-md-2 form-group">
-                                <button class="btn btn-outline-primary mr-2" (click)="addSubComplainant(complainant)"><i class="fa fa-plus"></i></button>
-                                <button class="btn btn-outline-danger mr-2" (click)="deleteSubComplainant(complainant)"><i class="fa fa-minus"></i></button>
+                                <button class="btn btn-outline-primary mr-2" (click)="addSubComplainant(complainant)"><i
+                                        class="fa fa-plus"></i></button>
+                                <button class="btn btn-outline-danger mr-2" (click)="deleteSubComplainant(complainant)">
+                                    <i class="fa fa-minus"></i></button>
                             </div>
                         </div>
                         <div *ngFor="let subComplainant of complainant.subComplainants; let i = index">
@@ -258,7 +270,7 @@
                                     ชื่อ
                                 </div>
                                 <div class="col-md-2 form-group">
-                                    <input type="text" class="form-control" >
+                                    <input type="text" class="form-control">
                                 </div>
                                 <div class="col-md-2 text-md-right">
                                     นามสกุล
@@ -285,9 +297,6 @@
                         </div>
                         <div class="col-md-3 form-group">
                             <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-1 form-group">
-                            <button class="btn btn-info">ตรวจสอบ</button>
                         </div>
                     </div>
                     <div class="row">
@@ -416,6 +425,9 @@
                                 <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
+                                <div class="col-md-2 form-group">
+                                    <button class="btn btn-info">ตรวจสอบชื่อซ้ำ</button>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 text-md-right">
@@ -433,9 +445,6 @@
                                 </div>
                                 <div class="col-md-3 form-group">
                                     <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-1 form-group">
-                                    <button class="btn btn-info">ตรวจสอบ</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -533,8 +542,10 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-outline-primary mr-2" (click)="addComplainant()"><i class="fa fa-plus"></i></button>
-                            <button class="btn btn-outline-danger mr-2" (click)="deleteComplainant()"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-outline-primary mr-2" (click)="addComplainant()"><i
+                                    class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-danger mr-2" (click)="deleteComplainant()"><i
+                                    class="fa fa-minus"></i></button>
                             เพิ่มผู้ร้องเรียน
                         </div>
                     </div>
@@ -553,7 +564,10 @@
                 <div class="card-body" *ngFor="let department of accusedDepartments; let i = index">
                     <div class="row">
                         <div class="col-md-2">
-                            <h5>หน่วยงานที่ {{i + 1}}</h5>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" [(ngModel)]="department.checked">
+                                <label class="form-check-label">หน่วยงานที่ {{i + 1}}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -679,8 +693,10 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn btn-outline-primary mr-2" (click)="addDepartment()"><i class="fa fa-plus"></i></button>
-                            <button class="btn btn-outline-danger mr-2" (click)="deleteDepartment()"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-outline-primary mr-2" (click)="addDepartment()"><i
+                                    class="fa fa-plus"></i></button>
+                            <button class="btn btn-outline-danger mr-2" (click)="deleteDepartment()"><i
+                                    class="fa fa-minus"></i></button>
                             เพิ่มหน่วยงาน / ผู้ถูกร้องเรียน
                         </div>
                     </div>
@@ -766,8 +782,9 @@
         </div>
         <div class="card-footer">
             <div class="row">
-                <button class="btn btn-primary" (click)="save($event.target.innerText)">บันทึกรับเรื่องร้องเรียน</button>
-                <button class="btn btn-secondary ml-2" [routerLink]="['..']" >ยกเลิกการบันทึก</button>
+                <button class="btn btn-primary" (click)="save($event.target.innerText)">บันทึกรับเรื่องร้องเรียน
+                </button>
+                <button class="btn btn-secondary ml-2" [routerLink]="['..']">ยกเลิกการบันทึก</button>
             </div>
         </div>
     </div>
