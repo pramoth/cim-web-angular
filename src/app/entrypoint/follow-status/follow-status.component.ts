@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {isEmpty} from "rxjs/operators";
 
 @Component({
     selector: 'app-follow-status',

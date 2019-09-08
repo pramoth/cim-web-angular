@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-receive-doc',
-  templateUrl: './receive-doc.component.html',
-  styleUrls: ['./receive-doc.component.scss']
+    selector: 'app-receive-doc',
+    templateUrl: './receive-doc.component.html',
+    styleUrls: ['./receive-doc.component.scss']
 })
 export class ReceiveDocComponent implements OnInit {
-  data: number[];
+    data: { id: number }[] = [{id: 1}, {id: 2}, {id: 3}, {id: 4},
+        {id: 5}, {id: 6}, {id: 7}, {id: 8}, {id: 9}, {id: 10}, {id: 11}];
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-    this.data= [1,2,3,4,5,6,7]
+    ngOnInit() {
 
-  }
-  deleteRow(i) {
-    const index = this.data.indexOf(this.data.length);
-    this.data.splice(index, 1);
-  }
+    }
+
+    deleteRow(id) {
+        for (let i = 0; i < this.data.length; ++i) {
+            if (this.data[i].id === id) {
+                this.data.splice(i, 1);
+            }
+        }
+    }
 }
