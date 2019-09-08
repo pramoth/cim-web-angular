@@ -83,7 +83,27 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
+
+                    <div class="row">
+                        <label class="col-md-1">
+                            <select #t name="example1_length"
+                                    class="custom-select form-control"
+                                    (change)="callPage(t.value) ">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+
+                        </label>
+                        <label class="col-md-6">
+                            <ngb-pagination [collectionSize]="items.length" [(page)]="page"></ngb-pagination>
+
+                        </label>
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
