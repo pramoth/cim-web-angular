@@ -11,6 +11,7 @@ import {CustomDatepickerI18n, I18n} from "./shared/custom-datepicker";
 import {NgbDateParser} from "./shared/custom-ngb-date-parser";
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ComfirmDialogComponent} from './shared/comfirm-dialog/comfirm-dialog.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
             useClass: NgbDateParser
         },
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents:[
+        ComfirmDialogComponent
+    ]
 })
 export class AppModule {
 }
