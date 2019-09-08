@@ -1,0 +1,390 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5 class="m-0 text-dark">ผู้ใช้งานทั้งหมด</h5>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-info float-right text-right" (click)="addNewUser(new_user_content)">
+                        เพิ่มผู้ใช้
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-12">
+            <div class="card card-primary m-12">
+                <div class="card-header">
+                    <h3 class="card-title">ข้อมูลผู้ใช้</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-widget="collapse">
+                            <i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="col">
+                        <div class="table-responsive" style="height: 366px;">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>รหัสผู้ใช้งาน</th>
+                                    <th>ชื่อบัญชีผู้ใช้งาน</th>
+                                    <th>ชื่อ-นามสกุล</th>
+                                    <th class="text-center text-nowrap" style="width: 10px">สำนัก</th>
+                                    <th class="text-center text-nowrap" style="width: 10px">แก้ไข</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let item of usersList; let i = index">
+                                    <td class="text-center">{{i + 1}}</td>
+                                    <td>{{item.user_id.toString()}}</td>
+                                    <td [innerHTML]="item.user_name"></td>
+                                    <td>{{item.fname + ' ' + item.lname}}</td>
+                                    <td class="text-center text-nowrap">
+                                        {{item.department}}
+                                    </td>
+                                    <td class="text-center text-nowrap">
+                                        <button type="button" class="btn btn-warning" style="margin-right:5px " (click)="onEditUserInfo(edit_user_content,item)">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger" (click)="onDeleteItem(item)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--Add user Modal Dialog-->
+<ng-template #new_user_content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">มอบหมายเจ้าหน้าที่ที่รับผิดชอบ</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <br>
+                        <h5 class="m-0 text-dark">ดึงข้อมูลผู้ใช้</h5>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="col-sm-6 col-form-label font-weight-normal">บัญชีผู้ใช้</label>
+                        <div class="col-sm">
+                            <input class="form-control" value="kokekikkok">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-sm-6 col-form-label font-weight-normal">รหัสผ่าน</label>
+                        <div class="col-sm">
+                            <input class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-sm-6 col-form-label font-weight-normal"></label>
+                        <div class="col-sm">
+                            <button class="btn btn-primary left-side inline" (click)="onSearchUserInfo()">ค้นหาจากชื่อผู้ใช้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!--information from user ldap-->
+        <div class="row" *ngIf="user_info_show">
+            <div class="col-md-12">
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">ข้อมูลผู้ใช้</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                ชื่อ-นามสกุล
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <input type="text" value="สมชาย ใจดี" disabled class="form-control">
+                            </div>
+                            <div class="col-md-2 text-md-right">
+                                ตำแหน่ง
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <input type="text" value="หัวหน้างาน" disabled class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                สังกัดหน่วยงาน
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <input type="text" value="กระทรวงมหาดไทย" disabled class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">เลือกกลุ่มผู้ใช้งาน</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="col">
+                            <div class="table-responsive" style="height: 366px;border-color: transparent">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>เลือกกลุ่ม</th>
+                                        <th>สิทธ์ผู้ใช้งาน</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let item of groupUserList; let i = index">
+                                        <td><input type="checkbox" (change)="addRightToUser(item,$event.target.checked)"   [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}"/></td>
+                                        <td>{{item.name}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">สิทธิผู้ใช้งาน</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="col">
+                            <div class="table-responsive" style="height: 366px;border-color: transparent">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>สิทธ์ผู้ใช้งาน</th>
+                                        <th>เลือกกลุ่ม</th>
+                                        <th>วันที่เริ่มสิทธิ</th>
+                                        <th>วันที่หมดสิทธิ</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let item of rightUserList; let i = index">
+                                        <td><input type="checkbox"  [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}"/></td>
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.start|date:'medium'}}</td>
+                                        <td>{{item.end |date:'medium'}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <div class="text-center mt-5 mb-5">
+                        <button class="btn btn-info" (click)="modal.close('Save click')">เพิ่มผู้ใช้</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+<!--Edit user Modal Dialog-->
+<ng-template #edit_user_content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">แก้ไขข้อมูลผู้ใช้</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="col-sm-6 col-form-label font-weight-normal">บัญชีผู้ใช้</label>
+                        <div class="col-sm">
+                            <input class="form-control" disabled value="{{userEdit.user_name}}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-sm-6 col-form-label font-weight-normal">รหัสผ่าน</label>
+                        <div class="col-sm">
+                            <input class="form-control" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!--information from user ldap-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">ข้อมูลผู้ใช้</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                ชื่อ-นามสกุล
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <input type="text" value="{{userEdit.fname+' '+userEdit.lname}}"  class="form-control">
+                            </div>
+                            <div class="col-md-2 text-md-right">
+                                ตำแหน่ง
+                            </div>
+                            <div class="col-md-2 form-group">
+                                <input type="text" value="หัวหน้างาน"  class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 text-md-right">
+                                สังกัดหน่วยงาน
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <input type="text" value="{{userEdit.department}}"  class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">เลือกกลุ่มผู้ใช้งาน</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="col">
+                            <div class="table-responsive" style="height: 366px;border-color: transparent">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>เลือกกลุ่ม</th>
+                                        <th>สิทธ์ผู้ใช้งาน</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let item of groupUserList; let i = index">
+                                        <td><input type="checkbox" (change)="addRightToUser(item,$event.target.checked)"   [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}"/></td>
+                                        <td>{{item.name}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-info m-12">
+                    <div class="card-header">
+                        <h3 class="card-title">สิทธิผู้ใช้งาน</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="col">
+                            <div class="table-responsive" style="height: 366px;border-color: transparent">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>สิทธ์ผู้ใช้งาน</th>
+                                        <th>เลือกกลุ่ม</th>
+                                        <th>วันที่เริ่มสิทธิ</th>
+                                        <th>วันที่หมดสิทธิ</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let item of rightUserList; let i = index">
+                                        <td><input type="checkbox"  [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}"/></td>
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.start|date:'medium'}}</td>
+                                        <td>{{item.end |date:'medium'}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <div class="text-center mt-5 mb-5">
+                        <button class="btn btn-info" (click)="modal.close('Save click')">บันทึก</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-template>
+
