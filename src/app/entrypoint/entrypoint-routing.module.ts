@@ -17,7 +17,7 @@ const routes: Routes = [
             {
                 path: 'dashboard',
                 component: MainContentComponent,
-                data: {name: 'Dashboard', header: 'Dashboard', iconClass: undefined}
+                data: {name: 'Dashboard', header: 'Dashboard', iconClass: 'fas fa-tachometer-alt'}
             },
             {
                 path: 'form',

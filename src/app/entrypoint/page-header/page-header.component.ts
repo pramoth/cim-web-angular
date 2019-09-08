@@ -11,6 +11,7 @@ export class PageHeaderComponent {
 
     breadcrumbs: { data: any, url: string }[] = [];
     header:string
+    iconClass:string
 
     constructor(private router: Router, private route: ActivatedRoute) {
         this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
@@ -23,6 +24,7 @@ export class PageHeaderComponent {
                 childrenRoutes.filter(e => e.outlet === 'primary').forEach(route => {
                     __url += '/' + route.snapshot.url.map(segment => segment.path).join('/');
                     this.header = route.snapshot.data.header
+                    this.iconClass = route.snapshot.data.iconClass
                     this.breadcrumbs.push({
                         data: route.snapshot.data,
                         url: __url

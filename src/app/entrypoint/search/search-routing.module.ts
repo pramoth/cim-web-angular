@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: AllComponent,
-    data: {name: 'ค้นหาเรื่องร้องเรียน', header: 'ค้นหาเรื่องร้องเรียน', iconClass: undefined}
+    data: {name: 'ค้นหาเรื่องร้องเรียน', header: 'ค้นหาเรื่องร้องเรียน', iconClass: 'fas fa-search'}
   },
 ];
 

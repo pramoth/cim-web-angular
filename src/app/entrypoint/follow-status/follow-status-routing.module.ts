@@ -7,7 +7,7 @@ const routes: Routes = [
     {
         path: '',
         component: FollowStatusComponent,
-        data: {name: 'ติดตามสถานะ', header: 'ติดตามสถานะ'}
+        data: {name: 'ติดตามสถานะ', header: 'ติดตามสถานะ',iconClass:'fas fa-history'}
     }
 ];
 

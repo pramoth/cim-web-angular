@@ -9,12 +9,12 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: AllComponent,
-        data: {name: 'รอมอบหมายงาน', header: 'รอมอบหมายงาน', iconClass: undefined}
+        data: {name: 'รอมอบหมายงาน', header: 'รอมอบหมายงาน', iconClass: 'fas fa-edit'}
     }, {
         path: 'detail',
         pathMatch: 'full',
         component: DetailComponent,
-        data: {name: 'มอบหมายงาน', header: 'มอบหมายงาน', iconClass: undefined}
+        data: {name: 'มอบหมายงาน', header: 'มอบหมายงาน', iconClass: 'fas fa-edit'}
     }
 
 ];

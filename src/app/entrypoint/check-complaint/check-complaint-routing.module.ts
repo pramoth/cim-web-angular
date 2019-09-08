@@ -9,12 +9,12 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: CheckComplaintComponent,
-        data: {name: 'ตรวจสอบเรื่องร้องเรียน', header: 'ตรวจสอบเรื่องร้องเรียน'}
+        data: {name: 'ตรวจสอบเรื่องร้องเรียน', header: 'ตรวจสอบเรื่องร้องเรียน', iconClass: 'fas fa-check'}
     },
     {
         path: 'detail',
         component: DetailComponent,
-        data: {name: 'รายละเอียด', header: 'รายละเอียด'}
+        data: {name: 'รายละเอียด', header: 'รายละเอียด', iconClass: 'fas fa-check'}
     },
 ];
 

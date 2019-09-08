@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: ReportComponent,
-        data: {name: 'รายงาน, สถิติ', header: 'รายงาน, สถิติ'}
+        data: {name: 'รายงาน, สถิติ', header: 'รายงาน, สถิติ',iconClass:'fas fa-chart-bar'}
     },
 ];
 

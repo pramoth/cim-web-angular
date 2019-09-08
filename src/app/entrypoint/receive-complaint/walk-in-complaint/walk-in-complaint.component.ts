@@ -1,66 +1,45 @@
 import {Component, OnInit} from '@angular/core';
-import {ToastrService} from 'ngx-toastr';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {ComfirmDialogComponent} from '../../../shared/comfirm-dialog/comfirm-dialog.component';
-import {from} from 'rxjs';
-import {filter} from 'rxjs/operators';
 
 @Component({
-    selector: 'app-walk-in-complaint',
+    selector: 'app-walkin-complaint',
     templateUrl: './walk-in-complaint.component.html',
     styleUrls: ['./walk-in-complaint.component.scss']
 })
-export class WalkInComplaintComponent implements OnInit {
+export class WalkinComplaintComponent implements OnInit {
 
-    complaintType: string = 'Walk In';
+    pages: any = {id: 10};
+    page = 1;
+    items: { route: string, complainant: string }[] = [
+        {route: 'call-center', complainant: 'นายสมชาย ใจดี'},
+        {route: 'call-center', complainant: 'นายจอห์น วิก'},
+        {route: 'call-center', complainant: 'นางสมหญิง ใจเด็ด'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'},
+        {route: 'call-center', complainant: 'นางสาวมะนาว โซดา'},
+        {route: 'call-center', complainant: 'นายรุ่งเรือง จิตใจดี'},
+        {route: 'call-center', complainant: 'นายเจ้าขุน ทอง'}];
 
-    complainantType: 'thai' | 'foreign' | 'agent' | 'group';
-
-    complainants: any[] = [{complainantType: null, subComplainants: [{}]}];
-
-    subComplainants: any[];
-
-    accusedDepartments: any[] = [{}];
-
-    constructor(private toastr: ToastrService, private ngbModal: NgbModal) {
+    constructor() {
     }
 
     ngOnInit() {
     }
 
-    addComplainant() {
-        this.complainants.push({complainantType: null, subComplainants: [{}]});
+    callPage(value) {
+        this.pages.id = value;
+        return value
     }
 
-    deleteComplainant() {
-        this.complainants.pop();
-    }
-
-    addSubComplainant(complainant: any) {
-        complainant.subComplainants.push({});
-    }
-
-    deleteSubComplainant(complainant: any) {
-        complainant.subComplainants.pop();
-    }
-
-    addDepartment() {
-        this.accusedDepartments.push({});
-    }
-
-    deleteDepartment() {
-        this.accusedDepartments.pop();
-    }
-
-    save(innerText: string): void {
-        const modalRef = this.ngbModal.open(ComfirmDialogComponent);
-        modalRef.componentInstance.content = 'ยืนยันการ'+innerText;
-        from(modalRef.result)
-            .pipe(filter(e => !!e))
-            .subscribe(e => {
-                this.toastr.success('บันทึกเสร็จสิ้น', 'Success');
-            }, dismis => {
-            });
-    }
 
 }

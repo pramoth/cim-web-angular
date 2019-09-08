@@ -3,7 +3,10 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">{{header}}</h1>
+                <h1 class="m-0 text-dark">
+                    <i *ngIf="iconClass" [class]="iconClass"></i>
+                    {{header}}
+                </h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <section>
@@ -13,11 +16,15 @@
                         </li>
                         <ng-container *ngFor="let breadcrumb of breadcrumbs;let last = last">
                             <ng-container *ngIf="breadcrumb.data.name">
-                                <i *ngIf="breadcrumb.data.iconClass" [class]="breadcrumb.data.iconClass"></i>
+
                                 <li *ngIf="!last" class="breadcrumb-item">
-                                    <a [routerLink]="breadcrumb.url">{{breadcrumb.data?.name}}</a>
+<!--                                    <i *ngIf="breadcrumb.data.iconClass" [class]="breadcrumb.data.iconClass"></i>-->
+                                    <a [routerLink]="breadcrumb.url">/{{breadcrumb.data?.name}}</a>
                                 </li>
-                                <li *ngIf="last" class="breadcrumb-item active">{{breadcrumb.data?.name}}</li>
+                                <li *ngIf="last" class="breadcrumb-item active">
+<!--                                    <i *ngIf="breadcrumb.data.iconClass" [class]="breadcrumb.data.iconClass"></i>-->
+                                    {{breadcrumb.data?.name}}
+                                </li>
                             </ng-container>
                         </ng-container>
                     </ol>
