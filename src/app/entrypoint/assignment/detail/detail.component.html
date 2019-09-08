@@ -59,8 +59,8 @@
                     <div class="card card-info m-12">
                         <div class="card-header">
                             <h3 class="card-title">เจ้าหน้าที่ผู้รับผิดชอบ</h3>
-                            <button type="button" class="btn btn-danger card-title float-md-right card-right-bar" onmouseover="this.style.color='#00ff0a'"
-                                    (click)="onShowHistory(history_content)">ดูประวัติการเปลี่ยนผู้รับผิดชอบ</button>
+                            <button type="button" class="btn btn-danger card-title float-md-right card-right-bar"
+                                    (click)="onShowHistory(history_content)"><i class="fas fa-history"></i> ดูประวัติการเปลี่ยนผู้รับผิดชอบ</button>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-widget="collapse">
                                     <i class="fas fa-minus"></i></button>
@@ -862,6 +862,7 @@
 <!--History Modal Dialog-->
 <ng-template #history_content let-modal>
     <div class="modal-header">
+
         <h4 class="modal-title">ประวัติการเปลี่ยนผู้รับผิดชอบ</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
