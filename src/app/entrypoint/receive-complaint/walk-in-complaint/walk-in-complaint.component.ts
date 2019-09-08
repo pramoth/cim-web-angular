@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ComfirmDialogComponent} from '../../../shared/comfirm-dialog/comfirm-dialog.component';
+import {from} from 'rxjs';
+import {filter} from 'rxjs/operators';
 
 @Component({
     selector: 'app-walk-in-complaint',
@@ -18,7 +22,7 @@ export class WalkInComplaintComponent implements OnInit {
 
     accusedDepartments: any[] = [{}];
 
-    constructor(private toastr: ToastrService) {
+    constructor(private toastr: ToastrService, private ngbModal: NgbModal) {
     }
 
     ngOnInit() {
@@ -49,8 +53,14 @@ export class WalkInComplaintComponent implements OnInit {
     }
 
     save(): void {
-        console.log(this.toastr)
-        this.toastr.success('บันทึกเสร็จสิ้น','Success')
+        const modalRef = this.ngbModal.open(ComfirmDialogComponent);
+        modalRef.componentInstance.content = 'ยืนยันการบันทึก'
+        from(modalRef.result)
+            .pipe(filter(e => !!e))
+            .subscribe(e => {
+                this.toastr.success('บันทึกเสร็จสิ้น', 'Success');
+            }, dismis => {
+            });
     }
 
 }
