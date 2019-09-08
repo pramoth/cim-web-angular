@@ -96,15 +96,15 @@
                         </p>
                     </a>
                 </li>
-<!--                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">-->
-<!--                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">-->
-<!--                        <i class="nav-icon fas fa-clipboard"></i>-->
-<!--                        <p>-->
-<!--                            บันทึกรับแฟ้ม-->
-<!--                        </p>-->
-<!--                    </a>-->
-<!--                </li>-->
-                <li class="nav-item"  *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
+                <!--                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">-->
+                <!--                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">-->
+                <!--                        <i class="nav-icon fas fa-clipboard"></i>-->
+                <!--                        <p>-->
+                <!--                            บันทึกรับแฟ้ม-->
+                <!--                        </p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
                     <a class="nav-link" [routerLink]="['sign-complaint']" routerLinkActive="active">
                         <i class="nav-icon fas fa-pen"></i>
                         <p>
@@ -124,26 +124,28 @@
                     <a [routerLink]="['report']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>
-                                รายงาน, สถิติ
+                            รายงาน, สถิติ
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="authenService.hasAnyRole(['ADMIN'])" >
-                    <a [routerLink]="['user']" routerLinkActive="active" class="nav-link">
-                        <i class="nav-icon fas fa-user-cog"></i>
+                <li class="nav-item has-treeview menu-open" *ngIf="authenService.hasAnyRole(['ADMIN'])">
+                    <a class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
                         <p>
                             จัดการข้อมูลแอดมิน
+                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a  routerLinkActive="active" class="nav-link">
+                            <a routerLinkActive="active" [routerLink]="['admin','user']"
+                               class="nav-link">
                                 <i class="far nav-icon"></i>
                                 <p>ผู้ใช้งาน</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  routerLinkActive="active"
+                            <a routerLinkActive="active"
                                class="nav-link" [routerLink]="['admin','group']">
                                 <i class="far nav-icon"></i>
                                 <p>กลุ่มผู้ใช้งาน</p>
