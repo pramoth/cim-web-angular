@@ -21,4 +21,11 @@ export class InternetComplaintComponent implements OnInit {
   ngOnInit() {
   }
 
+  types: any = [10, 25, 50, 100];
+  order: any = {id: 10};
+  callPage(value) {
+    this.order.type = value;
+    return value
+  }
+
 }

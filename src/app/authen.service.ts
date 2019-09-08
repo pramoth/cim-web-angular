@@ -59,7 +59,7 @@ export class AuthenService {
         return this.currentUserSubject;
     }
 
-    public hasAnyRole(rolesAllow: Authority[]): boolean {
+    public hasAnyRole(rolesAllow: Authority[]| string[]): boolean {
         if (this.currentUserSubject.value && this.currentUserSubject.value.authorities) {
             return this.currentUserSubject.value.authorities.some(e => rolesAllow.some(ex => e === ex));
         } else {
