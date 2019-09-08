@@ -49,6 +49,12 @@ const routes: Routes = [
         data: {name: 'รับเรื่องร้องเรียน : Internet', header: 'รับเรื่องร้องเรียน : Internet'}
     },
     {
+        path: 'internet-extra',
+        pathMatch: 'full',
+        component: InternetComplaintComponent,
+        data: {name: 'รับเรื่องร้องเรียน : เพิ่มเติม Internet', header: 'รับเรื่องร้องเรียน : เพิ่มเติม Internet'}
+    },
+    {
         path: 'internet/detail',
         pathMatch: 'full',
         component: InternetComplaintDetailComponent,
@@ -59,6 +65,12 @@ const routes: Routes = [
         pathMatch: 'full',
         component: MobileComplaintComponent,
         data: {name: 'รับเรื่องร้องเรียน : Mobile Application', header: 'รับเรื่องร้องเรียน : Mobile Application'}
+    },
+    {
+        path: 'mobile-extra',
+        pathMatch: 'full',
+        component: MobileComplaintComponent,
+        data: {name: 'รับเรื่องร้องเรียน : เพิ่มเติม Mobile Application', header: 'รับเรื่องร้องเรียน : เพิ่มเติม Mobile Application'}
     },
     {
         path: 'mobile/detail',
