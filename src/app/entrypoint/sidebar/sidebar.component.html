@@ -80,7 +80,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item" *ngIf="authenService.hasAnyRole(['INTAKE','INVESTIGATION']) && authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
+                <li class="nav-item"
+                    *ngIf="authenService.hasAnyRole(['INTAKE','INVESTIGATION']) && authenService.hasAnyRole(['DEPARTMENT_HEAD','DIVISION_HEAD'])">
                     <a class="nav-link" [routerLink]="['assignment']" routerLinkActive="active">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
@@ -96,15 +97,15 @@
                         </p>
                     </a>
                 </li>
-<!--                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">-->
-<!--                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">-->
-<!--                        <i class="nav-icon fas fa-clipboard"></i>-->
-<!--                        <p>-->
-<!--                            บันทึกรับแฟ้ม-->
-<!--                        </p>-->
-<!--                    </a>-->
-<!--                </li>-->
-                <li class="nav-item"  *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
+                <!--                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">-->
+                <!--                    <a [routerLink]="['record']" routerLinkActive="active" class="nav-link">-->
+                <!--                        <i class="nav-icon fas fa-clipboard"></i>-->
+                <!--                        <p>-->
+                <!--                            บันทึกรับแฟ้ม-->
+                <!--                        </p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['OMBUDSMAN','SECRETARY','DEPUTY_SECRETARY']) ">
                     <a class="nav-link" [routerLink]="['sign-complaint']" routerLinkActive="active">
                         <i class="nav-icon fas fa-pen"></i>
                         <p>
@@ -124,11 +125,11 @@
                     <a [routerLink]="['report']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>
-                                รายงาน, สถิติ
+                            รายงาน, สถิติ
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="authenService.hasAnyRole(['ADMIN'])" >
+                <li class="nav-item" *ngIf="authenService.hasAnyRole(['ADMIN'])">
                     <a [routerLink]="['user']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon fas fa-user-cog"></i>
                         <p>
@@ -137,16 +138,23 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a  routerLinkActive="active" class="nav-link">
+                            <a routerLinkActive="active" class="nav-link">
                                 <i class="far nav-icon"></i>
                                 <p>....</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a  routerLinkActive="active"
+                            <a routerLinkActive="active"
                                class="nav-link">
                                 <i class="far nav-icon"></i>
                                 <p>....</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['admin/history']" routerLinkActive="active"
+                               class="nav-link">
+                                <i class="far nav-icon"></i>
+                                <p>ประวัติการเข้าใช้ระบบ</p>
                             </a>
                         </li>
                     </ul>

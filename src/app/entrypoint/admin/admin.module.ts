@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import {FormsModule} from "@angular/forms";
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ HistoryComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
