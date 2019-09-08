@@ -16,7 +16,6 @@ import {AboutComponent} from './detail/about/about.component';
 import {ForwardComponent} from './detail/forward/forward.component';
 import {PrintComponent} from './detail/print/print.component';
 import {ConcludeComponent} from './detail/conclude/conclude.component';
-import {AttachmentComponent} from './detail/attachment/attachment.component';
 import {ReceiveDocComponent} from './detail/receive-doc/receive-doc.component';
 import {PlanComponent} from "./detail/plan/plan.component";
 import {AddPlanModalComponent} from './detail/plan/add-plan-modal/add-plan-modal.component';
@@ -33,7 +32,6 @@ import { StepComponent } from './detail/step/step.component';
         ForwardComponent,
         PrintComponent,
         FactComponent,
-        AttachmentComponent,
         ReceiveDocComponent,
         PlanComponent,
         ConcludeComponent,
