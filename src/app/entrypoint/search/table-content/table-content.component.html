@@ -3,11 +3,16 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">ตารางข้อมูลเรื่องร้องเรียนทั้งหมด</h3>
+                    <button class="btn btn-outline-secondary" style="float: right" (click)="showPrintModal()">
+                        <a class="fa fa-print"></a>
+                        พิมพ์
+                    </button>
                 </div>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-center">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>ลำดับ</th>
                             <th>เลขดำที่</th>
                             <th>เลขที่อ้างอิง</th>
@@ -23,6 +28,7 @@
                         </thead>
                         <tbody>
                         <tr *ngFor="let item of items; let i = index">
+                            <td><input type="checkbox"></td>
                             <td>{{i + 1}}</td>
                             <td>001/2558</td>
                             <td>-</td>
