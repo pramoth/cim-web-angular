@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {PrintModalComponent} from "../print-modal/print-modal.component";
 
 @Component({
   selector: 'app-table-content',
@@ -14,9 +16,15 @@ export class TableContentComponent implements OnInit {
   page:number;
   result: any;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
+
+  showPrintModal(){
+
+    const modalRef = this.modalService.open(PrintModalComponent);
+
+  }
 }
