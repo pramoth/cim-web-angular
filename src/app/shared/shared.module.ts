@@ -5,6 +5,7 @@ import {HideByRolesDirective} from './hide-by-roles.directive';
 import {ColorPaletteDirective} from '../color-palette.directive';
 import {HttpClientModule} from '@angular/common/http';
 import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.component';
+import { ScannerComponent } from './scanner/scanner.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.componen
         ShowByRolesDirective,
         HideByRolesDirective,
         ColorPaletteDirective,
-        ComfirmDialogComponent
+        ComfirmDialogComponent,
+        ScannerComponent
     ],
     exports: [
         ShowByRolesDirective,
@@ -22,6 +24,9 @@ import { ComfirmDialogComponent } from './comfirm-dialog/comfirm-dialog.componen
     imports: [
         CommonModule,
         HttpClientModule
+    ],
+    entryComponents:[
+        ScannerComponent
     ]
 })
 export class SharedModule {
