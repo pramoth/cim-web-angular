@@ -17,10 +17,40 @@ export class MobileComplaintDetailComponent implements OnInit {
 
     complainantType: 'thai' | 'foreign' | 'agent' | 'group';
 
+    complainants: any[] = [{complainantType: null, subComplainants: [{}]}];
+
+    subComplainants: any[];
+
+    accusedDepartments: any[] = [{}];
+
     constructor(private toastr: ToastrService, private ngbModal: NgbModal, private router: Router, private actRoute: ActivatedRoute) {
     }
 
     ngOnInit() {
+    }
+
+    addComplainant() {
+        this.complainants.push({complainantType: null, subComplainants: [{}]});
+    }
+
+    deleteComplainant() {
+        this.complainants.pop();
+    }
+
+    addSubComplainant(complainant: any) {
+        complainant.subComplainants.push({});
+    }
+
+    deleteSubComplainant(complainant: any) {
+        complainant.subComplainants.pop();
+    }
+
+    addDepartment() {
+        this.accusedDepartments.push({});
+    }
+
+    deleteDepartment() {
+        this.accusedDepartments.pop();
     }
 
     save(innerText: string): void {

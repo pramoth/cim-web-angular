@@ -92,7 +92,10 @@
                 <div class="card-body" *ngFor="let complainant of complainants; let i = index">
                     <div class="row">
                         <div class="col-md-2">
-                            <h5>ผู้ร้องที่ {{i + 1}}</h5>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" [(ngModel)]="complainant.checked">
+                                <label class="form-check-label">ผู้ร้องที่ {{i + 1}}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -218,6 +221,9 @@
                                 <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
+                                <div class="col-md-2 form-group">
+                                    <button class="btn btn-info">ตรวจสอบชื่อซ้ำ</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -237,9 +243,6 @@
                         </div>
                         <div class="col-md-3 form-group">
                             <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-1 form-group">
-                            <button class="btn btn-info">ตรวจสอบ</button>
                         </div>
                     </div>
                     <div class="row">
@@ -368,6 +371,9 @@
                                 <div class="col-md-2 form-group">
                                     <input type="text" class="form-control">
                                 </div>
+                                <div class="col-md-2 form-group">
+                                    <button class="btn btn-info">ตรวจสอบชื่อซ้ำ</button>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 text-md-right">
@@ -385,9 +391,6 @@
                                 </div>
                                 <div class="col-md-3 form-group">
                                     <input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-1 form-group">
-                                    <button class="btn btn-info">ตรวจสอบ</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -505,7 +508,10 @@
                 <div class="card-body" *ngFor="let department of accusedDepartments; let i = index">
                     <div class="row">
                         <div class="col-md-2">
-                            <h5>หน่วยงานที่ {{i + 1}}</h5>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" [(ngModel)]="department.checked">
+                                <label class="form-check-label">หน่วยงานที่ {{i + 1}}</label>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
